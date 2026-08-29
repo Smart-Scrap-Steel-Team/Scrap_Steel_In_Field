@@ -1,0 +1,234 @@
+modules:
+  image_capture: true      # 是否启用图像采集模块
+  arm_communication: false  # 是否启用机械臂通讯模块
+  dangerous_detection: true   # 是否启用危险物检测模块
+  scrap_segmentation: false   # 是否启用废钢分割模块
+  grasp_point_and_arm_control: false  # 是否启用抓取点计算与机械臂控制模块
+
+# 车辆检测系统配置文件
+# 此文件控制项目中哪些识别算法被启用，以及各种系统参数设置
+
+# 系统基础配置
+system:
+  # Flask Web服务器配置
+  flask:
+    host: "0.0.0.0"      # Web服务器监听地址，0.0.0.0表示监听所有网络接口
+    port: 5001           # Web服务器端口号
+    debug: false         # 调试模式开关，生产环境建议设为false
+  
+  # 应用路由前缀配置
+  application_root: "/safety"  # Web应用的基础URL路径前缀
+  
+  # 日志系统配置
+  logging:
+    level: "INFO"        # 日志输出级别：DEBUG, INFO, WARNING, ERROR, CRITICAL
+    max_file_size: "10MB" # 单个日志文件最大大小
+    backup_count: 5      # 保留的日志文件备份数量
+
+# 摄像头设备配置
+camera:
+  # NVR网络录像机配置
+  nvr:
+    ip: "192.168.3.13"  # NVR设备的IP地址
+    username: "admin"     # NVR登录用户名
+    password: "Xd2025328" # NVR登录密码
+  
+  # 摄像头通道分配配置
+  channels:
+    entrance: 2          # 车辆进场检测使用的摄像头通道号
+    exit: 6              # 车辆出厂检测使用的摄像头通道号
+    helmet: 8            # 安全帽检测使用的摄像头通道号
+    fire: 7              # 火焰烟雾检测使用的摄像头通道号
+
+# 人工智能识别算法配置
+algorithms:
+  # 车辆车牌识别算法配置
+  vehicle_detection:
+    enabled: false        # 是否启用车辆检测功能总开关
+    
+    # 车辆进场场景专用配置
+    entrance_scene:
+      enabled: true      # 是否启用车辆进场检测功能
+      camera_channel: 2  # 进场检测使用的摄像头通道号
+      auto_gate_control: false  # 是否自动控制进场闸机开关
+      record_interval: 60      # 车辆记录的最小间隔时间（秒）
+    
+    # 车辆出厂场景专用配置
+    exit_scene:
+      enabled: false      # 是否启用车辆出厂检测功能
+      camera_channel: 6  # 出厂检测使用的摄像头通道号
+      auto_gate_control: false  # 是否自动控制出厂闸机开关
+      record_interval: 60      # 车辆记录的最小间隔时间（秒）
+    
+    # 车辆检测模型配置
+    model:
+      path: "./models/best.pt"   # 车辆检测模型文件路径
+      task: "detect"           # 模型任务类型：detect（检测）
+      confidence_threshold: 0.5 # 检测置信度阈值，低于此值的结果将被过滤
+    
+    # 车牌文字识别（OCR）配置
+    ocr:
+      # PaddleOCR引擎配置
+      paddleocr:
+        enabled: true          # 是否启用PaddleOCR识别引擎
+        use_angle_cls: true    # 是否使用角度分类器（处理倾斜车牌）
+        lang: "ch"             # 识别语言：ch（中文）
+        confidence_threshold: 0.7 # OCR识别置信度阈值
+      # EasyOCR引擎配置
+      easyocr:
+        enabled: true          # 是否启用EasyOCR识别引擎
+        languages: ["ch_sim", "en"] # 支持的语言：中文简体、英文
+        gpu: false             # 是否使用GPU加速（false为CPU模式）
+        confidence_threshold: 0.7 # OCR识别置信度阈值
+    
+    # 数据处理配置
+    processing:
+      min_record_interval: 60  # 最小记录间隔时间（秒），防止重复记录
+      max_history_length: 5    # 前端显示的历史记录最大条数
+    
+    # 闸机控制配置
+    gate_control:
+      enabled: false            # 是否启用闸机自动控制功能
+      auto_close_delay: 30     # 闸机自动关闭延迟时间（秒）
+      entry_gate_url: "http://192.168.3.204:5000/remote/entry_gate"  # 进场闸机控制接口URL
+      exit_gate_url: "http://192.168.3.204:5000/remote/exit_gate"    # 出厂闸机控制接口URL
+
+  # 安全帽检测算法配置
+  helmet_detection:
+    enabled: false      # 是否启用安全帽检测功能
+    # 安全帽检测模型配置
+    model:
+      type: "yolov5"     # 模型类型：YOLOv5
+      path: "./models/helmet_head_person_s.pt"  # 安全帽检测模型文件路径
+      confidence_threshold: 0.3 # 检测置信度阈值
+    # 数据处理配置
+    processing:
+      update_interval: 10      # 检测结果更新间隔（秒）
+      max_history_size: 100    # 历史记录最大保存条数
+    # 检测类别标签配置
+    categories:
+      helmet: "佩戴安全帽"      # 检测到安全帽时的显示标签
+      head: "未正确佩戴安全帽"   # 检测到未戴安全帽时的显示标签
+      person: "人员"           # 检测到人员时的显示标签
+
+  # 火焰烟雾检测算法配置
+  fire_detection:
+    enabled: false      # 是否启用火焰烟雾检测功能
+    # 火焰检测模型配置
+    model:
+      type: "yolov8"     # 模型类型：YOLOv8
+      path: "models/smoke_fire_yolov8.pt"  # 火焰烟雾检测模型文件路径
+      confidence_threshold: 0.5 # 检测置信度阈值
+    # 数据处理配置
+    processing:
+      update_interval: 10      # 检测结果更新间隔（秒）
+      max_history_size: 100    # 历史记录最大保存条数
+    # 检测类别标签配置
+    categories:
+      fire: "火焰"             # 检测到火焰时的显示标签
+      smoke: "烟雾"            # 检测到烟雾时的显示标签
+      default: "无火焰"        # 默认状态显示标签
+
+# 数据存储配置
+storage:
+  # 数据文件存储目录配置
+  data_directory: "./data"       # 基础数据存储目录
+  files:
+    entry_records: "./data/entry_records.json"      # 车辆进场记录文件路径
+    exit_records: "./data/exit_records.json"        # 车辆出厂记录文件路径
+    abnormal_vehicles: "./data/abnormal_vehicles.json"  # 异常车辆记录文件路径
+  
+  # 检测结果存储配置
+  results_directory: "./detection_results"  # 检测结果存储目录
+  results_files:
+    helmet_detections: "./detection_results/helmet_detections.json"  # 安全帽检测结果文件
+    fire_detections: "./detection_results/fire_detections.json"     # 火焰检测结果文件
+
+# 系统性能优化配置
+performance:
+  # 多线程配置
+  threading:
+    daemon_threads: true       # 是否使用守护线程（程序退出时自动结束）
+    camera_update_interval: 0.1  # 摄像头画面更新间隔（秒）
+    frame_generation_interval: 0.1  # 视频流帧生成间隔（秒）
+  
+  # 模型优化配置
+  models:
+    device: "auto"             # 模型运行设备：auto（自动选择）, cpu, cuda（GPU）
+    half_precision: false      # 是否使用半精度浮点数（节省显存）
+    optimize: true             # 是否启用模型优化
+
+# 车牌验证规则配置
+validation:
+  # 车牌格式验证配置
+  license_plate:
+    validate_format: true      # 是否验证车牌格式
+    validate_chinese_chars: true  # 是否验证中文字符
+    # 有效的省份简称列表
+    valid_provinces:
+      - "京"
+      - "津"
+      - "冀"
+      - "晋"
+      - "蒙"
+      - "辽"
+      - "吉"
+      - "黑"
+      - "沪"
+      - "苏"
+      - "浙"
+      - "皖"
+      - "闽"
+      - "赣"
+      - "鲁"
+      - "豫"
+      - "鄂"
+      - "湘"
+      - "粤"
+      - "桂"
+      - "琼"
+      - "渝"
+      - "川"
+      - "贵"
+      - "云"
+      - "藏"
+      - "陕"
+      - "甘"
+      - "青"
+      - "宁"
+      - "新"
+      - "港"
+      - "澳"
+      - "台"
+
+# 报警系统配置
+alarm:
+  # 报警功能总开关
+  enabled: true               # 是否启用报警功能
+  max_alarm_history: 100      # 报警历史记录最大保存条数
+  
+  # 安全帽报警配置
+  helmet:
+    enabled: true             # 是否启用安全帽报警
+    alert_on_no_helmet: true  # 检测到未戴安全帽时是否报警
+  
+  # 火灾报警配置
+  fire:
+    enabled: true             # 是否启用火灾报警
+    alert_on_fire: true       # 检测到火焰时是否报警
+    alert_on_smoke: true      # 检测到烟雾时是否报警
+
+# 开发和调试配置
+development:
+  # 调试模式配置
+  debug: false                # 是否启用调试模式
+  
+  # 测试功能配置
+  test:
+    enabled: false            # 是否启用测试功能
+    test_image_path: "./test_images/"  # 测试图片存储路径
+  
+  # 模型测试配置
+  model_testing:
+    enabled: false            # 是否启用模型测试
+    test_license_recognition: false  # 是否测试车牌识别功能 

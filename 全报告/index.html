@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>废钢卸货分析报告 · 数据看板</title>
+    <!-- Chart.js 轻量图表库 -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background: #f0f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 2rem 1rem;
+        }
+
+        .report {
+            max-width: 1440px;
+            width: 100%;
+            background: white;
+            border-radius: 32px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            overflow: hidden;
+            padding: 2rem 2rem 2.5rem;
+            transition: all 0.2s;
+        }
+
+        /* header */
+        .report-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #eef2f6;
+            padding-bottom: 1.5rem;
+        }
+
+        .title-section h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            color: #0b1c2f;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .title-section .badge {
+            background: #dbeafe;
+            color: #1a4c8c;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.2rem 0.9rem;
+            border-radius: 40px;
+            margin-left: 8px;
+        }
+
+        .time-stamp {
+            background: #f8fafc;
+            padding: 0.45rem 1.2rem;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            color: #2c3e50;
+            border: 1px solid #e2e8f0;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .time-stamp i {
+            font-style: normal;
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: #22c55e;
+            border-radius: 10px;
+            margin-right: 6px;
+        }
+
+        /* 卡片网格 */
+        .grid-2col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.8rem;
+            margin-top: 0.5rem;
+        }
+
+        @media (max-width: 1000px) {
+            .grid-2col {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 24px;
+            border: 1px solid #eef2f6;
+            padding: 1.5rem 1.5rem 1.8rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+            transition: 0.15s;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.25rem;
+            font-weight: 500;
+            color: #1e293b;
+            font-size: 0.9rem;
+            letter-spacing: 0.3px;
+            text-transform: uppercase;
+            border-bottom: 1px dashed #e9edf2;
+            padding-bottom: 0.7rem;
+        }
+
+        .card-header span:first-child {
+            font-weight: 600;
+            color: #0f2b44;
+            font-size: 1rem;
+            letter-spacing: 0;
+            text-transform: none;
+        }
+
+        .card-header .sub {
+            color: #66788f;
+            font-size: 0.75rem;
+            font-weight: 400;
+        }
+
+        .info-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 0.4rem 0;
+            border-bottom: 1px solid #f2f6fc;
+        }
+
+        .info-row:last-child {
+            border-bottom: none;
+        }
+
+        .info-label {
+            color: #475569;
+            font-weight: 450;
+        }
+
+        .info-value {
+            font-weight: 600;
+            color: #0b1e33;
+        }
+
+        .info-value.highlight {
+            color: #1f6bb8;
+        }
+
+        /* 机械臂状态 */
+        .arm-status-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem 1.8rem;
+            margin: 0.8rem 0 0.2rem;
+        }
+
+        .arm-tag {
+            background: #f8fafc;
+            border-radius: 60px;
+            padding: 0.2rem 1.2rem 0.2rem 1rem;
+            border: 1px solid #e4ebf3;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .arm-tag .count {
+            font-weight: 700;
+            color: #0b2a4a;
+            margin-left: 4px;
+        }
+
+        .arm-tag .label {
+            color: #4b6a8b;
+        }
+
+        .chip-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem 0.9rem;
+            margin-top: 0.8rem;
+        }
+
+        .chip {
+            background: #f2f7ff;
+            padding: 0.2rem 1rem 0.2rem 0.8rem;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            border: 1px solid #dce6f2;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .chip .num {
+            font-weight: 700;
+            color: #1a4c7a;
+        }
+
+        .danger-tag {
+            background: #fee9e7;
+            border-color: #f8d0cc;
+            color: #a1302a;
+        }
+
+        .danger-tag .num {
+            color: #a1302a;
+        }
+
+        .stat-badge {
+            display: inline-block;
+            background: #eef5ff;
+            border-radius: 40px;
+            padding: 0.15rem 1rem;
+            font-size: 0.8rem;
+            border: 1px solid #d2e0f5;
+        }
+
+        .flex-between {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .mt-2 { margin-top: 1.2rem; }
+        .mt-1 { margin-top: 0.7rem; }
+
+        .ratio-group {
+            display: flex;
+            gap: 1rem 2.5rem;
+            flex-wrap: wrap;
+            margin: 0.5rem 0 0.2rem;
+        }
+
+        .ratio-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .ratio-item .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 10px;
+            background: #2563eb;
+        }
+        .ratio-item .dot.orange { background: #e67e22; }
+        .ratio-item .dot.purple { background: #7c3aed; }
+
+        .history-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+            margin-top: 0.3rem;
+        }
+
+        .history-table th {
+            text-align: left;
+            font-weight: 500;
+            color: #5a6f89;
+            padding: 0.5rem 0.2rem 0.4rem 0;
+            border-bottom: 1px solid #e7edf5;
+        }
+
+        .history-table td {
+            padding: 0.5rem 0.2rem 0.4rem 0;
+            border-bottom: 1px solid #edf2f8;
+            color: #1a2d44;
+        }
+
+        .history-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .status-badge {
+            background: #d1f0d7;
+            color: #1f6a3b;
+            padding: 0.1rem 0.7rem;
+            border-radius: 40px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .analysis-stats {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem 2rem;
+        }
+
+        .analysis-stats .stat-item {
+            display: flex;
+            align-items: baseline;
+            gap: 6px;
+        }
+
+        .analysis-stats .stat-item .label {
+            color: #4f6a86;
+        }
+
+        .analysis-stats .stat-item .value {
+            font-weight: 700;
+            color: #0a2946;
+        }
+
+        .separator {
+            width: 100%;
+            height: 1px;
+            background: #eef2f6;
+            margin: 1rem 0;
+        }
+
+        /* 饼图容器 */
+        .pie-wrapper {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem 2rem;
+            margin-top: 0.5rem;
+        }
+
+        .pie-box {
+            flex: 1 1 200px;
+            min-width: 180px;
+            max-width: 280px;
+            height: auto;
+        }
+
+        .pie-box canvas {
+            width: 100% !important;
+            height: auto !important;
+            max-height: 200px;
+        }
+
+        .pie-legend {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            font-size: 0.85rem;
+            color: #1f3a57;
+        }
+
+        .pie-legend .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .pie-legend .color-swatch {
+            width: 14px;
+            height: 14px;
+            border-radius: 6px;
+            flex-shrink: 0;
+        }
+
+        .subtext {
+            color: #5b738f;
+            font-size: 0.75rem;
+            font-weight: 400;
+        }
+
+        @media (max-width: 600px) {
+            .report { padding: 1.2rem; }
+            .title-section h1 { font-size: 1.6rem; }
+            .pie-box { max-width: 100%; }
+        }
+    </style>
+</head>
+<body>
+<div class="report">
+    <!-- 头部 -->
+    <div class="report-header">
+        <div class="title-section">
+            <h1>
+                🚛 废钢卸货分析报告
+                <span class="badge">数据看板</span>
+            </h1>
+            <div style="display: flex; gap: 16px; flex-wrap: wrap; margin-top: 6px;">
+                <span style="background: #f2f6fc; padding: 0.2rem 1rem; border-radius: 30px; font-size: 0.85rem;">车牌号 <strong>XD00001</strong></span>
+                <span style="background: #f2f6fc; padding: 0.2rem 1rem; border-radius: 30px; font-size: 0.85rem;">废钢总数 <strong>593</strong></span>
+                <span style="background: #f2f6fc; padding: 0.2rem 1rem; border-radius: 30px; font-size: 0.85rem;">总面积 <strong>1,749,069.00</strong></span>
+            </div>
+        </div>
+        <div class="time-stamp">
+            <i></i> 2025-07-22 17:42:26
+        </div>
+    </div>
+
+    <!-- 两列核心内容 -->
+    <div class="grid-2col">
+        <!-- 左列：车辆信息 + 机械臂 + 废钢明细 -->
+        <div class="card">
+            <div class="card-header">
+                <span>🚗 车辆卸货明细</span>
+                <span class="sub">实时</span>
+            </div>
+            <div class="info-row">
+                <span class="info-label">车牌号</span>
+                <span class="info-value highlight">XD00001</span>
+            </div>
+            <div class="info-row">
+                <span class="info-label">废钢总数</span>
+                <span class="info-value">593 件</span>
+            </div>
+            <div class="info-row">
+                <span class="info-label">废钢总面积</span>
+                <span class="info-value">1,749,069.00</span>
+            </div>
+            <div class="info-row">
+                <span class="info-label">危险物总数</span>
+                <span class="info-value" style="color: #b13e34;">0</span>
+            </div>
+            <div class="info-row" style="border-bottom: none; padding-bottom: 0;">
+                <span class="info-label">卸货时间</span>
+                <span class="info-value" style="font-weight: 500;">2025-07-22 17:42:26</span>
+            </div>
+
+            <!-- 机械臂状态 -->
+            <div style="margin-top: 1.5rem;">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span style="font-weight: 600; color: #1e3a5f;">⚙️ 机械臂状态</span>
+                    <span class="stat-badge">方管 142 | 钢板 39</span>
+                </div>
+                <div class="arm-status-grid">
+                    <span class="arm-tag"><span class="label">方管</span> <span class="count">142</span></span>
+                    <span class="arm-tag"><span class="label">钢板</span> <span class="count">39</span></span>
+                    <span class="arm-tag"><span class="label">链件</span> <span class="count">244</span></span>
+                    <span class="arm-tag"><span class="label">200s</span> <span class="count">—</span></span>
+                    <span class="arm-tag"><span class="label">钢筋</span> <span class="count">17</span></span>
+                    <span class="arm-tag"><span class="label">管道件</span> <span class="count">27</span></span>
+                </div>
+                <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 12px;">
+                    <span class="chip"><span class="num">19</span> 金属件</span>
+                    <span class="chip"><span class="num">0</span> 打孔废料</span>
+                    <span class="chip danger-tag"><span class="num">GasCyl1</span> 0</span>
+                    <span class="chip danger-tag"><span class="num">GasCyl2</span> 0</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 右列：危险物分析 + 废钢比例 + 饼图 -->
+        <div class="card">
+            <div class="card-header">
+                <span>📊 废钢组成 & 危险物</span>
+                <span class="sub">占比分析</span>
+            </div>
+            <!-- 危险物数量 & 比例 -->
+            <div class="flex-between">
+                <span style="font-weight: 500; color: #152c44;">危险物数量</span>
+                <span style="background: #eaf3e8; padding: 0.1rem 1rem; border-radius: 30px; color: #1c6b3b;">无危险物</span>
+            </div>
+            <div class="chip-group" style="margin-top: 0.2rem;">
+                <span class="chip"><span class="num">GasCyl1</span> 0</span>
+                <span class="chip"><span class="num">GasCyl2</span> 0</span>
+                <span class="chip"><span class="num">FireExt1</span> 0</span>
+                <span class="chip"><span class="num">FireExt2</span> 0</span>
+            </div>
+            <div class="ratio-group">
+                <span class="ratio-item"><span class="dot"></span> 危险物比例 0%</span>
+                <span class="ratio-item"><span class="dot orange"></span> 废钢面积比例 89%</span>
+                <span class="ratio-item"><span class="dot purple"></span> 废钢数量比例 76%</span>
+            </div>
+
+            <div class="separator"></div>
+
+            <!-- 口百管类 + 方管类 + 打孔废料 + 铜板类 -->
+            <div style="display: flex; flex-wrap: wrap; gap: 1rem 2rem;">
+                <div><span class="subtext">口百管类</span> <strong style="margin-left: 6px;">0</strong></div>
+                <div><span class="subtext">方管类</span> <strong style="margin-left: 6px;">142</strong></div>
+                <div><span class="subtext">打孔废料</span> <strong style="margin-left: 6px;">0</strong></div>
+                <div><span class="subtext">铜板类</span> <strong style="margin-left: 6px;">39</strong></div>
+            </div>
+
+            <div class="separator"></div>
+
+            <!-- 饼图区域：废钢分类占比 (方管, 钢板, 链件, 钢筋, 管道件, 金属件) -->
+            <div style="margin-top: 0.2rem;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                    <span style="font-weight: 600; color: #1e3a5f; font-size: 0.95rem;">废钢分类占比</span>
+                    <span class="subtext">按数量</span>
+                </div>
+                <div class="pie-wrapper">
+                    <div class="pie-box">
+                        <canvas id="steelPieChart" width="200" height="200"></canvas>
+                    </div>
+                    <div class="pie-legend" id="pieLegend">
+                        <!-- 动态由js生成 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 第三块：车辆历史信息 (全宽) -->
+    <div class="card" style="margin-top: 1.8rem; padding-bottom: 1rem;">
+        <div class="card-header">
+            <span>📋 车辆历史信息</span>
+            <span class="sub">最近记录</span>
+        </div>
+        <table class="history-table">
+            <thead>
+                <tr><th>车牌号</th><th>时间</th><th>状态</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>XD00001</strong></td><td>2025-07-22 17:42:26</td><td><span class="status-badge">到达</span></td></tr>
+                <tr><td><strong>XD00002</strong></td><td>2025-07-22 17:42:20</td><td><span class="status-badge">到达</span></td></tr>
+                <tr><td><strong>XD00001</strong></td><td>2025-07-22 17:42:15</td><td><span class="status-badge">到达</span></td></tr>
+            </tbody>
+        </table>
+        <div style="margin-top: 0.8rem; font-size: 0.8rem; color: #4b6a8b; display: flex; gap: 20px; flex-wrap: wrap;">
+            <span>📌 当前车辆 XD00001 · 卸货中</span>
+            <span>⏱️ 最近更新 17:42:26</span>
+        </div>
+    </div>
+
+    <!-- 脚注 -->
+    <div style="display: flex; justify-content: flex-end; margin-top: 1.2rem; font-size: 0.75rem; color: #687e99; gap: 1.5rem; flex-wrap: wrap; border-top: 1px solid #ebf0f6; padding-top: 1rem;">
+        <span>废钢级别 · 综合评估 B+</span>
+        <span>车辆卸货信息 · 实时同步</span>
+        <span>报告生成: 2025-07-22 17:42:26</span>
+    </div>
+</div>
+
+<script>
+    (function() {
+        // 废钢分类数据 (基于图片: 方管142, 钢板39, 链件244, 钢筋17, 管道件27, 金属件19)
+        const categories = ['方管', '钢板', '链件', '钢筋', '管道件', '金属件'];
+        const values = [142, 39, 244, 17, 27, 19];
+        const colors = ['#2563eb', '#e67e22', '#7c3aed', '#10b981', '#f59e0b', '#ef4444'];
+
+        const ctx = document.getElementById('steelPieChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: categories,
+                datasets: [{
+                    data: values,
+                    backgroundColor: colors,
+                    borderColor: '#ffffff',
+                    borderWidth: 2,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                plugins: {
+                    legend: {
+                        display: false, // 自定义图例
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                let label = context.label || '';
+                                let value = context.parsed || 0;
+                                let total = context.dataset.data.reduce((a, b) => a + b, 0);
+                                let percentage = total > 0 ? ((value / total) * 100).toFixed(1) : 0;
+                                return `${label}: ${value} (${percentage}%)`;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // 生成自定义图例
+        const legendContainer = document.getElementById('pieLegend');
+        if (legendContainer) {
+            legendContainer.innerHTML = '';
+            categories.forEach((cat, idx) => {
+                const item = document.createElement('div');
+                item.className = 'legend-item';
+                const swatch = document.createElement('span');
+                swatch.className = 'color-swatch';
+                swatch.style.backgroundColor = colors[idx];
+                const label = document.createElement('span');
+                label.textContent = `${cat}  ${values[idx]}`;
+                item.appendChild(swatch);
+                item.appendChild(label);
+                legendContainer.appendChild(item);
+            });
+        }
+    })();
+</script>
+
+</body>
+</html>

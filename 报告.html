@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>危险品检测报告 · 数据看板</title>
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <!-- Chart.js DataLabels 插件 -->
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f4f7fb;
+            font-family: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
+            padding: 2rem 1.5rem;
+            color: #1a2639;
+        }
+
+        .dashboard {
+            max-width: 1440px;
+            margin: 0 auto;
+        }
+
+        .header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .header h1 {
+            font-weight: 600;
+            font-size: 2rem;
+            letter-spacing: -0.02em;
+            background: linear-gradient(145deg, #0b2a4a, #1e4a6f);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .badge {
+            background: #ffffffcc;
+            backdrop-filter: blur(4px);
+            padding: 0.5rem 1.4rem;
+            border-radius: 60px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            box-shadow: 0 4px 12px rgba(0, 20, 40, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .badge span {
+            font-weight: 600;
+            color: #0f3b5c;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-card {
+            background: white;
+            border-radius: 24px;
+            padding: 1.2rem 1.2rem 1rem;
+            box-shadow: 0 6px 20px rgba(0, 20, 40, 0.04);
+            border: 1px solid #eef3f8;
+            transition: 0.2s;
+        }
+
+        .stat-card:hover {
+            border-color: #cbdae8;
+            box-shadow: 0 10px 24px rgba(0, 30, 60, 0.06);
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            color: #5d738b;
+            font-weight: 600;
+        }
+
+        .stat-value {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-top: 0.2rem;
+            line-height: 1.2;
+            color: #132b40;
+        }
+
+        .stat-sub {
+            font-size: 0.8rem;
+            color: #4d6a86;
+            margin-top: 0.3rem;
+            border-top: 1px dashed #e2eaf2;
+            padding-top: 0.3rem;
+        }
+
+        .two-col {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 1.8rem;
+            margin-bottom: 2rem;
+        }
+
+        @media (max-width: 800px) {
+            .two-col {
+                grid-template-columns: 1fr;
+                gap: 1.8rem;
+            }
+        }
+
+        .card {
+            background: white;
+            border-radius: 28px;
+            padding: 1.5rem 1.5rem 1.8rem;
+            box-shadow: 0 8px 28px rgba(0, 20, 40, 0.04);
+            border: 1px solid #e9f0f6;
+        }
+
+        .card h3 {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: #1d3b57;
+            margin-bottom: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .card h3 small {
+            font-weight: 400;
+            font-size: 0.8rem;
+            color: #6f8aa5;
+            margin-left: auto;
+        }
+
+        .table-wrap {
+            overflow-x: auto;
+            border-radius: 18px;
+            margin-top: 0.2rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+        }
+
+        th {
+            text-align: left;
+            padding: 0.7rem 0.5rem 0.7rem 0;
+            font-weight: 600;
+            color: #3d5b78;
+            border-bottom: 2px solid #e3ecf5;
+        }
+
+        td {
+            padding: 0.65rem 0.5rem 0.65rem 0;
+            border-bottom: 1px solid #ecf3fa;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        .badge-conf {
+            display: inline-block;
+            background: #eef3fa;
+            border-radius: 40px;
+            padding: 0.15rem 0.7rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #1d3b57;
+        }
+
+        .badge-conf.high {
+            background: #d4e6d9;
+            color: #1f5a3a;
+        }
+        .badge-conf.mid {
+            background: #f5efd7;
+            color: #8a6f2c;
+        }
+        .badge-conf.low {
+            background: #f6e0e0;
+            color: #a14444;
+        }
+
+        .chip {
+            display: inline-block;
+            background: #e3ecf5;
+            border-radius: 50px;
+            padding: 0.1rem 0.8rem;
+            font-size: 0.7rem;
+            font-weight: 500;
+        }
+
+        .chart-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.8rem;
+            align-items: center;
+        }
+
+        .chart-box {
+            flex: 1 1 140px;
+            min-width: 120px;
+            text-align: center;
+        }
+
+        .chart-box canvas {
+            max-height: 140px;
+            max-width: 140px;
+            margin: 0 auto;
+        }
+
+        .chart-box .chart-label {
+            font-size: 0.75rem;
+            color: #3f6482;
+            margin-top: 0.2rem;
+            font-weight: 500;
+        }
+
+        .legend-inline {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem 1.2rem;
+            font-size: 0.8rem;
+            margin-top: 0.3rem;
+        }
+
+        .legend-dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 10px;
+            margin-right: 4px;
+        }
+
+        .insight-box {
+            background: #f3f8fe;
+            border-radius: 16px;
+            padding: 0.8rem 1.2rem;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            border-left: 4px solid #3874a8;
+        }
+
+        .insight-box p {
+            margin: 0.3rem 0;
+        }
+
+        .footnote {
+            margin-top: 2.5rem;
+            font-size: 0.8rem;
+            color: #6f8aa5;
+            border-top: 1px solid #dbe6f0;
+            padding-top: 1.5rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="dashboard">
+
+    <div class="header">
+        <h1>🧯 危险品检测报告</h1>
+        <div class="badge">
+            📅 2026-07-30 17:48 · <span>2160 x 3840</span>
+        </div>
+    </div>
+
+    <div class="grid">
+        <div class="stat-card">
+            <div class="stat-label">总检测目标</div>
+            <div class="stat-value">9</div>
+            <div class="stat-sub">2 种类别</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-label">平均置信度</div>
+            <div class="stat-value">0.535</div>
+            <div class="stat-sub">范围 0.402 – 0.773</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-label">燃气罐 (GasCyl)</div>
+            <div class="stat-value">5</div>
+            <div class="stat-sub">平均 0.586 · 最高 0.776</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-label">灭火器 (FireExt)</div>
+            <div class="stat-value">4</div>
+            <div class="stat-sub">平均 0.471 · 最高 0.583</div>
+        </div>
+    </div>
+
+    <div class="two-col">
+        <div class="card">
+            <h3>📊 检测分布 <small>置信度 & 类别占比</small></h3>
+            <div class="chart-row">
+                <div class="chart-box">
+                    <canvas id="confChart" width="140" height="140"></canvas>
+                    <div class="chart-label">置信度区间</div>
+                </div>
+                <div class="chart-box">
+                    <canvas id="catChart" width="140" height="140"></canvas>
+                    <div class="chart-label">类别占比</div>
+                </div>
+                <div style="flex:1; min-width: 120px;">
+                    <div class="legend-inline">
+                        <span><span class="legend-dot" style="background:#2a6d8c;"></span> 高 (≥0.7) 22%</span>
+                        <span><span class="legend-dot" style="background:#6b9bbd;"></span> 中 (0.5-0.7) 22%</span>
+                        <span><span class="legend-dot" style="background:#b0c9dd;"></span> 低 (<0.5) 56%</span>
+                    </div>
+                    <div class="legend-inline" style="margin-top:0.2rem;">
+                        <span><span class="legend-dot" style="background:#e6834b;"></span> 燃气罐 55.6%</span>
+                        <span><span class="legend-dot" style="background:#5487b0;"></span> 灭火器 44.4%</span>
+                    </div>
+                    <div class="insight-box" style="margin-top:0.8rem;">
+                        <p>⚠️ 低置信度目标占 <strong>55.6%</strong> (5个) ，建议复核。</p>
+                        <p>📍 燃气罐数量多于灭火器，注意燃气安全。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>📋 各类别统计</h3>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                    <tr><th>类别</th><th>中文</th><th>数量</th><th>平均置信度</th><th>最高</th><th>最低</th></tr>
+                    </thead>
+                    <tbody>
+                    <tr><td>GasCyl</td><td>燃气罐</td><td>5</td><td>0.586</td><td>0.776</td><td>0.403</td></tr>
+                    <tr><td>FireExt</td><td>灭火器</td><td>4</td><td>0.471</td><td>0.583</td><td>0.422</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div style="margin-top: 0.6rem; font-size: 0.8rem; color: #466483; background: #ecf3fa; padding: 0.3rem 0.8rem; border-radius: 30px; display: inline-block;">
+                平均面积: 燃气罐 63,416 · 灭火器 64,663
+            </div>
+        </div>
+    </div>
+
+    <div class="card" style="margin-top: 0.2rem;">
+        <h3>📌 详细检测列表 <small>共 9 个目标</small></h3>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                <tr><th>#</th><th>类别</th><th>中文</th><th>置信度</th><th>位置 (x1,y1,x2,y2)</th><th>面积</th></tr>
+                </thead>
+                <tbody id="detailTableBody"></tbody>
+            </table>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 1.2rem; margin-top: 1rem; font-size: 0.85rem;">
+            <div><span class="badge-conf high">高 ≥0.7</span> 2个 (22.2%)</div>
+            <div><span class="badge-conf mid">中 0.5-0.7</span> 2个 (22.2%)</div>
+            <div><span class="badge-conf low">低 <0.5</span> 5个 (55.6%)</div>
+        </div>
+        <div class="insight-box" style="margin-top: 0.8rem;">
+            <p>🔍 图像右侧集中5个目标，建议检查采集角度；有1个目标面积偏小 (序号5: 5870-94 疑似笔误，实际为53630~587094?) 建议提高分辨率或靠近拍摄。</p>
+        </div>
+    </div>
+
+    <div class="footnote">
+        ⚡ 基于两份检测报告合并 · 数据时间 2026-07-30 17:48 · 图像尺寸 2160x3840
+    </div>
+</div>
+
+<script>
+    (function() {
+        // ----- 合并后的详细数据 -----
+        const details = [
+            { id: 1, cls: 'GasCyl', name: '燃气罐', conf: 0.773, pos: '(718,478,953,733)', area: 59925 },
+            { id: 2, cls: 'GasCyl', name: '燃气罐', conf: 0.730, pos: '(3231,686,3423,914)', area: 43776 },
+            { id: 3, cls: 'GasCyl', name: '燃气罐', conf: 0.592, pos: '(3168,862,3382,1252)', area: 83460 },
+            { id: 4, cls: 'FireExt', name: '灭火器', conf: 0.583, pos: '(3143,1283,3486,1466)', area: 62769 },
+            { id: 5, cls: 'FireExt', name: '灭火器', conf: 0.456, pos: '(1188,1342,1427,1588)', area: '5870-94' },
+            { id: 6, cls: 'GasCyl', name: '燃气罐', conf: 0.426, pos: '(3199,739,3411,1087)', area: 73776 },
+            { id: 7, cls: 'FireExt', name: '灭火器', conf: 0.424, pos: '(2376,423,2697,683)', area: 83460 },
+            { id: 8, cls: 'FireExt', name: '灭火器', conf: 0.402, pos: '(1124,736,1337,1046)', area: 53630 },
+            { id: 9, cls: 'GasCyl', name: '燃气罐', conf: 0.407, pos: '(1294,1161,1536,1393)', area: 56144 }
+        ];
+
+        // 渲染表格
+        const tbody = document.getElementById('detailTableBody');
+        if (tbody) {
+            tbody.innerHTML = details.map(d => {
+                let badgeClass = 'low';
+                if (d.conf >= 0.7) badgeClass = 'high';
+                else if (d.conf >= 0.5) badgeClass = 'mid';
+                return `<tr>
+                    <td>${d.id}</td>
+                    <td><span class="chip">${d.cls}</span></td>
+                    <td>${d.name}</td>
+                    <td><span class="badge-conf ${badgeClass}">${d.conf.toFixed(3)}</span></td>
+                    <td style="font-family: monospace; font-size:0.75rem;">${d.pos}</td>
+                    <td>${d.area}</td>
+                </tr>`;
+            }).join('');
+        }
+
+        // ----- 注册 DataLabels 插件 -----
+        Chart.register(ChartDataLabels);
+
+        // 通用数据标签样式 - 显示在扇区内部
+        const datalabelsStyle = {
+            color: '#ffffff',
+            font: { weight: 'bold', size: 12 },
+            anchor: 'center',
+            align: 'center',
+            offset: 0,
+            formatter: (value, ctx) => {
+                const total = ctx.dataset.data.reduce((a, b) => a + b, 0);
+                const percentage = ((value / total) * 100).toFixed(1);
+                return `${percentage}%`;
+            }
+        };
+
+        // ----- 置信度分布图表 -----
+        const ctxConf = document.getElementById('confChart').getContext('2d');
+        new Chart(ctxConf, {
+            type: 'doughnut',
+            data: {
+                labels: ['高 (≥0.7)', '中 (0.5-0.7)', '低 (<0.5)'],
+                datasets: [{
+                    data: [2, 2, 5],
+                    backgroundColor: ['#2a6d8c', '#6b9bbd', '#b0c9dd'],
+                    borderWidth: 2,
+                    borderColor: '#ffffff',
+                    borderRadius: 4,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                cutout: '55%',
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        callbacks: {
+                            label: (ctx) => `${ctx.raw} 个 (${((ctx.raw / 9) * 100).toFixed(1)}%)`
+                        }
+                    },
+                    datalabels: datalabelsStyle
+                }
+            }
+        });
+
+        // ----- 类别占比图表 -----
+        const ctxCat = document.getElementById('catChart').getContext('2d');
+        new Chart(ctxCat, {
+            type: 'doughnut',
+            data: {
+                labels: ['燃气罐', '灭火器'],
+                datasets: [{
+                    data: [5, 4],
+                    backgroundColor: ['#e6834b', '#5487b0'],
+                    borderWidth: 2,
+                    borderColor: '#ffffff',
+                    borderRadius: 4,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                cutout: '55%',
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        callbacks: {
+                            label: (ctx) => `${ctx.raw} 个 (${((ctx.raw / 9) * 100).toFixed(1)}%)`
+                        }
+                    },
+                    datalabels: datalabelsStyle
+                }
+            }
+        });
+
+    })();
+</script>
+</body>
+</html>

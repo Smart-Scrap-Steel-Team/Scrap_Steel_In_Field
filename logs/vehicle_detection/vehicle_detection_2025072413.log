@@ -1,0 +1,31 @@
+2025-07-24 13:43:47 - VehicleDetection - INFO - [config_util.py:11] - Configuration loaded successfully
+2025-07-24 13:43:47 - VehicleDetection - INFO - [vehicle_detection.py:46] - Vehicle detection is disabled in configuration
+2025-07-24 13:43:47 - VehicleDetection - INFO - [safety_detection_system.py:33] - Safety detection enabled - Helmet: False, Fire: True
+2025-07-24 13:47:08 - VehicleDetection - INFO - [config_util.py:11] - Configuration loaded successfully
+2025-07-24 13:47:08 - VehicleDetection - INFO - [vehicle_detection.py:46] - Vehicle detection is disabled in configuration
+2025-07-24 13:48:47 - VehicleDetection - INFO - [config_util.py:11] - Configuration loaded successfully
+2025-07-24 13:48:47 - VehicleDetection - INFO - [vehicle_detection.py:46] - Vehicle detection is disabled in configuration
+2025-07-24 13:50:06 - VehicleDetection - INFO - [config_util.py:11] - Configuration loaded successfully
+2025-07-24 13:50:06 - VehicleDetection - INFO - [vehicle_detection.py:46] - Vehicle detection is disabled in configuration
+2025-07-24 13:51:18 - VehicleDetection - INFO - [config_util.py:11] - Configuration loaded successfully
+2025-07-24 13:51:18 - VehicleDetection - INFO - [vehicle_detection.py:46] - Vehicle detection is disabled in configuration
+2025-07-24 13:52:30 - VehicleDetection - INFO - [config_util.py:11] - Configuration loaded successfully
+2025-07-24 13:52:30 - VehicleDetection - INFO - [vehicle_detection.py:46] - Vehicle detection is disabled in configuration
+2025-07-24 13:54:42 - VehicleDetection - INFO - [config_util.py:11] - Configuration loaded successfully
+2025-07-24 13:54:42 - VehicleDetection - INFO - [vehicle_detection.py:46] - Vehicle detection is disabled in configuration
+2025-07-24 13:54:42 - VehicleDetection - INFO - [safety_detection_system.py:33] - Safety detection enabled - Helmet: False, Fire: True
+2025-07-24 13:56:38 - VehicleDetection - INFO - [config_util.py:11] - Configuration loaded successfully
+2025-07-24 13:56:38 - VehicleDetection - INFO - [vehicle_detection.py:46] - Vehicle detection is disabled in configuration
+2025-07-24 13:56:38 - VehicleDetection - INFO - [safety_detection_system.py:33] - Safety detection enabled - Helmet: False, Fire: True
+2025-07-24 13:58:11 - VehicleDetection - INFO - [config_util.py:11] - Configuration loaded successfully
+2025-07-24 13:58:11 - VehicleDetection - INFO - [vehicle_detection.py:46] - Vehicle detection is disabled in configuration
+2025-07-24 13:58:11 - VehicleDetection - INFO - [safety_detection_system.py:33] - Safety detection enabled - Helmet: False, Fire: True
+2025-07-24 13:58:31 - VehicleDetection - INFO - [config_util.py:11] - Configuration loaded successfully
+2025-07-24 13:58:31 - VehicleDetection - INFO - [vehicle_detection.py:46] - Vehicle detection is disabled in configuration
+2025-07-24 13:58:31 - VehicleDetection - INFO - [safety_detection_system.py:33] - Safety detection enabled - Helmet: False, Fire: True
+2025-07-24 13:59:00 - VehicleDetection - INFO - [config_util.py:11] - Configuration loaded successfully
+2025-07-24 13:59:00 - VehicleDetection - INFO - [vehicle_detection.py:46] - Vehicle detection is disabled in configuration
+2025-07-24 13:59:00 - VehicleDetection - INFO - [safety_detection_system.py:33] - Safety detection enabled - Helmet: False, Fire: True
+2025-07-24 13:59:24 - VehicleDetection - INFO - [config_util.py:11] - Configuration loaded successfully
+2025-07-24 13:59:24 - VehicleDetection - INFO - [vehicle_detection.py:46] - Vehicle detection is disabled in configuration
+2025-07-24 13:59:24 - VehicleDetection - INFO - [safety_detection_system.py:33] - Safety detection enabled - Helmet: False, Fire: True

@@ -1,0 +1,3 @@
+2025-07-25 11:49:35 - VehicleDetection - INFO - [config_util.py:11] - Configuration loaded successfully
+2025-07-25 11:49:35 - VehicleDetection - INFO - [vehicle_detection.py:46] - Vehicle detection is disabled in configuration
+2025-07-25 11:49:35 - VehicleDetection - INFO - [safety_detection_system.py:29] - Both helmet and fire detection are disabled in configuration

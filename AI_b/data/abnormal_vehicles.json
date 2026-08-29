@@ -1,0 +1,34 @@
+[
+  {
+    "timestamp": "2025-04-24 15:41:09",
+    "time": "15:41:09",
+    "plate_number": "京AXD0001",
+    "confidence": 0.8443781733512878,
+    "plate_color": "GreenLicense",
+    "status": "abnormal"
+  },
+  {
+    "timestamp": "2025-04-24 15:50:42",
+    "time": "15:50:42",
+    "plate_number": "京AXD0001",
+    "confidence": 0.8719354867935181,
+    "plate_color": "GreenLicense",
+    "status": "abnormal"
+  },
+  {
+    "timestamp": "2025-04-24 17:28:04",
+    "time": "17:28:04",
+    "plate_number": "京AXD0001",
+    "confidence": 0.8657457828521729,
+    "plate_color": "GreenLicense",
+    "status": "abnormal"
+  },
+  {
+    "timestamp": "2025-04-24 17:46:30",
+    "time": "17:46:30",
+    "plate_number": "京AX00001",
+    "confidence": 0.742225170135498,
+    "plate_color": "GreenLicense",
+    "status": "abnormal"
+  }
+]

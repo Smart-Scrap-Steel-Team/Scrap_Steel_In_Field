@@ -1,0 +1,56 @@
+[
+    {
+        "plate_number": "京AXD0001",
+        "date": "2025-04-24",
+        "time": "17:11:47",
+        "timestamp": "2025-04-24 17:11:47",
+        "plate_color": "GreenLicense",
+        "status": "exit",
+        "entry_time": "2025-04-24 17:10:47"
+    },
+    {
+        "plate_number": "京AXD0001",
+        "date": "2025-04-24",
+        "time": "17:43:05",
+        "timestamp": "2025-04-24 17:43:05",
+        "plate_color": "GreenLicense",
+        "status": "exit",
+        "entry_time": "2025-04-24 17:42:32"
+    },
+    {
+        "plate_number": "京AXD0001",
+        "date": "2025-04-24",
+        "time": "18:10:53",
+        "timestamp": "2025-04-24 18:10:53",
+        "plate_color": "GreenLicense",
+        "status": "exit",
+        "entry_time": "2025-04-24 18:10:32"
+    },
+    {
+        "plate_number": "京AXD0001",
+        "date": "2025-04-24",
+        "time": "18:18:02",
+        "timestamp": "2025-04-24 18:18:02",
+        "plate_color": "GreenLicense",
+        "status": "exit",
+        "entry_time": "2025-04-24 18:17:41"
+    },
+    {
+        "plate_number": "京AXD0001",
+        "date": "2025-04-25",
+        "time": "11:41:00",
+        "timestamp": "2025-04-25 11:41:00",
+        "plate_color": "GreenLicense",
+        "status": "exit",
+        "entry_time": "2025-04-25 11:40:27"
+    },
+    {
+        "plate_number": "京AXD0002",
+        "date": "2025-04-30",
+        "time": "09:21:22",
+        "timestamp": "2025-04-30 09:21:22",
+        "plate_color": "GreenLicense",
+        "status": "exit",
+        "entry_time": "2025-04-30 09:20:36"
+    }
+]

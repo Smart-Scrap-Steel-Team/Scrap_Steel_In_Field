@@ -1,0 +1,472 @@
+2025-07-24 14:03:03 - VehicleDetection - INFO - [config_util.py:11] - Configuration loaded successfully
+2025-07-24 14:03:03 - VehicleDetection - INFO - [vehicle_detection.py:46] - Vehicle detection is disabled in configuration
+2025-07-24 14:03:03 - VehicleDetection - INFO - [safety_detection_system.py:33] - Safety detection enabled - Helmet: False, Fire: True
+2025-07-24 14:03:03 - VehicleDetection - INFO - [safety_detection_system.py:120] - Fire detection threads created
+2025-07-24 14:03:03 - VehicleDetection - INFO - [safety_detection_system.py:142] - 开始fire视频流，通道号为7
+2025-07-24 14:03:03 - VehicleDetection - INFO - [safety_detection_system.py:125] - Started safety detection thread: Thread-1 (camera_stream)
+2025-07-24 14:03:03 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:03:03 - VehicleDetection - INFO - [safety_detection_system.py:125] - Started safety detection thread: Thread-2 (process_frame_fire)
+2025-07-24 14:03:06 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:03:08 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:03:11 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:03:13 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:03:14 - VehicleDetection - INFO - [safety_detection_system.py:353] - 火焰检测结果: []
+2025-07-24 14:03:14 - VehicleDetection - INFO - [safety_detection_system.py:245] - 火焰烟雾检测结果: []
+2025-07-24 14:03:14 - VehicleDetection - INFO - [safety_detection_system.py:361] - 检测历史更新完成，当前历史记录长度为0
+2025-07-24 14:05:37 - VehicleDetection - INFO - [config_util.py:11] - Configuration loaded successfully
+2025-07-24 14:05:37 - VehicleDetection - INFO - [vehicle_detection.py:46] - Vehicle detection is disabled in configuration
+2025-07-24 14:05:37 - VehicleDetection - INFO - [safety_detection_system.py:33] - Safety detection enabled - Helmet: False, Fire: True
+2025-07-24 14:05:37 - VehicleDetection - INFO - [safety_detection_system.py:120] - Fire detection threads created
+2025-07-24 14:05:37 - VehicleDetection - INFO - [safety_detection_system.py:142] - 开始fire视频流，通道号为7
+2025-07-24 14:05:37 - VehicleDetection - INFO - [safety_detection_system.py:125] - Started safety detection thread: Thread-1 (camera_stream)
+2025-07-24 14:05:37 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:05:37 - VehicleDetection - INFO - [safety_detection_system.py:125] - Started safety detection thread: Thread-2 (process_frame_fire)
+2025-07-24 14:05:39 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:05:42 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:05:44 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:05:47 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:05:47 - VehicleDetection - INFO - [safety_detection_system.py:353] - 火焰检测结果: []
+2025-07-24 14:05:47 - VehicleDetection - INFO - [safety_detection_system.py:245] - 火焰烟雾检测结果: []
+2025-07-24 14:05:47 - VehicleDetection - INFO - [safety_detection_system.py:361] - 检测历史更新完成，当前历史记录长度为0
+2025-07-24 14:05:49 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:05:51 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:07:55 - VehicleDetection - INFO - [config_util.py:11] - Configuration loaded successfully
+2025-07-24 14:07:55 - VehicleDetection - INFO - [vehicle_detection.py:46] - Vehicle detection is disabled in configuration
+2025-07-24 14:07:55 - VehicleDetection - INFO - [safety_detection_system.py:33] - Safety detection enabled - Helmet: False, Fire: True
+2025-07-24 14:07:55 - VehicleDetection - INFO - [safety_detection_system.py:120] - Fire detection threads created
+2025-07-24 14:07:55 - VehicleDetection - INFO - [safety_detection_system.py:142] - 开始fire视频流，通道号为7
+2025-07-24 14:07:55 - VehicleDetection - INFO - [safety_detection_system.py:125] - Started safety detection thread: Thread-1 (camera_stream)
+2025-07-24 14:07:55 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:07:55 - VehicleDetection - INFO - [safety_detection_system.py:125] - Started safety detection thread: Thread-2 (process_frame_fire)
+2025-07-24 14:07:58 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:08:00 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:08:03 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:08:05 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:08:06 - VehicleDetection - INFO - [safety_detection_system.py:353] - 火焰检测结果: []
+2025-07-24 14:08:06 - VehicleDetection - INFO - [safety_detection_system.py:245] - 火焰烟雾检测结果: []
+2025-07-24 14:08:06 - VehicleDetection - INFO - [safety_detection_system.py:361] - 检测历史更新完成，当前历史记录长度为0
+2025-07-24 14:08:08 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:08:10 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:08:13 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:08:15 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:08:16 - VehicleDetection - INFO - [safety_detection_system.py:353] - 火焰检测结果: []
+2025-07-24 14:08:16 - VehicleDetection - INFO - [safety_detection_system.py:245] - 火焰烟雾检测结果: []
+2025-07-24 14:08:16 - VehicleDetection - INFO - [safety_detection_system.py:361] - 检测历史更新完成，当前历史记录长度为0
+2025-07-24 14:08:18 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:08:20 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:08:23 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:08:25 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:08:26 - VehicleDetection - INFO - [safety_detection_system.py:353] - 火焰检测结果: []
+2025-07-24 14:08:26 - VehicleDetection - INFO - [safety_detection_system.py:245] - 火焰烟雾检测结果: []
+2025-07-24 14:08:26 - VehicleDetection - INFO - [safety_detection_system.py:361] - 检测历史更新完成，当前历史记录长度为0
+2025-07-24 14:08:27 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:08:30 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:08:32 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:08:35 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:08:36 - VehicleDetection - INFO - [safety_detection_system.py:353] - 火焰检测结果: []
+2025-07-24 14:08:36 - VehicleDetection - INFO - [safety_detection_system.py:245] - 火焰烟雾检测结果: []
+2025-07-24 14:08:36 - VehicleDetection - INFO - [safety_detection_system.py:361] - 检测历史更新完成，当前历史记录长度为0
+2025-07-24 14:08:37 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:15:21 - VehicleDetection - INFO - [config_util.py:11] - Configuration loaded successfully
+2025-07-24 14:15:21 - VehicleDetection - INFO - [vehicle_detection.py:46] - Vehicle detection is disabled in configuration
+2025-07-24 14:15:21 - VehicleDetection - INFO - [safety_detection_system.py:33] - Safety detection enabled - Helmet: False, Fire: True
+2025-07-24 14:15:21 - VehicleDetection - INFO - [safety_detection_system.py:120] - Fire detection threads created
+2025-07-24 14:15:21 - VehicleDetection - INFO - [safety_detection_system.py:142] - 开始fire视频流，通道号为7
+2025-07-24 14:15:21 - VehicleDetection - INFO - [safety_detection_system.py:125] - Started safety detection thread: Thread-1 (camera_stream)
+2025-07-24 14:15:21 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:15:21 - VehicleDetection - INFO - [safety_detection_system.py:125] - Started safety detection thread: Thread-2 (process_frame_fire)
+2025-07-24 14:15:23 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:15:26 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:15:28 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:15:31 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:15:31 - VehicleDetection - INFO - [safety_detection_system.py:353] - 火焰检测结果: []
+2025-07-24 14:15:31 - VehicleDetection - INFO - [safety_detection_system.py:245] - 火焰烟雾检测结果: []
+2025-07-24 14:15:31 - VehicleDetection - INFO - [safety_detection_system.py:361] - 检测历史更新完成，当前历史记录长度为0
+2025-07-24 14:15:33 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:15:36 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:15:38 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:15:41 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:15:41 - VehicleDetection - INFO - [safety_detection_system.py:353] - 火焰检测结果: []
+2025-07-24 14:15:41 - VehicleDetection - INFO - [safety_detection_system.py:245] - 火焰烟雾检测结果: []
+2025-07-24 14:15:41 - VehicleDetection - INFO - [safety_detection_system.py:361] - 检测历史更新完成，当前历史记录长度为0
+2025-07-24 14:15:43 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:15:46 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:15:48 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:15:50 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:15:52 - VehicleDetection - INFO - [safety_detection_system.py:353] - 火焰检测结果: []
+2025-07-24 14:15:52 - VehicleDetection - INFO - [safety_detection_system.py:245] - 火焰烟雾检测结果: []
+2025-07-24 14:15:52 - VehicleDetection - INFO - [safety_detection_system.py:361] - 检测历史更新完成，当前历史记录长度为0
+2025-07-24 14:15:53 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:15:55 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:15:58 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:16:00 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:16:02 - VehicleDetection - INFO - [safety_detection_system.py:353] - 火焰检测结果: []
+2025-07-24 14:16:02 - VehicleDetection - INFO - [safety_detection_system.py:245] - 火焰烟雾检测结果: []
+2025-07-24 14:16:02 - VehicleDetection - INFO - [safety_detection_system.py:361] - 检测历史更新完成，当前历史记录长度为0
+2025-07-24 14:16:03 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:16:05 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:16:08 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:16:10 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:16:12 - VehicleDetection - INFO - [safety_detection_system.py:353] - 火焰检测结果: []
+2025-07-24 14:16:12 - VehicleDetection - INFO - [safety_detection_system.py:245] - 火焰烟雾检测结果: []
+2025-07-24 14:16:12 - VehicleDetection - INFO - [safety_detection_system.py:361] - 检测历史更新完成，当前历史记录长度为0
+2025-07-24 14:16:13 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:16:15 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:16:18 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:16:20 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:16:22 - VehicleDetection - INFO - [safety_detection_system.py:353] - 火焰检测结果: []
+2025-07-24 14:16:22 - VehicleDetection - INFO - [safety_detection_system.py:245] - 火焰烟雾检测结果: []
+2025-07-24 14:16:22 - VehicleDetection - INFO - [safety_detection_system.py:361] - 检测历史更新完成，当前历史记录长度为0
+2025-07-24 14:16:23 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:16:25 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:16:28 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:16:30 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:16:32 - VehicleDetection - INFO - [safety_detection_system.py:353] - 火焰检测结果: []
+2025-07-24 14:16:32 - VehicleDetection - INFO - [safety_detection_system.py:245] - 火焰烟雾检测结果: []
+2025-07-24 14:16:32 - VehicleDetection - INFO - [safety_detection_system.py:361] - 检测历史更新完成，当前历史记录长度为0
+2025-07-24 14:16:32 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:16:35 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:16:37 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:16:40 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:16:53 - VehicleDetection - INFO - [config_util.py:11] - Configuration loaded successfully
+2025-07-24 14:16:53 - VehicleDetection - INFO - [vehicle_detection.py:46] - Vehicle detection is disabled in configuration
+2025-07-24 14:16:53 - VehicleDetection - INFO - [safety_detection_system.py:33] - Safety detection enabled - Helmet: False, Fire: True
+2025-07-24 14:16:53 - VehicleDetection - INFO - [safety_detection_system.py:120] - Fire detection threads created
+2025-07-24 14:16:53 - VehicleDetection - INFO - [safety_detection_system.py:142] - 开始fire视频流，通道号为7
+2025-07-24 14:16:53 - VehicleDetection - INFO - [safety_detection_system.py:125] - Started safety detection thread: Thread-1 (camera_stream)
+2025-07-24 14:16:53 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:16:53 - VehicleDetection - INFO - [safety_detection_system.py:125] - Started safety detection thread: Thread-2 (process_frame_fire)
+2025-07-24 14:16:56 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:16:58 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:17:00 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:17:03 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:17:04 - VehicleDetection - INFO - [safety_detection_system.py:353] - 火焰检测结果: []
+2025-07-24 14:17:04 - VehicleDetection - INFO - [safety_detection_system.py:245] - 火焰烟雾检测结果: []
+2025-07-24 14:17:04 - VehicleDetection - INFO - [safety_detection_system.py:361] - 检测历史更新完成，当前历史记录长度为0
+2025-07-24 14:17:05 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:17:08 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:17:10 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:17:13 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:17:14 - VehicleDetection - INFO - [safety_detection_system.py:353] - 火焰检测结果: []
+2025-07-24 14:17:14 - VehicleDetection - INFO - [safety_detection_system.py:245] - 火焰烟雾检测结果: []
+2025-07-24 14:17:14 - VehicleDetection - INFO - [safety_detection_system.py:361] - 检测历史更新完成，当前历史记录长度为0
+2025-07-24 14:17:15 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:17:18 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:17:52 - VehicleDetection - INFO - [config_util.py:11] - Configuration loaded successfully
+2025-07-24 14:17:52 - VehicleDetection - INFO - [vehicle_detection.py:46] - Vehicle detection is disabled in configuration
+2025-07-24 14:17:52 - VehicleDetection - INFO - [safety_detection_system.py:33] - Safety detection enabled - Helmet: False, Fire: True
+2025-07-24 14:17:52 - VehicleDetection - INFO - [safety_detection_system.py:120] - Fire detection threads created
+2025-07-24 14:17:52 - VehicleDetection - INFO - [safety_detection_system.py:142] - 开始fire视频流，通道号为7
+2025-07-24 14:17:52 - VehicleDetection - INFO - [safety_detection_system.py:125] - Started safety detection thread: Thread-1 (camera_stream)
+2025-07-24 14:17:52 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:17:52 - VehicleDetection - INFO - [safety_detection_system.py:125] - Started safety detection thread: Thread-2 (process_frame_fire)
+2025-07-24 14:17:55 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:17:57 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:17:59 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:18:02 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:18:03 - VehicleDetection - INFO - [safety_detection_system.py:353] - 火焰检测结果: []
+2025-07-24 14:18:03 - VehicleDetection - INFO - [safety_detection_system.py:245] - 火焰烟雾检测结果: []
+2025-07-24 14:18:03 - VehicleDetection - INFO - [safety_detection_system.py:361] - 检测历史更新完成，当前历史记录长度为0
+2025-07-24 14:18:04 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:18:07 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:18:44 - VehicleDetection - INFO - [config_util.py:11] - Configuration loaded successfully
+2025-07-24 14:18:44 - VehicleDetection - INFO - [vehicle_detection.py:46] - Vehicle detection is disabled in configuration
+2025-07-24 14:18:44 - VehicleDetection - INFO - [safety_detection_system.py:33] - Safety detection enabled - Helmet: False, Fire: True
+2025-07-24 14:18:44 - VehicleDetection - INFO - [safety_detection_system.py:120] - Fire detection threads created
+2025-07-24 14:18:44 - VehicleDetection - INFO - [safety_detection_system.py:142] - 开始fire视频流，通道号为7
+2025-07-24 14:18:44 - VehicleDetection - INFO - [safety_detection_system.py:125] - Started safety detection thread: Thread-1 (camera_stream)
+2025-07-24 14:18:44 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:18:44 - VehicleDetection - INFO - [safety_detection_system.py:125] - Started safety detection thread: Thread-2 (process_frame_fire)
+2025-07-24 14:18:46 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:18:49 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:18:51 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:18:54 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:18:54 - VehicleDetection - INFO - [safety_detection_system.py:353] - 火焰检测结果: []
+2025-07-24 14:18:54 - VehicleDetection - INFO - [safety_detection_system.py:245] - 火焰烟雾检测结果: []
+2025-07-24 14:18:54 - VehicleDetection - INFO - [safety_detection_system.py:361] - 检测历史更新完成，当前历史记录长度为0
+2025-07-24 14:18:56 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:18:58 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:19:01 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:19:03 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:19:04 - VehicleDetection - INFO - [safety_detection_system.py:353] - 火焰检测结果: []
+2025-07-24 14:19:04 - VehicleDetection - INFO - [safety_detection_system.py:245] - 火焰烟雾检测结果: []
+2025-07-24 14:19:04 - VehicleDetection - INFO - [safety_detection_system.py:361] - 检测历史更新完成，当前历史记录长度为0
+2025-07-24 14:19:06 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:19:08 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:19:11 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:19:13 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:19:14 - VehicleDetection - INFO - [safety_detection_system.py:353] - 火焰检测结果: []
+2025-07-24 14:19:14 - VehicleDetection - INFO - [safety_detection_system.py:245] - 火焰烟雾检测结果: []
+2025-07-24 14:19:14 - VehicleDetection - INFO - [safety_detection_system.py:361] - 检测历史更新完成，当前历史记录长度为0
+2025-07-24 14:19:16 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:19:18 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:19:21 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:19:23 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:19:24 - VehicleDetection - INFO - [safety_detection_system.py:353] - 火焰检测结果: []
+2025-07-24 14:19:24 - VehicleDetection - INFO - [safety_detection_system.py:245] - 火焰烟雾检测结果: []
+2025-07-24 14:19:24 - VehicleDetection - INFO - [safety_detection_system.py:361] - 检测历史更新完成，当前历史记录长度为0
+2025-07-24 14:19:25 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:19:28 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:19:30 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:19:33 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:19:34 - VehicleDetection - INFO - [safety_detection_system.py:353] - 火焰检测结果: []
+2025-07-24 14:19:34 - VehicleDetection - INFO - [safety_detection_system.py:245] - 火焰烟雾检测结果: []
+2025-07-24 14:19:34 - VehicleDetection - INFO - [safety_detection_system.py:361] - 检测历史更新完成，当前历史记录长度为0
+2025-07-24 14:19:35 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:19:38 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:19:40 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:19:43 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:19:45 - VehicleDetection - INFO - [safety_detection_system.py:353] - 火焰检测结果: []
+2025-07-24 14:19:45 - VehicleDetection - INFO - [safety_detection_system.py:245] - 火焰烟雾检测结果: []
+2025-07-24 14:19:45 - VehicleDetection - INFO - [safety_detection_system.py:361] - 检测历史更新完成，当前历史记录长度为0
+2025-07-24 14:19:45 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:19:48 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:19:50 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:19:53 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:19:55 - VehicleDetection - INFO - [safety_detection_system.py:353] - 火焰检测结果: []
+2025-07-24 14:19:55 - VehicleDetection - INFO - [safety_detection_system.py:245] - 火焰烟雾检测结果: []
+2025-07-24 14:19:55 - VehicleDetection - INFO - [safety_detection_system.py:361] - 检测历史更新完成，当前历史记录长度为0
+2025-07-24 14:19:55 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:19:57 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:20:00 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:20:02 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:20:05 - VehicleDetection - INFO - [safety_detection_system.py:353] - 火焰检测结果: []
+2025-07-24 14:20:05 - VehicleDetection - INFO - [safety_detection_system.py:245] - 火焰烟雾检测结果: []
+2025-07-24 14:20:05 - VehicleDetection - INFO - [safety_detection_system.py:361] - 检测历史更新完成，当前历史记录长度为0
+2025-07-24 14:20:05 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:20:07 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:20:10 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:20:12 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:20:15 - VehicleDetection - INFO - [safety_detection_system.py:353] - 火焰检测结果: []
+2025-07-24 14:20:15 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:20:15 - VehicleDetection - INFO - [safety_detection_system.py:245] - 火焰烟雾检测结果: []
+2025-07-24 14:20:15 - VehicleDetection - INFO - [safety_detection_system.py:361] - 检测历史更新完成，当前历史记录长度为0
+2025-07-24 14:20:17 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:20:20 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:20:22 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:20:24 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:20:25 - VehicleDetection - INFO - [safety_detection_system.py:353] - 火焰检测结果: []
+2025-07-24 14:20:25 - VehicleDetection - INFO - [safety_detection_system.py:245] - 火焰烟雾检测结果: []
+2025-07-24 14:20:25 - VehicleDetection - INFO - [safety_detection_system.py:361] - 检测历史更新完成，当前历史记录长度为0
+2025-07-24 14:20:27 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:20:29 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:20:32 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:20:34 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:20:35 - VehicleDetection - INFO - [safety_detection_system.py:353] - 火焰检测结果: []
+2025-07-24 14:20:35 - VehicleDetection - INFO - [safety_detection_system.py:245] - 火焰烟雾检测结果: []
+2025-07-24 14:20:35 - VehicleDetection - INFO - [safety_detection_system.py:361] - 检测历史更新完成，当前历史记录长度为0
+2025-07-24 14:20:37 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:20:39 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:20:42 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:20:44 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:20:45 - VehicleDetection - INFO - [safety_detection_system.py:353] - 火焰检测结果: []
+2025-07-24 14:20:45 - VehicleDetection - INFO - [safety_detection_system.py:245] - 火焰烟雾检测结果: []
+2025-07-24 14:20:45 - VehicleDetection - INFO - [safety_detection_system.py:361] - 检测历史更新完成，当前历史记录长度为0
+2025-07-24 14:20:46 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:20:49 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:20:51 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:20:54 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:20:55 - VehicleDetection - INFO - [safety_detection_system.py:353] - 火焰检测结果: []
+2025-07-24 14:20:55 - VehicleDetection - INFO - [safety_detection_system.py:245] - 火焰烟雾检测结果: []
+2025-07-24 14:20:55 - VehicleDetection - INFO - [safety_detection_system.py:361] - 检测历史更新完成，当前历史记录长度为0
+2025-07-24 14:20:56 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:20:59 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:21:01 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:21:04 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:21:05 - VehicleDetection - INFO - [safety_detection_system.py:353] - 火焰检测结果: []
+2025-07-24 14:21:05 - VehicleDetection - INFO - [safety_detection_system.py:245] - 火焰烟雾检测结果: []
+2025-07-24 14:21:05 - VehicleDetection - INFO - [safety_detection_system.py:361] - 检测历史更新完成，当前历史记录长度为0
+2025-07-24 14:21:06 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:21:09 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:21:11 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:21:13 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:21:15 - VehicleDetection - INFO - [safety_detection_system.py:353] - 火焰检测结果: []
+2025-07-24 14:21:15 - VehicleDetection - INFO - [safety_detection_system.py:245] - 火焰烟雾检测结果: []
+2025-07-24 14:21:15 - VehicleDetection - INFO - [safety_detection_system.py:361] - 检测历史更新完成，当前历史记录长度为0
+2025-07-24 14:21:16 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:21:18 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:21:21 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:21:23 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:22:11 - VehicleDetection - INFO - [config_util.py:11] - Configuration loaded successfully
+2025-07-24 14:22:11 - VehicleDetection - INFO - [vehicle_detection.py:46] - Vehicle detection is disabled in configuration
+2025-07-24 14:22:11 - VehicleDetection - INFO - [safety_detection_system.py:33] - Safety detection enabled - Helmet: False, Fire: True
+2025-07-24 14:22:11 - VehicleDetection - INFO - [safety_detection_system.py:120] - Fire detection threads created
+2025-07-24 14:22:11 - VehicleDetection - INFO - [safety_detection_system.py:142] - 开始fire视频流，通道号为7
+2025-07-24 14:22:11 - VehicleDetection - INFO - [safety_detection_system.py:125] - Started safety detection thread: Thread-1 (camera_stream)
+2025-07-24 14:22:11 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:22:11 - VehicleDetection - INFO - [safety_detection_system.py:125] - Started safety detection thread: Thread-2 (process_frame_fire)
+2025-07-24 14:22:14 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:22:16 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:22:19 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:22:21 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:22:22 - VehicleDetection - INFO - [safety_detection_system.py:353] - 火焰检测结果: []
+2025-07-24 14:22:22 - VehicleDetection - INFO - [safety_detection_system.py:245] - 火焰烟雾检测结果: []
+2025-07-24 14:22:22 - VehicleDetection - INFO - [safety_detection_system.py:361] - 检测历史更新完成，当前历史记录长度为0
+2025-07-24 14:22:23 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:22:26 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:22:28 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:22:31 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:22:32 - VehicleDetection - INFO - [safety_detection_system.py:353] - 火焰检测结果: []
+2025-07-24 14:22:32 - VehicleDetection - INFO - [safety_detection_system.py:245] - 火焰烟雾检测结果: []
+2025-07-24 14:22:32 - VehicleDetection - INFO - [safety_detection_system.py:361] - 检测历史更新完成，当前历史记录长度为0
+2025-07-24 14:22:33 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:22:36 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:22:38 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:27:44 - VehicleDetection - INFO - [config_util.py:11] - Configuration loaded successfully
+2025-07-24 14:27:44 - VehicleDetection - INFO - [vehicle_detection.py:46] - Vehicle detection is disabled in configuration
+2025-07-24 14:27:44 - VehicleDetection - INFO - [safety_detection_system.py:33] - Safety detection enabled - Helmet: False, Fire: True
+2025-07-24 14:27:44 - VehicleDetection - INFO - [safety_detection_system.py:120] - Fire detection threads created
+2025-07-24 14:27:44 - VehicleDetection - INFO - [safety_detection_system.py:142] - 开始fire视频流，通道号为7
+2025-07-24 14:27:44 - VehicleDetection - INFO - [safety_detection_system.py:125] - Started safety detection thread: Thread-1 (camera_stream)
+2025-07-24 14:27:44 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:27:44 - VehicleDetection - INFO - [safety_detection_system.py:125] - Started safety detection thread: Thread-2 (process_frame_fire)
+2025-07-24 14:27:47 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:27:49 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:27:52 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:27:54 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:27:55 - VehicleDetection - INFO - [safety_detection_system.py:353] - 火焰检测结果: []
+2025-07-24 14:27:55 - VehicleDetection - INFO - [safety_detection_system.py:245] - 火焰烟雾检测结果: []
+2025-07-24 14:27:55 - VehicleDetection - INFO - [safety_detection_system.py:361] - 检测历史更新完成，当前历史记录长度为0
+2025-07-24 14:27:57 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:27:59 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:28:02 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:28:04 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:28:05 - VehicleDetection - INFO - [safety_detection_system.py:353] - 火焰检测结果: []
+2025-07-24 14:28:05 - VehicleDetection - INFO - [safety_detection_system.py:245] - 火焰烟雾检测结果: []
+2025-07-24 14:28:05 - VehicleDetection - INFO - [safety_detection_system.py:361] - 检测历史更新完成，当前历史记录长度为0
+2025-07-24 14:28:07 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:28:09 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:28:12 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:28:14 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:28:15 - VehicleDetection - INFO - [safety_detection_system.py:353] - 火焰检测结果: []
+2025-07-24 14:28:15 - VehicleDetection - INFO - [safety_detection_system.py:245] - 火焰烟雾检测结果: []
+2025-07-24 14:28:15 - VehicleDetection - INFO - [safety_detection_system.py:361] - 检测历史更新完成，当前历史记录长度为0
+2025-07-24 14:28:16 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:28:19 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:28:21 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:28:24 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:28:25 - VehicleDetection - INFO - [safety_detection_system.py:353] - 火焰检测结果: []
+2025-07-24 14:28:25 - VehicleDetection - INFO - [safety_detection_system.py:245] - 火焰烟雾检测结果: []
+2025-07-24 14:28:25 - VehicleDetection - INFO - [safety_detection_system.py:361] - 检测历史更新完成，当前历史记录长度为0
+2025-07-24 14:28:26 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:28:29 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:28:31 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:28:34 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:28:35 - VehicleDetection - INFO - [safety_detection_system.py:353] - 火焰检测结果: []
+2025-07-24 14:28:35 - VehicleDetection - INFO - [safety_detection_system.py:245] - 火焰烟雾检测结果: []
+2025-07-24 14:28:35 - VehicleDetection - INFO - [safety_detection_system.py:361] - 检测历史更新完成，当前历史记录长度为0
+2025-07-24 14:28:36 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:28:39 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:28:41 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:28:44 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:28:45 - VehicleDetection - INFO - [safety_detection_system.py:353] - 火焰检测结果: []
+2025-07-24 14:28:45 - VehicleDetection - INFO - [safety_detection_system.py:245] - 火焰烟雾检测结果: []
+2025-07-24 14:28:45 - VehicleDetection - INFO - [safety_detection_system.py:361] - 检测历史更新完成，当前历史记录长度为0
+2025-07-24 14:28:46 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:28:48 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:28:51 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:28:53 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:28:56 - VehicleDetection - INFO - [safety_detection_system.py:353] - 火焰检测结果: []
+2025-07-24 14:28:56 - VehicleDetection - INFO - [safety_detection_system.py:245] - 火焰烟雾检测结果: []
+2025-07-24 14:28:56 - VehicleDetection - INFO - [safety_detection_system.py:361] - 检测历史更新完成，当前历史记录长度为0
+2025-07-24 14:28:56 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:28:58 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:29:01 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:29:03 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:29:06 - VehicleDetection - INFO - [safety_detection_system.py:353] - 火焰检测结果: []
+2025-07-24 14:29:06 - VehicleDetection - INFO - [safety_detection_system.py:245] - 火焰烟雾检测结果: []
+2025-07-24 14:29:06 - VehicleDetection - INFO - [safety_detection_system.py:361] - 检测历史更新完成，当前历史记录长度为0
+2025-07-24 14:29:06 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:29:08 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:29:11 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:29:13 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:29:16 - VehicleDetection - INFO - [safety_detection_system.py:353] - 火焰检测结果: []
+2025-07-24 14:29:16 - VehicleDetection - INFO - [safety_detection_system.py:245] - 火焰烟雾检测结果: []
+2025-07-24 14:29:16 - VehicleDetection - INFO - [safety_detection_system.py:361] - 检测历史更新完成，当前历史记录长度为0
+2025-07-24 14:29:16 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:29:18 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:29:21 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:29:23 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:29:26 - VehicleDetection - INFO - [safety_detection_system.py:353] - 火焰检测结果: []
+2025-07-24 14:29:26 - VehicleDetection - INFO - [safety_detection_system.py:245] - 火焰烟雾检测结果: []
+2025-07-24 14:29:26 - VehicleDetection - INFO - [safety_detection_system.py:361] - 检测历史更新完成，当前历史记录长度为0
+2025-07-24 14:29:26 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:29:28 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:29:31 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:29:33 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:29:35 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:29:36 - VehicleDetection - INFO - [safety_detection_system.py:353] - 火焰检测结果: []
+2025-07-24 14:29:36 - VehicleDetection - INFO - [safety_detection_system.py:245] - 火焰烟雾检测结果: []
+2025-07-24 14:29:36 - VehicleDetection - INFO - [safety_detection_system.py:361] - 检测历史更新完成，当前历史记录长度为0
+2025-07-24 14:29:38 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:29:40 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:29:43 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:29:45 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:29:46 - VehicleDetection - INFO - [safety_detection_system.py:353] - 火焰检测结果: []
+2025-07-24 14:29:46 - VehicleDetection - INFO - [safety_detection_system.py:245] - 火焰烟雾检测结果: []
+2025-07-24 14:29:46 - VehicleDetection - INFO - [safety_detection_system.py:361] - 检测历史更新完成，当前历史记录长度为0
+2025-07-24 14:29:48 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:29:50 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:29:52 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:29:55 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:29:56 - VehicleDetection - INFO - [safety_detection_system.py:353] - 火焰检测结果: []
+2025-07-24 14:29:56 - VehicleDetection - INFO - [safety_detection_system.py:245] - 火焰烟雾检测结果: []
+2025-07-24 14:29:56 - VehicleDetection - INFO - [safety_detection_system.py:361] - 检测历史更新完成，当前历史记录长度为0
+2025-07-24 14:29:57 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:30:00 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:30:02 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:30:05 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:30:06 - VehicleDetection - INFO - [safety_detection_system.py:353] - 火焰检测结果: []
+2025-07-24 14:30:06 - VehicleDetection - INFO - [safety_detection_system.py:245] - 火焰烟雾检测结果: []
+2025-07-24 14:30:06 - VehicleDetection - INFO - [safety_detection_system.py:361] - 检测历史更新完成，当前历史记录长度为0
+2025-07-24 14:30:07 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:30:10 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:30:12 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:30:15 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:30:16 - VehicleDetection - INFO - [safety_detection_system.py:353] - 火焰检测结果: []
+2025-07-24 14:30:16 - VehicleDetection - INFO - [safety_detection_system.py:245] - 火焰烟雾检测结果: []
+2025-07-24 14:30:16 - VehicleDetection - INFO - [safety_detection_system.py:361] - 检测历史更新完成，当前历史记录长度为0
+2025-07-24 14:30:17 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:30:20 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:30:22 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:30:24 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:30:26 - VehicleDetection - INFO - [safety_detection_system.py:353] - 火焰检测结果: []
+2025-07-24 14:30:26 - VehicleDetection - INFO - [safety_detection_system.py:245] - 火焰烟雾检测结果: []
+2025-07-24 14:30:26 - VehicleDetection - INFO - [safety_detection_system.py:361] - 检测历史更新完成，当前历史记录长度为0
+2025-07-24 14:30:27 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:30:29 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:30:32 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:30:34 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:30:36 - VehicleDetection - INFO - [safety_detection_system.py:353] - 火焰检测结果: []
+2025-07-24 14:30:36 - VehicleDetection - INFO - [safety_detection_system.py:245] - 火焰烟雾检测结果: []
+2025-07-24 14:30:36 - VehicleDetection - INFO - [safety_detection_system.py:361] - 检测历史更新完成，当前历史记录长度为0
+2025-07-24 14:30:37 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:30:39 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:30:42 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:30:44 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:30:46 - VehicleDetection - INFO - [safety_detection_system.py:353] - 火焰检测结果: []
+2025-07-24 14:30:46 - VehicleDetection - INFO - [safety_detection_system.py:245] - 火焰烟雾检测结果: []
+2025-07-24 14:30:46 - VehicleDetection - INFO - [safety_detection_system.py:361] - 检测历史更新完成，当前历史记录长度为0
+2025-07-24 14:30:47 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:30:49 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:30:52 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:30:54 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:30:56 - VehicleDetection - INFO - [safety_detection_system.py:353] - 火焰检测结果: []
+2025-07-24 14:30:56 - VehicleDetection - INFO - [safety_detection_system.py:245] - 火焰烟雾检测结果: []
+2025-07-24 14:30:56 - VehicleDetection - INFO - [safety_detection_system.py:361] - 检测历史更新完成，当前历史记录长度为0
+2025-07-24 14:30:57 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:30:59 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:31:02 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:31:04 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:31:06 - VehicleDetection - INFO - [safety_detection_system.py:353] - 火焰检测结果: []
+2025-07-24 14:31:06 - VehicleDetection - INFO - [safety_detection_system.py:245] - 火焰烟雾检测结果: []
+2025-07-24 14:31:06 - VehicleDetection - INFO - [safety_detection_system.py:361] - 检测历史更新完成，当前历史记录长度为0
+2025-07-24 14:31:07 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:31:09 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:31:11 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:31:14 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:31:16 - VehicleDetection - INFO - [safety_detection_system.py:353] - 火焰检测结果: []
+2025-07-24 14:31:16 - VehicleDetection - INFO - [safety_detection_system.py:245] - 火焰烟雾检测结果: []
+2025-07-24 14:31:16 - VehicleDetection - INFO - [safety_detection_system.py:361] - 检测历史更新完成，当前历史记录长度为0
+2025-07-24 14:31:16 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 14:31:19 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream

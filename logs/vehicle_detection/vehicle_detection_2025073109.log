@@ -1,0 +1,55 @@
+2025-07-31 09:59:13 - VehicleDetection - INFO - [config_util.py:11] - Configuration loaded successfully
+2025-07-31 09:59:13 - VehicleDetection - INFO - [vehicle_information.py:56] - Loading YOLO model from models/best.pt
+2025-07-31 09:59:18 - VehicleDetection - INFO - [vehicle_information.py:67] - PaddleOCR initialized with config: {'use_angle_cls': True, 'lang': 'ch', 'confidence_threshold': 0.7}
+2025-07-31 09:59:19 - VehicleDetection - INFO - [vehicle_information.py:86] - EasyOCR initialized with config: {'languages': ['ch_sim', 'en'], 'gpu': False, 'confidence_threshold': 0.7}
+2025-07-31 09:59:19 - VehicleDetection - INFO - [vehicle_detection.py:79] - Loading YOLO model from ./models/best.pt
+2025-07-31 09:59:19 - VehicleDetection - INFO - [vehicle_detection.py:103] - VehicleDetection system initialized successfully
+2025-07-31 09:59:19 - VehicleDetection - INFO - [vehicle_detection.py:104] - Entrance scene enabled: True, Exit scene enabled: False
+2025-07-31 09:59:19 - VehicleDetection - INFO - [vehicle_detection.py:494] - Starting entrance camera stream with index 2
+2025-07-31 09:59:19 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-31 09:59:19 - VehicleDetection - INFO - [safety_detection_system.py:29] - Both helmet and fire detection are disabled in configuration
+2025-07-31 09:59:21 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-31 09:59:22 - VehicleDetection - INFO - [vehicle_detection.py:133] - 线程entrance YOLO未检测到任何目标
+2025-07-31 09:59:23 - VehicleDetection - INFO - [vehicle_detection.py:133] - 线程entrance YOLO未检测到任何目标
+2025-07-31 09:59:23 - VehicleDetection - INFO - [vehicle_detection.py:133] - 线程entrance YOLO未检测到任何目标
+2025-07-31 09:59:24 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-31 09:59:24 - VehicleDetection - INFO - [vehicle_detection.py:133] - 线程entrance YOLO未检测到任何目标
+2025-07-31 09:59:24 - VehicleDetection - INFO - [vehicle_detection.py:133] - 线程entrance YOLO未检测到任何目标
+2025-07-31 09:59:25 - VehicleDetection - INFO - [vehicle_detection.py:133] - 线程entrance YOLO未检测到任何目标
+2025-07-31 09:59:25 - VehicleDetection - INFO - [vehicle_detection.py:133] - 线程entrance YOLO未检测到任何目标
+2025-07-31 09:59:26 - VehicleDetection - INFO - [vehicle_detection.py:133] - 线程entrance YOLO未检测到任何目标
+2025-07-31 09:59:26 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-31 09:59:26 - VehicleDetection - INFO - [vehicle_detection.py:133] - 线程entrance YOLO未检测到任何目标
+2025-07-31 09:59:27 - VehicleDetection - INFO - [vehicle_detection.py:133] - 线程entrance YOLO未检测到任何目标
+2025-07-31 09:59:27 - VehicleDetection - INFO - [vehicle_detection.py:133] - 线程entrance YOLO未检测到任何目标
+2025-07-31 09:59:28 - VehicleDetection - INFO - [vehicle_detection.py:133] - 线程entrance YOLO未检测到任何目标
+2025-07-31 09:59:28 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-31 09:59:28 - VehicleDetection - INFO - [vehicle_detection.py:133] - 线程entrance YOLO未检测到任何目标
+2025-07-31 09:59:29 - VehicleDetection - INFO - [vehicle_detection.py:133] - 线程entrance YOLO未检测到任何目标
+2025-07-31 09:59:30 - VehicleDetection - INFO - [vehicle_detection.py:133] - 线程entrance YOLO未检测到任何目标
+2025-07-31 09:59:30 - VehicleDetection - INFO - [vehicle_detection.py:133] - 线程entrance YOLO未检测到任何目标
+2025-07-31 09:59:31 - VehicleDetection - INFO - [vehicle_detection.py:133] - 线程entrance YOLO未检测到任何目标
+2025-07-31 09:59:31 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-31 09:59:31 - VehicleDetection - INFO - [vehicle_detection.py:133] - 线程entrance YOLO未检测到任何目标
+2025-07-31 09:59:32 - VehicleDetection - INFO - [vehicle_detection.py:133] - 线程entrance YOLO未检测到任何目标
+2025-07-31 09:59:32 - VehicleDetection - INFO - [vehicle_detection.py:133] - 线程entrance YOLO未检测到任何目标
+2025-07-31 09:59:33 - VehicleDetection - INFO - [vehicle_detection.py:133] - 线程entrance YOLO未检测到任何目标
+2025-07-31 09:59:33 - VehicleDetection - INFO - [vehicle_detection.py:133] - 线程entrance YOLO未检测到任何目标
+2025-07-31 09:59:33 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-31 09:59:34 - VehicleDetection - INFO - [vehicle_detection.py:133] - 线程entrance YOLO未检测到任何目标
+2025-07-31 09:59:34 - VehicleDetection - INFO - [vehicle_detection.py:133] - 线程entrance YOLO未检测到任何目标
+2025-07-31 09:59:35 - VehicleDetection - INFO - [vehicle_detection.py:133] - 线程entrance YOLO未检测到任何目标
+2025-07-31 09:59:35 - VehicleDetection - INFO - [vehicle_detection.py:133] - 线程entrance YOLO未检测到任何目标
+2025-07-31 09:59:36 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-31 09:59:36 - VehicleDetection - INFO - [vehicle_detection.py:133] - 线程entrance YOLO未检测到任何目标
+2025-07-31 09:59:36 - VehicleDetection - INFO - [vehicle_detection.py:133] - 线程entrance YOLO未检测到任何目标
+2025-07-31 09:59:37 - VehicleDetection - INFO - [vehicle_detection.py:133] - 线程entrance YOLO未检测到任何目标
+2025-07-31 09:59:38 - VehicleDetection - INFO - [vehicle_detection.py:133] - 线程entrance YOLO未检测到任何目标
+2025-07-31 09:59:38 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-31 09:59:38 - VehicleDetection - INFO - [vehicle_detection.py:133] - 线程entrance YOLO未检测到任何目标
+2025-07-31 09:59:39 - VehicleDetection - INFO - [vehicle_detection.py:133] - 线程entrance YOLO未检测到任何目标
+2025-07-31 09:59:39 - VehicleDetection - INFO - [vehicle_detection.py:133] - 线程entrance YOLO未检测到任何目标
+2025-07-31 09:59:40 - VehicleDetection - INFO - [vehicle_detection.py:133] - 线程entrance YOLO未检测到任何目标
+2025-07-31 09:59:40 - VehicleDetection - INFO - [vehicle_detection.py:133] - 线程entrance YOLO未检测到任何目标
+2025-07-31 09:59:41 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-31 09:59:41 - VehicleDetection - INFO - [vehicle_detection.py:133] - 线程entrance YOLO未检测到任何目标
