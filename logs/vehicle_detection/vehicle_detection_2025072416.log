@@ -1,0 +1,81 @@
+2025-07-24 16:00:59 - VehicleDetection - INFO - [config_util.py:11] - Configuration loaded successfully
+2025-07-24 16:00:59 - VehicleDetection - INFO - [vehicle_detection.py:46] - Vehicle detection is disabled in configuration
+2025-07-24 16:00:59 - VehicleDetection - INFO - [safety_detection_system.py:33] - Safety detection enabled - Helmet: False, Fire: True
+2025-07-24 16:00:59 - VehicleDetection - INFO - [safety_detection_system.py:120] - Fire detection threads created
+2025-07-24 16:00:59 - VehicleDetection - INFO - [safety_detection_system.py:142] - 开始fire视频流，通道号为7
+2025-07-24 16:00:59 - VehicleDetection - INFO - [safety_detection_system.py:125] - Started safety detection thread: Thread-1 (camera_stream)
+2025-07-24 16:00:59 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 16:00:59 - VehicleDetection - INFO - [safety_detection_system.py:125] - Started safety detection thread: Thread-2 (process_frame_fire)
+2025-07-24 16:01:29 - VehicleDetection - ERROR - [get_img.py:146] - 无法打开RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 16:01:29 - VehicleDetection - WARNING - [safety_detection_system.py:158] - 无法获取摄像头7的画面，请检查摄像头是否正常
+2025-07-24 16:01:29 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 16:01:59 - VehicleDetection - ERROR - [get_img.py:146] - 无法打开RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 16:01:59 - VehicleDetection - WARNING - [safety_detection_system.py:158] - 无法获取摄像头7的画面，请检查摄像头是否正常
+2025-07-24 16:01:59 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 16:02:50 - VehicleDetection - INFO - [config_util.py:11] - Configuration loaded successfully
+2025-07-24 16:02:50 - VehicleDetection - INFO - [vehicle_detection.py:46] - Vehicle detection is disabled in configuration
+2025-07-24 16:02:50 - VehicleDetection - INFO - [safety_detection_system.py:33] - Safety detection enabled - Helmet: False, Fire: True
+2025-07-24 16:02:50 - VehicleDetection - INFO - [safety_detection_system.py:120] - Fire detection threads created
+2025-07-24 16:02:50 - VehicleDetection - INFO - [safety_detection_system.py:142] - 开始fire视频流，通道号为7
+2025-07-24 16:02:50 - VehicleDetection - INFO - [safety_detection_system.py:125] - Started safety detection thread: Thread-1 (camera_stream)
+2025-07-24 16:02:50 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 16:02:50 - VehicleDetection - INFO - [safety_detection_system.py:125] - Started safety detection thread: Thread-2 (process_frame_fire)
+2025-07-24 16:04:13 - VehicleDetection - INFO - [config_util.py:11] - Configuration loaded successfully
+2025-07-24 16:04:13 - VehicleDetection - INFO - [vehicle_detection.py:46] - Vehicle detection is disabled in configuration
+2025-07-24 16:04:13 - VehicleDetection - INFO - [safety_detection_system.py:33] - Safety detection enabled - Helmet: False, Fire: True
+2025-07-24 16:04:13 - VehicleDetection - INFO - [safety_detection_system.py:120] - Fire detection threads created
+2025-07-24 16:04:13 - VehicleDetection - INFO - [safety_detection_system.py:142] - 开始fire视频流，通道号为7
+2025-07-24 16:04:13 - VehicleDetection - INFO - [safety_detection_system.py:125] - Started safety detection thread: Thread-1 (camera_stream)
+2025-07-24 16:04:13 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 16:04:13 - VehicleDetection - INFO - [safety_detection_system.py:125] - Started safety detection thread: Thread-2 (process_frame_fire)
+2025-07-24 16:05:35 - VehicleDetection - INFO - [config_util.py:11] - Configuration loaded successfully
+2025-07-24 16:05:35 - VehicleDetection - INFO - [vehicle_detection.py:46] - Vehicle detection is disabled in configuration
+2025-07-24 16:05:35 - VehicleDetection - INFO - [safety_detection_system.py:33] - Safety detection enabled - Helmet: False, Fire: True
+2025-07-24 16:05:35 - VehicleDetection - INFO - [safety_detection_system.py:120] - Fire detection threads created
+2025-07-24 16:05:35 - VehicleDetection - INFO - [safety_detection_system.py:142] - 开始fire视频流，通道号为7
+2025-07-24 16:05:35 - VehicleDetection - INFO - [safety_detection_system.py:125] - Started safety detection thread: Thread-1 (camera_stream)
+2025-07-24 16:05:35 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 16:05:35 - VehicleDetection - INFO - [safety_detection_system.py:125] - Started safety detection thread: Thread-2 (process_frame_fire)
+2025-07-24 16:07:14 - VehicleDetection - INFO - [config_util.py:11] - Configuration loaded successfully
+2025-07-24 16:07:14 - VehicleDetection - INFO - [vehicle_detection.py:46] - Vehicle detection is disabled in configuration
+2025-07-24 16:07:14 - VehicleDetection - INFO - [safety_detection_system.py:33] - Safety detection enabled - Helmet: False, Fire: True
+2025-07-24 16:07:14 - VehicleDetection - INFO - [safety_detection_system.py:120] - Fire detection threads created
+2025-07-24 16:07:14 - VehicleDetection - INFO - [safety_detection_system.py:142] - 开始fire视频流，通道号为7
+2025-07-24 16:07:14 - VehicleDetection - INFO - [safety_detection_system.py:125] - Started safety detection thread: Thread-1 (camera_stream)
+2025-07-24 16:07:14 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 16:07:14 - VehicleDetection - INFO - [safety_detection_system.py:125] - Started safety detection thread: Thread-2 (process_frame_fire)
+2025-07-24 16:08:08 - VehicleDetection - INFO - [config_util.py:11] - Configuration loaded successfully
+2025-07-24 16:08:08 - VehicleDetection - INFO - [vehicle_detection.py:46] - Vehicle detection is disabled in configuration
+2025-07-24 16:08:08 - VehicleDetection - INFO - [safety_detection_system.py:33] - Safety detection enabled - Helmet: False, Fire: True
+2025-07-24 16:08:08 - VehicleDetection - INFO - [safety_detection_system.py:120] - Fire detection threads created
+2025-07-24 16:08:08 - VehicleDetection - INFO - [safety_detection_system.py:142] - 开始fire视频流，通道号为7
+2025-07-24 16:08:08 - VehicleDetection - INFO - [safety_detection_system.py:125] - Started safety detection thread: Thread-1 (camera_stream)
+2025-07-24 16:08:08 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 16:08:08 - VehicleDetection - INFO - [safety_detection_system.py:125] - Started safety detection thread: Thread-2 (process_frame_fire)
+2025-07-24 16:10:02 - VehicleDetection - INFO - [config_util.py:11] - Configuration loaded successfully
+2025-07-24 16:10:02 - VehicleDetection - INFO - [vehicle_detection.py:46] - Vehicle detection is disabled in configuration
+2025-07-24 16:10:02 - VehicleDetection - INFO - [safety_detection_system.py:33] - Safety detection enabled - Helmet: False, Fire: True
+2025-07-24 16:10:02 - VehicleDetection - INFO - [safety_detection_system.py:120] - Fire detection threads created
+2025-07-24 16:10:02 - VehicleDetection - INFO - [safety_detection_system.py:142] - 开始fire视频流，通道号为7
+2025-07-24 16:10:02 - VehicleDetection - INFO - [safety_detection_system.py:125] - Started safety detection thread: Thread-1 (camera_stream)
+2025-07-24 16:10:02 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 16:10:02 - VehicleDetection - INFO - [safety_detection_system.py:125] - Started safety detection thread: Thread-2 (process_frame_fire)
+2025-07-24 16:12:45 - VehicleDetection - INFO - [config_util.py:11] - Configuration loaded successfully
+2025-07-24 16:12:45 - VehicleDetection - INFO - [vehicle_detection.py:46] - Vehicle detection is disabled in configuration
+2025-07-24 16:12:45 - VehicleDetection - INFO - [safety_detection_system.py:33] - Safety detection enabled - Helmet: False, Fire: True
+2025-07-24 16:12:45 - VehicleDetection - INFO - [safety_detection_system.py:120] - Fire detection threads created
+2025-07-24 16:12:45 - VehicleDetection - INFO - [safety_detection_system.py:142] - 开始fire视频流，通道号为7
+2025-07-24 16:12:45 - VehicleDetection - INFO - [safety_detection_system.py:125] - Started safety detection thread: Thread-1 (camera_stream)
+2025-07-24 16:12:45 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 16:12:45 - VehicleDetection - INFO - [safety_detection_system.py:125] - Started safety detection thread: Thread-2 (process_frame_fire)
+2025-07-24 16:13:15 - VehicleDetection - ERROR - [get_img.py:146] - 无法打开RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 16:13:15 - VehicleDetection - WARNING - [safety_detection_system.py:158] - 无法获取摄像头7的画面，请检查摄像头是否正常
+2025-07-24 16:13:15 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 16:14:23 - VehicleDetection - INFO - [config_util.py:11] - Configuration loaded successfully
+2025-07-24 16:14:23 - VehicleDetection - INFO - [vehicle_detection.py:46] - Vehicle detection is disabled in configuration
+2025-07-24 16:14:23 - VehicleDetection - INFO - [safety_detection_system.py:33] - Safety detection enabled - Helmet: False, Fire: True
+2025-07-24 16:14:23 - VehicleDetection - INFO - [safety_detection_system.py:120] - Fire detection threads created
+2025-07-24 16:14:23 - VehicleDetection - INFO - [safety_detection_system.py:142] - 开始fire视频流，通道号为7
+2025-07-24 16:14:23 - VehicleDetection - INFO - [safety_detection_system.py:125] - Started safety detection thread: Thread-1 (camera_stream)
+2025-07-24 16:14:23 - VehicleDetection - INFO - [get_img.py:139] - 尝试连接RTSP URL: rtsp://192.168.3.14:554/user=admin_password=0CJbuXuI_channel=0_stream=0&onvif=5.sdp?real_stream
+2025-07-24 16:14:23 - VehicleDetection - INFO - [safety_detection_system.py:125] - Started safety detection thread: Thread-2 (process_frame_fire)

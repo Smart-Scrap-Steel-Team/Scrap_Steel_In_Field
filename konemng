@@ -1,0 +1,13 @@
+1.@app.route('/video_feed')(app_final.py)
+
+2.def run_inference_loop():(app_final.py)
+
+3.<div id="monitorImage"> (index_bak.html)
+
+4.setInterval(updateSegmentationStats, 1000)(index_bak.js)
+
+5.@app.route('/start_arm', methods=['POST'])(app_final.py)
+
+ document.getElementById('startArmBtn').addEventListener('click', function() {
+    fetch('/start_arm', { method: 'POST' }); // 触发后端抓取流程
+});(index_bak.js)

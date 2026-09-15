@@ -1,0 +1,21 @@
+2025-07-25 14:02:34 - VehicleDetection - INFO - [config_util.py:11] - Configuration loaded successfully
+2025-07-25 14:02:34 - VehicleDetection - INFO - [vehicle_detection.py:46] - Vehicle detection is disabled in configuration
+2025-07-25 14:02:34 - VehicleDetection - INFO - [safety_detection_system.py:29] - Both helmet and fire detection are disabled in configuration
+2025-07-25 14:05:49 - VehicleDetection - INFO - [config_util.py:11] - Configuration loaded successfully
+2025-07-25 14:05:49 - VehicleDetection - INFO - [vehicle_detection.py:46] - Vehicle detection is disabled in configuration
+2025-07-25 14:05:49 - VehicleDetection - INFO - [safety_detection_system.py:29] - Both helmet and fire detection are disabled in configuration
+2025-07-25 14:07:07 - VehicleDetection - INFO - [config_util.py:11] - Configuration loaded successfully
+2025-07-25 14:07:07 - VehicleDetection - INFO - [vehicle_detection.py:46] - Vehicle detection is disabled in configuration
+2025-07-25 14:07:07 - VehicleDetection - INFO - [safety_detection_system.py:29] - Both helmet and fire detection are disabled in configuration
+2025-07-25 14:37:06 - VehicleDetection - INFO - [config_util.py:11] - Configuration loaded successfully
+2025-07-25 14:37:06 - VehicleDetection - INFO - [vehicle_detection.py:46] - Vehicle detection is disabled in configuration
+2025-07-25 14:37:06 - VehicleDetection - INFO - [safety_detection_system.py:29] - Both helmet and fire detection are disabled in configuration
+2025-07-25 14:42:57 - VehicleDetection - INFO - [config_util.py:11] - Configuration loaded successfully
+2025-07-25 14:42:57 - VehicleDetection - INFO - [vehicle_detection.py:46] - Vehicle detection is disabled in configuration
+2025-07-25 14:42:57 - VehicleDetection - INFO - [safety_detection_system.py:29] - Both helmet and fire detection are disabled in configuration
+2025-07-25 14:51:13 - VehicleDetection - INFO - [config_util.py:11] - Configuration loaded successfully
+2025-07-25 14:51:13 - VehicleDetection - INFO - [vehicle_detection.py:46] - Vehicle detection is disabled in configuration
+2025-07-25 14:51:13 - VehicleDetection - INFO - [safety_detection_system.py:29] - Both helmet and fire detection are disabled in configuration
+2025-07-25 14:54:58 - VehicleDetection - INFO - [config_util.py:11] - Configuration loaded successfully
+2025-07-25 14:54:58 - VehicleDetection - INFO - [vehicle_detection.py:46] - Vehicle detection is disabled in configuration
+2025-07-25 14:54:58 - VehicleDetection - INFO - [safety_detection_system.py:29] - Both helmet and fire detection are disabled in configuration

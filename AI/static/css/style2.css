@@ -1,0 +1,731 @@
+/*
+ * 整体部分
+ */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+body {
+    background-image: url('../images/bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.content {
+    color: white;
+    text-align: center;
+    padding: 20px;
+    text-shadow: 1px 1px 3px #000;
+}
+/*危险物图像*/
+#dangerImage {
+    position: absolute;
+    right: 31%;
+    bottom: 4.7%;
+    width: 38.5%;
+    height: 32.5%;
+    /* border: 1px solid #30b7eb;
+    background-color: rgba(27, 42, 67, 0.5); */
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/*监控图像 - 调整尺寸与危险物检测视觉一致*/
+#monitorImage {
+    position: absolute;
+    right: 31%;
+    top: 20.5%;
+    width: 30%;  /* 进一步调小宽度 */
+    height: 32.5%;  /* 调小高度 */
+    border: 2px solid red !important;  /* 调试用红色边框 */
+    background-color: rgba(27, 42, 67, 0.8);
+    color: white;
+    text-align: center;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: 9999 !important;  /* 确保在最上层 */
+}
+
+/* 视频流图片样式 - 使用更高优先级选择器 */
+#monitorImage #vehicleVideoStream {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: fill !important;  /* 强制填满容器 */
+    display: block !important;
+}
+
+/* 其他监控图片样式 */
+#monitorImage img:not(#vehicleVideoStream) {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain;
+    display: block !important;
+    min-width: 100px;
+    min-height: 100px;
+}
+/*废钢分割图像*/
+#segmentationImage {
+    position: absolute;
+    left: 72.3%;
+    top: 75.1%;
+    width: 24.5%;
+    height: 20.5%;
+    /* border: 1px solid #30b7eb;
+    background-color: rgba(27, 42, 67, 0.5); */
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/*小车记录-车辆信息容器*/
+#jsonDataContainer {
+    position: absolute;
+    left: 2%; /* 调整车辆信息框的水平位置 */
+    top: 19.5%; /* 调整车辆信息框的垂直位置 */
+    width: 24.3%;
+    height: 8.5%;
+    /* border: 1px solid #30b7eb;
+    background-color: rgba(27, 42, 67, 0.5); */
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 5px;
+    overflow: hidden;
+}
+
+/*小车记录-历史信息容器*/
+#jsonHistoryContainer {
+    position: absolute;
+    left: 2%; /* 调整历史信息框的水平位置 */
+    top: 78.5%; /* 调整历史信息框的垂直位置 */
+    width: 24.3%;
+    height: 16.5%;
+    /* border: 1px solid #30b7eb;
+    background-color: rgba(27, 42, 67, 0.5); */
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 5px;
+    overflow: hidden;
+}
+
+/* 危险物数量统计容器 */
+#dangerCountsContainer {
+    position: absolute;
+    right: 82.5%;
+    bottom: 29.5%;
+    width: 15%;
+    height: 18%;
+    border: none;
+    background-color: rgba(27, 42, 67, 0.5);
+    color: white;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 5px;
+    padding: 10px;
+    margin: 10px;
+}
+
+/* 单个危险物数量项 */
+.danger-count-item {
+    border: 1px solid #00F4FD;
+    border-radius: 4px;
+    padding: 5px 10px;
+    /* background-color: rgba(27, 42, 67, 0.8); */
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+/* 危险物名称样式 */
+.danger-count-item .danger-type-label {
+    font-weight: bold;
+    color: #00F4FD;
+    font-size: 18px;
+    margin-bottom: 2px;
+}
+
+/* 数量包装器样式 */
+.danger-count-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 30px;  /* 增加间距 */
+}
+
+/* 危险物数量样式 */
+.danger-count-item .danger-count-value {
+    font-size: 16px;
+    color: #FFD700;
+    font-weight: bold;
+}
+
+/* 数量单位样式 */
+.danger-count-item .danger-count-unit {
+    font-size: 17px;
+    color: #00F4FD;
+}
+
+/* 机械臂状态容器 */
+#armStatusContainer {
+    position: absolute;
+    right: 72.5%;
+    bottom: 57%;
+    width: 24%;
+    height: 10%;
+    /* border: 1px solid #00F4FD; */
+    background-color: none;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10px;
+    margin: 10px;
+}
+
+#armStatusContainer h3 {
+    position: absolute;
+    top: 10px;
+    left: 35px;
+    margin: 0;
+  }
+
+/* 单个机械臂状态项 */
+.arm-status-item {
+    position: absolute;
+    right: 2.5%;
+    bottom: 12%;
+    width: 50%;
+    height: 25%;
+    /* border: 1px solid #00F4FD; */
+    border-radius: 4px;
+    padding: 5px 10px;
+    margin: 5px 0;
+    width: 90%; /* 保持宽度 */
+    background-color: rgba(27, 42, 67, 0.8);
+    display: flex; /* 使用flex布局 */
+    align-items: center; /* 垂直居中 */
+    justify-content: center; /* 水平居中 */
+    gap: 10px; /* 调整标签和状态之间的间距 */
+}
+
+/* 机械臂标签样式 */
+.arm-status-item .arm-label {
+    color: #00F4FD; /* 设置为蓝色 */
+    font-weight: bold; /* 可以根据需要加粗 */
+    font-size: 14px; /* 可以根据需要调整字体大小 */
+    white-space: nowrap; /* 防止文本换行 */
+}
+
+/* 机械臂状态文字样式 */
+#arm1Status {
+    font-weight: bold; /* 可以根据需要加粗 */
+    font-size: 10px; /* 添加或修改字体大小 */
+}
+
+/* 机械臂未启动状态颜色 */
+.arm-status-item.status-off #arm1Status {
+    color: gray; /* 未启动时为灰色 */
+}
+
+/* 机械臂启动状态颜色 */
+.arm-status-item.status-on #arm1Status {
+    color: #4CAF50; /* 启动时为绿色 */
+}
+
+/* 进度条容器 */
+.progress-container {
+    position: relative;  /* 关键：为伪元素提供定位基准 */
+    left: 0%;
+    top: 10.5%;
+    width: 100%;
+    height: 30%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    margin-top: 5px;
+}
+
+/* 进度条首尾时间刻度（新增） */
+.progress-container::before,
+.progress-container::after {
+    position: absolute;
+    top: calc(100% + 5px);  /* 刻度在进度条下方5px */
+    font-size: 12px;
+    color: #00F4FD;  /* 与主题色一致 */
+}
+
+/* 首刻度（0秒） */
+.progress-container::before {
+    content: '0s';
+    left: 0;  /* 左侧对齐 */
+}
+
+/* 尾刻度（200秒） */
+.progress-container::after {
+    content: '200s';
+    right: 0;  /* 右侧对齐 */
+}
+
+/* 进度条 */
+.progress-bar {
+    width: 10%;
+    height: 100%;
+    background-color: #00F4FD;
+    border-radius: 4px;
+    transition: width 0.1s linear;
+}
+
+/* 车辆信息 */
+#jsonData, #jsonHistory {
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden; /* 完全去掉垂直滚动条并禁用滚动 */
+    overflow-x: hidden;
+    padding: 0px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#jsonData {
+    /* 最新数据部分的特殊样式 */
+    align-items: center; /* 居中对齐 */
+}
+
+#jsonHistory {
+    /* 历史数据部分的特殊样式 */
+    align-items: stretch; /* 拉伸填充 */
+}
+
+#jsonData::-webkit-scrollbar, #jsonHistory::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+}
+
+.history-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.history-item {
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 10px;
+    background-color: rgba(27, 42, 67, 0.7);
+}
+
+.history-item h4 {
+    margin: 0 0 5px 0;
+    color: #30b7eb;
+    font-size: 14px;
+    text-align: left;
+    border-bottom: 1px dashed #30b7eb;
+    padding-bottom: 3px;
+}
+
+/* 车辆表格样式 */
+.vehicle-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: -41px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.vehicle-table td {
+    border: none;
+    border-bottom: 1px solid rgba(48, 183, 235, 0.3);
+    padding: 4px 8px;
+    text-align: left;
+    background-color: rgba(27, 42, 67, 0.7);
+    /* 默认文字样式 - 值的样式 */
+    font-size: 16px; /* 类似数量的字体大小 */
+    color: #5db739; /* 修改为绿色系 */
+    font-weight: bold; /* 类似数量的加粗 */
+}
+
+.vehicle-table td strong {
+    /* 字段名样式 */
+    font-weight: bold; /* 加粗 */
+    color: #00F4FD; /* 类似分类名的蓝色 */
+    font-size: 14px; /* 类似分类名的字体大小 */
+    margin-right: 10px; /* 字段名和值之间的间距 */
+}
+
+.vehicle-table tr:nth-child(even) {
+    background-color: rgba(48, 183, 235, 0.2);
+}
+
+.vehicle-table tr:hover {
+    background-color: #ddd;
+}
+
+/* 历史数据的表格样式 */
+.vehicle-history-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: -35px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.vehicle-history-table td {
+    border: none;
+    border-bottom: 1px solid rgba(48, 183, 235, 0.3);
+    padding: 4px 8px;
+    text-align: left;
+    background-color: rgba(27, 42, 67, 0.7);
+    /* 默认文字样式 - 值的样式 */
+    font-size: 16px; /* 类似数量的字体大小 */
+    color: #5db739; /* 修改为绿色系 */
+    font-weight: bold; /* 类似数量的加粗 */
+}
+
+.vehicle-history-table td strong {
+     /* 字段名样式 */
+    font-weight: bold; /* 加粗 */
+    color: #00F4FD; /* 类似分类名的蓝色 */
+    font-size: 14px; /* 类似分类名的字体大小 */
+     margin-right: 10px; /* 字段名和值之间的间距 */
+}
+
+.vehicle-history-table th {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border: none;
+    border-bottom: 1px solid rgba(48, 183, 235, 0.5);
+    background-color: rgba(27, 42, 67, 0.7); /* 确保有背景色 */
+    color: white;
+    position: sticky; /* 添加粘滞定位 */
+    top: 0; /* 粘滞在顶部 */
+    z-index: 1; /* 确保表头在滚动内容之上 */
+}
+
+.vehicle-history-table tr:nth-child(even) {
+    background-color: rgba(48, 183, 235, 0.2);
+}
+
+.vehicle-history-table tr:hover {
+    background-color: #ddd;
+}
+/*
+body {
+    background-image: url('../images/bg.png');
+    padding: 0;
+    margin: 0;
+}
+*/
+.header {
+    height: 90px;
+    display: flex;
+}
+.logo {
+    height: 35px;
+    vertical-align: middle;
+    margin-top: 30px;
+}
+.logo-yy {
+    margin-left: 40px;
+}
+.logo-st {
+    margin-left: 8px;
+    padding-left: 10px;
+    border-left: 1px solid #FFF;
+}
+.head-item {
+    width: 25%;
+    height: 100%;
+}
+.rg-align {
+    text-align: right;
+}
+.head-text {
+    font-size: 24px;
+    line-height: 117px;
+    font-weight: bold;
+}
+.head-time {
+    font-size: 18px;
+    line-height: 100px;
+}
+
+.subhead {
+    height: 48px;
+    width: 100%;
+    text-align: center;
+    color:#00F4FD;
+    line-height: 48px;
+}
+
+/* 各类废钢数量统计容器 */
+#segmentationStats {
+    position: absolute;  /* 绝对定位 */
+    left: 72.4%;          /* 距离左边的距离 */
+    top: 29%;           /* 距离顶部的距离 */
+    width: 23.9%;
+    height: 20%;
+    /* border: 1px solid #30b7eb;
+    background-color: rgba(27, 42, 67, 0.5);  */
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+}
+
+.stats-container {
+    width: 90%;        /* 容器宽度占父元素比例 */
+    height: 100%;
+    display: grid;      /* 网格布局 */
+    grid-template-columns: repeat(2, 1fr);  /* 两列等宽布局 */
+    gap: 2px;          /* 网格间距 */
+    padding: 5px;      /* 内边距 */
+}
+
+.stats-item {
+    border: 1px solid #00F4FD;  /* 边框样式 */
+    border-radius: 4px;  /* 圆角 */
+    padding: 6px;      /* 内边距 */
+    background-color: rgba(27, 42, 67, 0.8);  /* 背景颜色 */
+    text-align: center;  /* 文字居中 */
+    display: flex;     /* 弹性布局 */
+    justify-content: center;  /* 水平居中 */
+    align-items: center;  /* 垂直居中 */
+    /* min-height: 50px;  最小高度 */
+}
+
+.stats-content {
+    display: flex;     /* 弹性布局 */
+    align-items: center;  /* 垂直居中 */
+    gap: 40px;        /* 增加元素之间的间距 */
+}
+
+.stats-category {
+    font-weight: bold;  /* 文字加粗 */
+    color: #00F4FD;    /* 文字颜色（蓝色） */
+    font-size: 14px;   /* 字体大小 */
+    min-width: 60px;   /* 设置最小宽度，确保对齐 */
+    text-align: right; /* 文字右对齐 */
+}
+
+.stats-count {
+    font-size: 16px;   /* 字体大小 */
+    color: #FFD700;    /* 数量文字颜色（金色） */
+    font-weight: bold;  /* 文字加粗 */
+    min-width: 30px;   /* 设置最小宽度，确保对齐 */
+    text-align: left;  /* 文字左对齐 */
+}
+
+/* 删除不需要的样式 */
+.stats-area {
+    display: none;  /* 隐藏面积显示 */
+}
+
+/*废钢总数容器*/
+#totalStats {
+    position: absolute;
+    left: 73.7%;
+    top: 21.0%;
+    width: 5%;
+    height: 4%;
+    /* border: 1px solid #30b7eb;
+    background-color: rgba(27, 42, 67, 0.5); */
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#totalStats h3 {
+    margin: 0;
+    margin-bottom: 5px;
+    color: #00F4FD;
+}
+
+#totalStats #totalCount {
+    font-size: 20px;
+    font-weight: bold;
+    color: #FFD700;
+}
+
+/*废钢总面积容器*/
+#totalArea {
+    position: absolute;
+    left: 82.3%;
+    top: 21.0%;
+    width: 5%;
+    height: 4%;
+    /* border: 1px solid #30b7eb;
+    background-color: rgba(27, 42, 67, 0.5); */
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#totalArea h3 {
+    margin: 0;
+    margin-bottom: 5px;
+    color: #00F4FD;
+}
+
+#totalArea #totalAreaCount {
+    font-size: 20px;
+    font-weight: bold;
+    color: #FFD700;
+}
+
+/*危险物总数容器*/
+#totalDanger {
+    position: absolute;
+    left: 90.5%;
+    top: 21.0%;
+    width: 5%;
+    height: 4%;
+    /* border: 1px solid #30b7eb;
+    background-color: rgba(27, 42, 67, 0.5); */
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#totalDanger h3 {
+    margin: 0;
+    margin-bottom: 5px;
+    color: #00F4FD;
+}
+
+#totalDanger #totalDangerCount {
+    font-size: 20px;
+    font-weight: bold;
+    color: #FFD700;
+}
+
+/*废钢面积比例饼图*/
+#scrapPieChart {
+    position: absolute;
+    left: 70%;
+    top: 50%;
+    width: 16%;
+    height: 19%;
+    /* border: 1px solid #30b7eb;
+    background-color: rgba(27, 42, 67, 0.5); */
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*废钢数量比例饼图*/
+#scrapCountPieChart {
+    position: absolute;
+    left: 81.5%;
+    top: 50%;
+    width: 16%;
+    height: 19%;
+    /* border: 1px solid #30b7eb;
+    background-color: rgba(27, 42, 67, 0.5); */
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*危险物比例饼图*/
+#dangerPieChart {
+    position: absolute;
+    left: 15%;
+    top: 50%;
+    width: 14%;
+    height: 19%;
+    /* border: 1px solid #30b7eb;
+    background-color: rgba(27, 42, 67, 0.5); */
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 数据更新动画效果 */
+@keyframes dataUpdate {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 rgba(0, 244, 253, 0);
+    }
+    50% {
+        transform: scale(1.02);
+        box-shadow: 0 0 10px rgba(0, 244, 253, 0.5);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 rgba(0, 244, 253, 0);
+    }
+}
+
+/* 机械臂启动按钮 */
+.arm-start-btn {
+    margin-top: 8px;
+    padding: 4px 16px;
+    background-color: rgba(0, 244, 253, 0.1);
+    color: #00F4FD;
+    border: 1px solid #00F4FD;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.arm-start-btn:hover {
+    background-color: rgba(0, 244, 253, 0.25);
+    box-shadow: 0 0 10px rgba(0, 244, 253, 0.4);
+}

@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>车辆管理系统</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html, body {
+            height: 100%;
+            overflow: hidden;
+        }
+        body {
+            font-family: 'Microsoft YaHei', sans-serif;
+            background-color: #ffffff;
+            color: #333333;
+            line-height: 1.6;
+            padding: 20px;
+            background-image: url('./static/background.png');
+            background-size: 100% 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            min-height: 100vh;
+            width: 100%;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 3fr 2fr;
+            gap: 20px;
+            height: calc(100vh - 40px);
+        }
+        .panel-content-1, .panel-content-2{
+            width: calc(23% - 0px);
+            height: calc(41% - 0px);
+            padding: 0;
+            overflow: hidden;
+            position: absolute;
+            border-radius: 6px;
+        }
+        .panel-content-3, .panel-content-4{
+            width: calc(50% - 0px);
+            height: calc(15% - 0px);
+            padding: 0;
+            overflow: hidden;
+            position: absolute;
+            border-radius: 6px;
+        }
+        .panel-content-1 {
+            top: 20%;
+            left: 2.0%;
+        }
+        .panel-content-2 {
+            top: 20%;
+            left: 25.3%;
+        }
+        .panel-content-3 {
+            top: 63%;
+            left: 2.4%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .panel-content-4 {
+            top: 80%;
+            /* left: 51.1%;  */
+            left: 2.4%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .panel-content-5, .panel-content-6{
+            width: calc(22.5% - 0px);
+            height: calc(34% - 0px);
+            padding: 0;
+            overflow: hidden;
+            position: absolute;
+        }
+        .panel-content-5 {
+            top: 20%;
+            left: 51%;
+        }
+        .panel-content-6 {
+            top: 20%;
+            left: 74%;  /* 使用百分比定位 */
+        }
+        .panel-content-7, .panel-content-8 {
+            top: 55%;
+            width: calc(21% - 0px);
+            height: calc(25% - 0px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            position: absolute;
+            background: rgba(0, 0, 0, 0.0);
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+        .panel-content-7 {
+            left: 51.5%;
+        }
+        .panel-content-8 {
+            left: 75%;
+        }
+
+        .video-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+            border-radius: 6px;
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+        }
+        .video-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 50% 50%;
+            display: block;
+        }
+        .vehicle-history {
+            list-style: none;
+            padding: 10px;
+            margin: 0;
+            background: rgba(0, 0, 0, 0.0);
+            border-radius: 6px;
+            height: 100%;
+            width: 80%;
+            overflow-y: auto;
+            color: white;
+            text-align: center;
+        }
+        .history-item {
+            padding: 8px;
+            margin-bottom: 8px;
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        .history-item.highlight {
+            animation: highlight 5s ease-out;
+        }
+        .history-item.new-entry {
+            border-left: 4px solid #4CAF50;
+        }
+        .history-item.new-exit {
+            border-left: 4px solid #F44336;
+        }
+        .history-item.new-abnormal {
+            border-left: 4px solid #FF9800;
+        }
+        .history-plate-color {
+            color: #ffffff;
+            margin-right: 10px;
+        }
+        .history-time {
+            color: #ffffff;
+            margin-right: 10px;
+        }
+        .history-object {
+            color: #ffffff;
+            font-weight: bold;
+        }
+        .history-confidence {
+            color: #ffffff;
+            float: right;
+        }
+        .current-vehicles {
+            position: absolute;
+            top: 30px;
+            left: 90%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.3);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 18px;
+            z-index: 1000;
+        }
+        .status-entry {
+            color: #4CAF50;
+        }
+        .status-exit {
+            color: #F44336;
+        }
+        /* 添加动画样式 */
+        @keyframes highlight {
+            0% {
+                background: rgba(255, 255, 0, 0.3);
+                transform: scale(1.05);
+            }
+            100% {
+                background: rgba(0, 0, 0, 0.1);
+                transform: scale(1);
+            }
+        }
+        /* 添加滚动条样式 */
+        .vehicle-history::-webkit-scrollbar {
+            width: 6px;
+        }
+        .vehicle-history::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 3px;
+        }
+        .vehicle-history::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 3px;
+        }
+        .vehicle-history::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.5);
+        }
+        #helmet-today-list, #fire-today-list {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .statistics-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding: 5px;
+        }
+        .stat-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 4px 8px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            flex: 1;
+            margin: 2px 0;
+        }
+        .stat-item:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateX(5px);
+        }
+        .stat-label {
+            font-size: 12px;
+            font-weight: 500;
+            color: #ffffff;
+        }
+        .stat-value {
+            font-size: 12px;
+            font-weight: 600;
+            color: #4CAF50;
+        }
+        .stat-value.warning {
+            color: #FF9800;
+        }
+        .stat-value.danger {
+            color: #F44336;
+        }
+        .last-detection {
+            margin-top: 10px;
+            padding: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            font-size: 12px;
+            color: #ffffff;
+            text-align: center;
+        }
+        @keyframes alarmAnimation {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        .alarm-active {
+            animation: alarmAnimation 1s infinite;
+            background: rgba(255, 0, 0, 0.1);
+            border: 1px solid #d32f2f;
+        }
+    </style>
+</head>
+<body>
+    <div class="current-vehicles">
+        当前在场车辆数: <span id="current-vehicle-count">0</span>
+    </div>
+    <div class="container">
+        <!-- 进场车辆抓拍 -->
+        <div class="panel-content-1">
+            <div class="video-container">
+                <img src="{{ url_for('video_feed_entrance') }}" alt="车辆视频流">
+            </div>
+        </div>
+
+        <!-- 出场车辆抓拍 -->
+        <div class="panel-content-2">
+            <div class="video-container">
+                <img src="{{ url_for('video_feed_exit') }}" alt="车辆视频流">
+            </div>
+        </div>
+        
+        <!-- 进场车辆历史 -->
+        <div class="panel-content-3">
+            <ul class="vehicle-history" id="entrance-history">
+                <li class="loading">加载记录...</li>
+            </ul>
+        </div>
+
+        <!-- 出场车辆历史 -->
+        <div class="panel-content-4">
+            <ul class="vehicle-history" id="exit-history">
+                <li class="loading">加载记录...</li>
+            </ul>
+        </div>
+
+          <!-- 安全帽检测面板 -->
+          <div class="panel-content-5">
+            <div class="video-container" style="height: 100%;">
+                <img src="{{ url_for('safety_video_feed', cam_index=0) }}" alt="监控区域1">
+            </div>
+        </div> 
+        
+        <!-- 烟雾火灾检测面板 -->
+        <div class="panel-content-6">
+            <div class="video-container" style="height: 100%;">
+                <img src="{{ url_for('safety_video_feed', cam_index=1) }}" alt="监控区域2">
+            </div>
+        </div>
+
+        <!-- 检测统计 -->
+        <div class="panel-content-7" id="helmet-today-stat" style="color:white;">
+            <div id="helmet-today-list"></div>
+        </div>
+
+        <div class="panel-content-8" id="fire-today-stat" style="color:white;">
+            <div id="fire-today-list"></div>
+        </div> 
+    </div>
+</body>
+
+<!-- 添加 JavaScript 代码 -->
+<script>
+    // 存储上次的记录用于比较
+    let lastEntranceRecords = [];
+    let lastExitRecords = [];
+    
+    function updateDetectionHistory() {
+        fetch('/get_detection_history_entrance')
+            .then(response => response.json())
+            .then(data => {
+                const historyList = document.getElementById('entrance-history');
+                
+                // 检查是否有新记录
+                if (data.length > 0 && 
+                    (lastEntranceRecords.length === 0 || 
+                     JSON.stringify(data[0]) !== JSON.stringify(lastEntranceRecords[0]))) {
+                    // 清空现有内容
+                    historyList.innerHTML = '';
+                    
+                    // 添加新记录
+                    data.forEach((detection, index) => {
+                        const li = document.createElement('li');
+                        li.className = 'history-item';
+                        
+                        // 如果是新记录，添加高亮效果
+                        if (index === 0 && 
+                            (lastEntranceRecords.length === 0 || 
+                             JSON.stringify(detection) !== JSON.stringify(lastEntranceRecords[0]))) {
+                            li.classList.add('highlight', 'new-entry');
+                        }
+                        
+                        li.innerHTML = `
+                            <span class="history-time">进场时间：${detection.time}</span>
+                            <span class="history-plate-color">车牌颜色：${detection.plate_color}</span>
+                            <span class="history-object">车牌号：${detection.plate_number}</span>
+                            <span class="status-entry">进场</span>
+                        `;
+                        historyList.appendChild(li);
+                    });
+                    
+                    // 更新上次记录
+                    lastEntranceRecords = [...data];
+                }
+            })
+            .catch(error => console.error('Error:', error));
+
+        // 更新当前在场车辆数
+        fetch('/get_current_vehicles')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('current-vehicle-count').textContent = data.count;
+            })
+            .catch(error => console.error('Error:', error));
+    }
+
+    function updateExitHistory() {
+        fetch('/get_detection_history_exit')
+            .then(response => response.json())
+            .then(data => {
+                const exithistoryList = document.getElementById('exit-history');
+                
+                // 检查是否有新记录
+                if (data.length > 0 && 
+                    (lastExitRecords.length === 0 || 
+                     JSON.stringify(data[0]) !== JSON.stringify(lastExitRecords[0]))) {
+                    // 清空现有内容
+                    exithistoryList.innerHTML = '';
+                    
+                    // 添加新记录
+                    data.forEach((record, index) => {
+                        const recordLi = document.createElement('li');
+                        recordLi.className = 'history-item';
+                        
+                        // 如果是新记录，添加高亮效果
+                        if (index === 0 && 
+                            (lastExitRecords.length === 0 || 
+                             JSON.stringify(record) !== JSON.stringify(lastExitRecords[0]))) {
+                            recordLi.classList.add('highlight');
+                            
+                            // 根据状态添加不同的样式
+                            if (record.status === 'abnormal') {
+                                recordLi.classList.add('new-abnormal');
+                            } else {
+                                recordLi.classList.add('new-exit');
+                            }
+                        }
+                        
+                        if (record.status === 'abnormal') {
+                            recordLi.innerHTML = `
+                                <span class="history-time">出场时间：${record.time}</span>
+                                <span class="history-plate-color">车牌颜色：${record.plate_color}</span>
+                                <span class="history-object">车牌号：${record.plate_number}</span>
+                                <span class="status-exit" style="color: red;">异常车辆</span>
+                            `;
+                        } else {
+                            recordLi.innerHTML = `
+                                <span class="history-time">出场时间：${record.time}</span>
+                                <span class="history-plate-color">车牌颜色：${record.plate_color}</span>
+                                <span class="history-object">车牌号：${record.plate_number}</span>
+                                <span class="status-exit" style="color: green;">正常出场</span>
+                            `;
+                        }
+                        
+                        exithistoryList.appendChild(recordLi);
+                    });
+                    
+                    // 更新上次记录
+                    lastExitRecords = [...data];
+                }
+            })
+            .catch(error => console.error('Error fetching exit history:', error));
+    }
+
+    // 每秒更新一次检测历史和在场车辆数
+    setInterval(updateDetectionHistory, 1000);
+    setInterval(updateExitHistory, 1000);
+</script>
+
+<script>
+    // 定时拉取最新识别结果
+    function fetchAlarms() {
+        // 0: 安全帽，1: 火焰
+        Promise.all([
+            fetch('/safety/api/latest_results/0').then(r=>r.json()),
+            fetch('/safety/api/latest_results/1').then(r=>r.json())
+        ]).then(([helmetResults, fireResults]) => {
+            let html = '';
+            // 安全帽检测
+            if (helmetResults.length > 0) {
+                helmetResults.forEach(item => {
+                    html += `<div>【安全帽检测】${item.label}，置信度：${(item.confidence*100).toFixed(1)}%，时间：${item.timestamp}</div>`;
+                });
+            }
+            // 火焰检测
+            if (fireResults.length > 0) {
+                fireResults.forEach(item => {
+                    if (item.label === '火焰') {
+                        html += `<div style="color:#b71c1c;font-weight:bold;">【火灾报警】${item.label}，置信度：${(item.confidence*100).toFixed(1)}%，时间：${item.timestamp}</div>`;
+                    } else {
+                        html += `<div>【火焰检测】${item.label}，置信度：${(item.confidence*100).toFixed(1)}%，时间：${item.timestamp}</div>`;
+                    }
+                });
+            }
+            if (!html) html = '<div style="color:#888;">暂无识别结果</div>';
+            document.getElementById('alarm-list').innerHTML = html;
+        });
+    }
+    setInterval(fetchAlarms, 2000); // 每2秒刷新一次
+    fetchAlarms();
+</script>
+
+<script>
+    // 只显示最新一条报警
+    function fetchSingleAlarm() {
+        fetch('/safety/api/latest_alarm')
+            .then(r => r.json())
+            .then(alarm => {
+                const alarmArea = document.getElementById('single-alarm-area');
+                if (alarm && alarm.label && alarm.label !== '无报警' && 
+                    (alarm.label === '火焰' || alarm.label === '未正确佩戴安全帽')) {
+                    const html = `<div style="color:#b71c1c;font-weight:bold;">【${alarm.label}报警】置信度：${(alarm.confidence*100).toFixed(1)}%，时间：${alarm.timestamp}</div>`;
+                    document.getElementById('single-alarm').innerHTML = html;
+                    alarmArea.style.display = 'block';
+                    alarmArea.classList.add('alarm-active');
+                    
+                    // 5秒后隐藏报警信息
+                    setTimeout(() => {
+                        alarmArea.style.display = 'none';
+                        alarmArea.classList.remove('alarm-active');
+                    }, 5000);
+                } else {
+                    alarmArea.style.display = 'none';
+                    alarmArea.classList.remove('alarm-active');
+                }
+            });
+    }
+    setInterval(fetchSingleAlarm, 2000);
+    fetchSingleAlarm();
+</script>
+
+<script>
+    function updateSafetyStats() {
+        // 更新安全帽检测统计
+        fetch('/safety/api/today_statistics')
+            .then(r => r.json())
+            .then(stat => {
+                let helmetHtml = '';
+                helmetHtml += `<div class="statistics-container">`;
+                helmetHtml += `<div class="stat-item"><span class="stat-label">日期</span><span class="stat-value">${stat.date}</span></div>`;
+                helmetHtml += `<div class="stat-item"><span class="stat-label">总检测人数</span><span class="stat-value">${stat.totalPerson}</span></div>`;
+                helmetHtml += `<div class="stat-item"><span class="stat-label">正确佩戴人数</span><span class="stat-value">${stat.helmetCount}</span></div>`;
+                helmetHtml += `<div class="stat-item"><span class="stat-label">未正确佩戴人数</span><span class="stat-value warning">${stat.noHelmet}</span></div>`;
+                helmetHtml += `<div class="stat-item"><span class="stat-label">安全帽佩戴率</span><span class="stat-value">${stat.helmetRate}</span></div>`;
+                helmetHtml += `<div class="stat-item"><span class="stat-label">最近报警时间</span><span class="stat-value warning">${stat.lastAlarmTime || '--'}</span></div>`;
+                helmetHtml += `</div>`;
+                document.getElementById('helmet-today-list').innerHTML = helmetHtml;
+
+                // 更新火灾检测统计
+                let fireHtml = '';
+                fireHtml += `<div class="statistics-container">`;
+                fireHtml += `<div class="stat-item"><span class="stat-label">日期</span><span class="stat-value">${stat.date || '未知'}</span></div>`;
+                fireHtml += `<div class="stat-item"><span class="stat-label">火灾检测次数</span><span class="stat-value">${stat.fireDetectionCount || 0}</span></div>`;
+                fireHtml += `<div class="stat-item"><span class="stat-label">火灾报警次数</span><span class="stat-value danger">${stat.fireAlarmCount || 0}</span></div>`;
+                fireHtml += `<div class="stat-item"><span class="stat-label">最近报警时间</span><span class="stat-value warning">${stat.lastFireAlarmTime || '暂无报警'}</span></div>`;
+                fireHtml += `</div>`;
+                document.getElementById('fire-today-list').innerHTML = fireHtml;
+            });
+    }
+
+    // 定时更新安全监控统计数据
+    setInterval(updateSafetyStats, 10000); // 每10秒更新一次
+    updateSafetyStats(); // 立即执行一次更新
+</script>
+
+</html>

@@ -1,0 +1,4 @@
+2025-07-25 16:50:20 - VehicleDetection - ERROR - [config_util.py:14] - Failed to load configuration: [Errno 2] No such file or directory: 'config.yaml'
+2025-07-25 16:50:20 - VehicleDetection - ERROR - [vehicle_detection.py:20] - Configuration not loaded, using default settings
+2025-07-25 16:50:20 - VehicleDetection - INFO - [vehicle_detection.py:46] - Vehicle detection is disabled in configuration
+2025-07-25 16:50:20 - VehicleDetection - ERROR - [safety_detection_system.py:17] - Configuration not loaded, using default settings

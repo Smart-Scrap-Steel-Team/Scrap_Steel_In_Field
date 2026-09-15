@@ -1,0 +1,82 @@
+[
+    {
+        "plate_number": "京AXD0001",
+        "date": "2025-04-24",
+        "time": "17:10:47",
+        "timestamp": "2025-04-24 17:10:47",
+        "plate_color": "GreenLicense",
+        "status": "entry"
+    },
+    {
+        "plate_number": "京AXD0001",
+        "date": "2025-04-24",
+        "time": "17:42:32",
+        "timestamp": "2025-04-24 17:42:32",
+        "plate_color": "GreenLicense",
+        "status": "entry"
+    },
+    {
+        "plate_number": "京AXD0001",
+        "date": "2025-04-24",
+        "time": "17:43:56",
+        "timestamp": "2025-04-24 17:43:56",
+        "plate_color": "GreenLicense",
+        "status": "entry"
+    },
+    {
+        "plate_number": "京AXD0001",
+        "date": "2025-04-24",
+        "time": "18:10:32",
+        "timestamp": "2025-04-24 18:10:32",
+        "plate_color": "GreenLicense",
+        "status": "entry"
+    },
+    {
+        "plate_number": "京AXD0001",
+        "date": "2025-04-24",
+        "time": "18:17:41",
+        "timestamp": "2025-04-24 18:17:41",
+        "plate_color": "GreenLicense",
+        "status": "entry"
+    },
+    {
+        "plate_number": "京AXD0001",
+        "date": "2025-04-25",
+        "time": "11:40:27",
+        "timestamp": "2025-04-25 11:40:27",
+        "plate_color": "GreenLicense",
+        "status": "entry"
+    },
+    {
+        "plate_number": "京AXD0002",
+        "date": "2025-04-30",
+        "time": "09:20:36",
+        "timestamp": "2025-04-30 09:20:36",
+        "plate_color": "GreenLicense",
+        "status": "entry"
+    },
+    {
+        "plate_number": "京AXD0001",
+        "date": "2025-05-13",
+        "time": "10:43:30",
+        "timestamp": "2025-05-13 10:43:30",
+        "plate_color": "GreenLicense",
+        "status": "entry"
+    },
+    {
+        "plate_number": "京AXD0001",
+        "date": "2025-05-13",
+        "time": "10:48:31",
+        "timestamp": "2025-05-13 10:48:31",
+        "plate_color": "GreenLicense",
+        "status": "entry"
+    },
+    {
+        "plate_number": "京AXD0001",
+        "date": "2025-05-13",
+        "time": "10:50:05",
+        "timestamp": "2025-05-13 10:50:05",
+        "plate_color": "GreenLicense",
+        "status": "entry"
+    }
+]
