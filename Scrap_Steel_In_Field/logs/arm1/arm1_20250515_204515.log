@@ -1,0 +1,24 @@
+2025-05-15 20:45:15 [INFO] 收到机械臂消息: yes_grab
+2025-05-15 20:45:15 [INFO] 开始获取清晰图像...
+2025-05-15 20:45:59 [INFO] 已保存original图像: C:\Users\qinguang\feigangxiangmu\Scrap_steel_system\Scrap_Steel_In_Field\photos\original\original_image_20250515_204559.jpg
+2025-05-15 20:46:02 [INFO] [完成] 第1次原始图片拍照完成: C:\Users\qinguang\feigangxiangmu\Scrap_steel_system\Scrap_Steel_In_Field\photos\original\original_image_20250515_204559.jpg
+2025-05-15 20:46:06 [ERROR] 更新图片路径到 Flask 应用时出错: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /set_image_path (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027C6200C8E0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2025-05-15 20:46:06 [INFO] [步骤3.1] 进行危险品推理
+2025-05-15 20:46:07 [INFO] [完成] 危险品检测完成，未发现危险品
+2025-05-15 20:46:07 [INFO] 危险品检测结果已写入JSON文件: C:\Users\qinguang\feigangxiangmu\Scrap_steel_system\Scrap_Steel_In_Field\photos\detection_results.json
+2025-05-15 20:46:12 [ERROR] 更新饼状图到 Flask 应用时出错: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /set_pie_chart_path (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027C001CB610>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2025-05-15 20:46:12 [INFO] 检测结果的路径为：C:\Users\qinguang\feigangxiangmu\Scrap_steel_system\Scrap_Steel_In_Field\photos\dangerous_det\detection_20250515_204607.jpg
+2025-05-15 20:46:12 [INFO] 文件存在，大小: 140481 字节
+2025-05-15 20:46:16 [ERROR] 更新危险品检测结果到 Flask 应用时出错: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /set_detection_path (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027C001CBDF0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2025-05-15 20:46:16 [INFO] [步骤3.2] 对原始图片进行废钢分割
+2025-05-15 20:46:16 [WARNING] [警告] 废钢分割失败，将按默认流程继续
+2025-05-15 20:46:16 [INFO] 
+[步骤3.3] 请求第1次抓取循环
+2025-05-15 20:46:56 [INFO] 机械臂坐标系抓取点: [(438.8540163654081, -144.56737217586615), (438.37051700773793, -14.687269985062102), (437.8870176500678, 115.19283220574195)]
+2025-05-15 20:46:56 [INFO] 抓取点坐标（z=0）:
+2025-05-15 20:46:56 [INFO] 438.8540163654081,-144.56737217586615,0
+2025-05-15 20:46:56 [INFO] 438.37051700773793,-14.687269985062102,0
+2025-05-15 20:46:56 [INFO] 437.8870176500678,115.19283220574195,0
+2025-05-15 20:46:56 [INFO] 发送第一个抓取点坐标: 438.8540163654081,-144.56737217586615,0
+2025-05-15 20:50:08 [INFO] 收到机械臂消息: yes_grab
+2025-05-15 20:50:10 [INFO] 发送第二个抓取点坐标: 438.37051700773793,-14.687269985062102,0

@@ -1,0 +1,11 @@
+2026-09-15 15:36:45 [INFO] CUDA 初始化成功
+2026-09-15 15:36:45 [ERROR] 引擎反序列化失败
+2026-09-15 15:36:45 [ERROR] 初始化失败: Failed to load TensorRT engine.
+2026-09-15 15:36:45 [INFO] 全局 CUDA 资源已释放
+2026-09-15 15:36:47 [INFO] CUDA 初始化成功
+2026-09-15 15:36:47 [ERROR] 引擎反序列化失败
+2026-09-15 15:36:47 [ERROR] 初始化失败: Failed to load TensorRT engine.
+2026-09-15 15:36:47 [INFO] 全局 CUDA 资源已释放
+2026-09-15 15:36:47 [ERROR] 初始化失败: Failed to load TensorRT engine.
+2026-09-15 15:36:47 [INFO] CUDA 未初始化，无需释放
+2026-09-15 15:36:47 [INFO] 分割系统资源已释放

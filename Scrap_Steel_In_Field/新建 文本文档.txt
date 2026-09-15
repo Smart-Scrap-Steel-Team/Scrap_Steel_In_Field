@@ -1,0 +1,12 @@
+// 重点显示元素e
+function hightlightElement(e){
+	e.style.transition='none';
+	e.style.transition='all 2s ease';
+	e.style.backgroundColor='yellow';
+	setTimeout(function(){e.style.backgroundColor='';},5000);
+}
+
+
+// 在希望重点显示某元素时按如下格式调用
+hightlightElement(document.getElementById('title0'))
+或hightlightElement(document.getElementByName('title0'))

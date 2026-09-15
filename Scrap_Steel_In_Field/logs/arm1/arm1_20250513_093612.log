@@ -1,0 +1,5 @@
+2025-05-13 09:36:12 [INFO] 
+===== 开始 arm1 的处理流程 =====
+2025-05-13 09:36:12 [INFO] 收到机械臂消息: yes_grab
+2025-05-13 09:36:12 [ERROR] [错误] 车体拍照处理过程中发生异常: name 'detect_and_transform_rectangle' is not defined
+2025-05-13 09:36:12 [INFO] 机械臂处理流程已完成

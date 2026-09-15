@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>废钢沙盘</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+    <!-- 头部部分 -->
+    <div class="header">
+        <div class="head-item">
+            <img class="logo logo-yy" src="../static/images/logo_yonyou.png" alt="" srcset="">
+            <img class="logo logo-st" src="../static/images/logo_seentao.png" alt="" srcset="">
+        </div>
+        <div class="head-item rg-align head-text">
+            <span style="color:#868E98;">控制点总览</span>
+            <span style="width: 30px;display: inline-block;"></span>
+        </div>
+        <div class="head-item head-text">
+            <span style="width: 60px;display: inline-block;"></span>
+            <span style="color:#00F4FD;">智能判级</span>
+        </div>
+        <div class="head-item rg-align head-time">
+            <span id="headtime" style="color:#FFF;"></span>
+            <span style="width: 60px;display: inline-block;"></span>
+        </div>
+    </div>
+    <!-- 二级头部部分 -->
+    <div class="subhead">
+        <span style="font-size: 24px; font-weight: bold;">废钢判级</span>
+    </div>
+
+</body>
+<body>
+    <div id="11" style="position: absolute; left: 4%; top: 12.7%; color: #00F4FD; font-size: 18px;"><h3>车辆卸货信息</h3></div>
+    <div id="22" style="position: absolute; left: 4%; top: 28.7%; color: #00F4FD; font-size: 18px;"><h3>机械臂状态</h3></div>
+    <div id="33" style="position: absolute; left: 4%; top: 42.5%; color: #00F4FD; font-size: 18px;"><h3>危险物数量</h3></div>
+    <div id="44" style="position: absolute; left: 4%; top: 71.5%; color: #00F4FD; font-size: 18px;"><h3>车辆历史信息</h3></div>
+    <div id="55" style="position: absolute; left: 32%; top: 12.7%; color: #00F4FD; font-size: 18px;"><h3>车辆图像</h3></div>
+    <div id="66" style="position: absolute; left: 32%; top: 55%; color: #00F4FD; font-size: 18px;"><h3>危险物检测</h3></div>
+    <div id="77" style="position: absolute; left: 74%; top: 12.7%; color: #00F4FD; font-size: 18px;"><h3>废钢信息</h3></div>
+    <div id="88" style="position: absolute; left: 74%; top: 68%; color: #00F4FD; font-size: 18px;"><h3>废钢分割</h3></div>
+    
+    <div id="monitorImage"><h3>车辆图像</h3>等待图像加载...</div>
+    <div id="dangerImage"><h3>危险物检测</h3>等待图像加载...</div>
+    <div id="segmentationImage"><h3>分割结果</h3>等待图像加载...</div>
+    <div id="scrapPieChart"><h3>废钢面积比例</h3>等待数据加载...</div>
+    <div id="scrapCountPieChart"><h3>废钢数量比例</h3>等待数据加载...</div>
+    <div id="dangerPieChart"><h3>危险物比例</h3>等待数据加载...</div>
+    <div id="totalStats"><h3>废钢总数</h3><span id="totalCount">0</span></div>
+    <div id="totalArea"><h3>废钢总面积</h3><span id="totalAreaCount">0</span></div>
+    <div id="totalDanger"><h3>危险物总数</h3><span id="totalDangerCount">0</span></div>
+    <div id="segmentationStats">
+        <div class="stats-container">
+            <div class="stats-item">
+                <div class="stats-content">
+                    <span class="stats-category">方管</span>
+                    <span class="stats-count" id="squareTubeCount">0</span>
+                </div>
+            </div>
+            <div class="stats-item">
+                <div class="stats-content">
+                    <span class="stats-category">圆管</span>
+                    <span class="stats-count" id="roundTubeCount">0</span>
+                </div>
+            </div>
+            <div class="stats-item">
+                <div class="stats-content">
+                    <span class="stats-category">钢板</span>
+                    <span class="stats-count" id="steelPlateCount">0</span>
+                </div>
+            </div>
+            <div class="stats-item">
+                <div class="stats-content">
+                    <span class="stats-category">镀锌件</span>
+                    <span class="stats-count" id="galvanizedCount">0</span>
+                </div>
+            </div>
+            <div class="stats-item">
+                <div class="stats-content">
+                    <span class="stats-category">钢筋</span>
+                    <span class="stats-count" id="rebarCount">0</span>
+                </div>
+            </div>
+            <div class="stats-item">
+                <div class="stats-content">
+                    <span class="stats-category">管道件</span>
+                    <span class="stats-count" id="pipeFittingCount">0</span>
+                </div>
+            </div>
+            <div class="stats-item">
+                <div class="stats-content">
+                    <span class="stats-category">金属件</span>
+                    <span class="stats-count" id="metalFittingCount">0</span>
+                </div>
+            </div>
+            <div class="stats-item">
+                <div class="stats-content">
+                    <span class="stats-category">打孔废料</span>
+                    <span class="stats-count" id="scrapCount">0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="jsonDataContainer"><div id="jsonData"></div></div>
+    <div id="jsonHistoryContainer"><div id="jsonHistory"></div></div>
+    <div id="dangerCountsContainer">
+        <!-- <h3>危险物数量统计</h3> -->
+        <div class="danger-count-item"><span class="danger-type-label">GasCyl1</span> <span class="danger-count-wrapper"><span class="danger-count-unit">数量</span><span id="gasCyl1Count" class="danger-count-value">0</span></span></div>
+        <div class="danger-count-item"><span class="danger-type-label">GasCyl2</span> <span class="danger-count-wrapper"><span class="danger-count-unit">数量</span><span id="gasCyl2Count" class="danger-count-value">0</span></span></div>
+        <div class="danger-count-item"><span class="danger-type-label">FireExt1</span> <span class="danger-count-wrapper"><span class="danger-count-unit">数量</span><span id="fireExt1Count" class="danger-count-value">0</span></span></div>
+        <div class="danger-count-item"><span class="danger-type-label">FireExt2</span> <span class="danger-count-wrapper"><span class="danger-count-unit">数量</span><span id="fireExt2Count" class="danger-count-value">0</span></span></div>
+    </div>
+    <div id="armStatusContainer">
+        <!-- <h3>机械臂状态</h3> -->
+        <div class="arm-status-item">
+            <span class="arm-label">机械臂</span> <span id="arm1Status">未知</span>
+
+            <div class="progress-container">
+                <div id="arm1Progress" class="progress-bar"></div>
+            </div>
+            <button id="startArmBtn" class="arm-control-btn">启动机械臂</button>
+        </div>
+    </div> 
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    <script src="static/js/index.js"></script>
+</body>
+</html>

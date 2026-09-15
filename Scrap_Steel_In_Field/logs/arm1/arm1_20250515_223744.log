@@ -1,0 +1,39 @@
+2025-05-15 22:37:44 [INFO] 收到机械臂消息: yes_grab
+2025-05-15 22:37:44 [INFO] 开始获取清晰图像...
+2025-05-15 22:37:58 [INFO] 已保存original图像: C:\Users\qinguang\feigangxiangmu\Scrap_steel_system\Scrap_Steel_In_Field\photos\original\original_image_20250515_223758.jpg
+2025-05-15 22:38:00 [INFO] [完成] 第1次原始图片拍照完成: C:\Users\qinguang\feigangxiangmu\Scrap_steel_system\Scrap_Steel_In_Field\photos\original\original_image_20250515_223758.jpg
+2025-05-15 22:38:04 [ERROR] 更新图片路径到 Flask 应用时出错: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /set_image_path (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023C347BC7C0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2025-05-15 22:38:05 [INFO] [步骤3.1] 进行危险品推理
+2025-05-15 22:38:06 [INFO] [完成] 危险品检测成功，发现 4 个危险品
+2025-05-15 22:38:06 [INFO] 危险品 1: GasCyl1 (置信度: 0.91)
+2025-05-15 22:38:06 [INFO] 危险品 2: FireExt1 (置信度: 0.41)
+2025-05-15 22:38:06 [INFO] 危险品 3: FireExt1 (置信度: 0.38)
+2025-05-15 22:38:06 [INFO] 危险品 4: FireExt1 (置信度: 0.30)
+2025-05-15 22:38:06 [INFO] 危险品检测结果已写入JSON文件: C:\Users\qinguang\feigangxiangmu\Scrap_steel_system\Scrap_Steel_In_Field\photos\detection_results.json
+2025-05-15 22:38:10 [ERROR] 更新饼状图到 Flask 应用时出错: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /set_pie_chart_path (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023C34F8FDC0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2025-05-15 22:38:10 [INFO] 检测结果的路径为：C:\Users\qinguang\feigangxiangmu\Scrap_steel_system\Scrap_Steel_In_Field\photos\dangerous_det\detection_20250515_223806.jpg
+2025-05-15 22:38:10 [INFO] 文件存在，大小: 1650712 字节
+2025-05-15 22:38:14 [ERROR] 更新危险品检测结果到 Flask 应用时出错: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /set_detection_path (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023C34F8F970>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2025-05-15 22:38:14 [INFO] [步骤3.2] 对原始图片进行废钢分割
+2025-05-15 22:38:15 [WARNING] [警告] 废钢分割失败，将按默认流程继续
+2025-05-15 22:38:15 [INFO] 
+[步骤3.3] 请求第1次抓取循环
+2025-05-15 22:38:18 [INFO] 机械臂坐标系抓取点: [(471.4008535039306, -147.68291996274914), (470.2800337628905, -18.08693901352666), (469.15921402185046, 111.50904193569582)]
+2025-05-15 22:38:18 [INFO] 抓取点坐标（z=0）:
+2025-05-15 22:38:18 [INFO] 471.4008535039306,-147.68291996274914,0
+2025-05-15 22:38:18 [INFO] 470.2800337628905,-18.08693901352666,0
+2025-05-15 22:38:18 [INFO] 469.15921402185046,111.50904193569582,0
+2025-05-15 22:38:18 [INFO] 发送第一个抓取点坐标: 471.4008535039306,-147.68291996274914,0
+2025-05-15 22:38:33 [INFO] 收到机械臂消息: A
+2025-05-15 22:38:33 [INFO] 收到第1次的抓取点位: A
+2025-05-15 22:38:33 [INFO] 发送第二个抓取点坐标: 470.2800337628905,-18.08693901352666,0
+2025-05-15 22:38:47 [INFO] 收到机械臂消息: B
+2025-05-15 22:38:47 [INFO] 收到第1次的抓取点位: B
+2025-05-15 22:38:47 [INFO] 发送第三个抓取点坐标: 469.15921402185046,111.50904193569582,0
+2025-05-15 22:39:03 [INFO] 收到机械臂消息: C
+2025-05-15 22:39:03 [INFO] 收到第1次的抓取点位: C
+2025-05-15 22:39:03 [INFO] [完成] 第1次抓取指令发送成功
+2025-05-15 22:39:03 [INFO] 收到机械臂消息: no_grab
+2025-05-15 22:39:03 [INFO] 
+===== arm1 的处理流程已完成 =====
+

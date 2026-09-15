@@ -1,0 +1,31 @@
+2025-05-06 15:01:16 [INFO] 正在获取图像，尝试 1/10 (已耗时: 0.0秒)
+2025-05-06 15:01:25 [ERROR] 获取图像失败: OpenCV(4.11.0) D:\a\opencv-python\opencv-python\opencv\modules\imgcodecs\src\loadsave.cpp:929: error: (-215:Assertion failed) !_img.empty() in function 'cv::imwrite'
+
+2025-05-06 15:01:25 [INFO] 正在获取图像，尝试 2/10 (已耗时: 9.3秒)
+2025-05-06 15:01:25 [ERROR] 获取图像失败: OpenCV(4.11.0) D:\a\opencv-python\opencv-python\opencv\modules\imgcodecs\src\loadsave.cpp:929: error: (-215:Assertion failed) !_img.empty() in function 'cv::imwrite'
+
+2025-05-06 15:01:26 [INFO] 正在获取图像，尝试 3/10 (已耗时: 9.8秒)
+2025-05-06 15:01:26 [ERROR] 获取图像失败: OpenCV(4.11.0) D:\a\opencv-python\opencv-python\opencv\modules\imgcodecs\src\loadsave.cpp:929: error: (-215:Assertion failed) !_img.empty() in function 'cv::imwrite'
+
+2025-05-06 15:01:26 [INFO] 正在获取图像，尝试 4/10 (已耗时: 10.4秒)
+2025-05-06 15:01:26 [ERROR] 获取图像失败: OpenCV(4.11.0) D:\a\opencv-python\opencv-python\opencv\modules\imgcodecs\src\loadsave.cpp:929: error: (-215:Assertion failed) !_img.empty() in function 'cv::imwrite'
+
+2025-05-06 15:01:27 [INFO] 正在获取图像，尝试 5/10 (已耗时: 10.9秒)
+2025-05-06 15:01:27 [ERROR] 获取图像失败: OpenCV(4.11.0) D:\a\opencv-python\opencv-python\opencv\modules\imgcodecs\src\loadsave.cpp:929: error: (-215:Assertion failed) !_img.empty() in function 'cv::imwrite'
+
+2025-05-06 15:01:27 [INFO] 正在获取图像，尝试 6/10 (已耗时: 11.5秒)
+2025-05-06 15:01:27 [ERROR] 获取图像失败: OpenCV(4.11.0) D:\a\opencv-python\opencv-python\opencv\modules\imgcodecs\src\loadsave.cpp:929: error: (-215:Assertion failed) !_img.empty() in function 'cv::imwrite'
+
+2025-05-06 15:01:28 [INFO] 正在获取图像，尝试 7/10 (已耗时: 12.0秒)
+2025-05-06 15:01:28 [ERROR] 获取图像失败: OpenCV(4.11.0) D:\a\opencv-python\opencv-python\opencv\modules\imgcodecs\src\loadsave.cpp:929: error: (-215:Assertion failed) !_img.empty() in function 'cv::imwrite'
+
+2025-05-06 15:01:28 [INFO] 正在获取图像，尝试 8/10 (已耗时: 12.5秒)
+2025-05-06 15:01:28 [ERROR] 获取图像失败: OpenCV(4.11.0) D:\a\opencv-python\opencv-python\opencv\modules\imgcodecs\src\loadsave.cpp:929: error: (-215:Assertion failed) !_img.empty() in function 'cv::imwrite'
+
+2025-05-06 15:01:29 [INFO] 正在获取图像，尝试 9/10 (已耗时: 13.1秒)
+2025-05-06 15:01:29 [ERROR] 获取图像失败: OpenCV(4.11.0) D:\a\opencv-python\opencv-python\opencv\modules\imgcodecs\src\loadsave.cpp:929: error: (-215:Assertion failed) !_img.empty() in function 'cv::imwrite'
+
+2025-05-06 15:01:29 [INFO] 正在获取图像，尝试 10/10 (已耗时: 13.7秒)
+2025-05-06 15:01:30 [ERROR] 获取图像失败: OpenCV(4.11.0) D:\a\opencv-python\opencv-python\opencv\modules\imgcodecs\src\loadsave.cpp:929: error: (-215:Assertion failed) !_img.empty() in function 'cv::imwrite'
+
+2025-05-06 15:01:30 [WARNING] 在10次尝试后未能获取清晰图像，使用最后一次获取的图像

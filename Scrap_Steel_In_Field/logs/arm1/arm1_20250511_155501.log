@@ -1,0 +1,33 @@
+2025-05-11 15:55:01 [INFO] 
+===== 开始 arm1 的处理流程 =====
+2025-05-11 15:55:01 [INFO] 
+[步骤1] 请求拍摄车体照片
+2025-05-11 15:55:01 [INFO] 开始获取清晰图像...
+2025-05-11 15:55:41 [INFO] 已保存vehicle图像: C:\Users\qinguang\feigangxiangmu\Scrap_steel_system\Scrap_Steel_Loading\photos\vehicle\vehicle_image_20250511_155541.jpg
+2025-05-11 15:55:41 [INFO] [完成] 车体拍照完成: C:\Users\qinguang\feigangxiangmu\Scrap_steel_system\Scrap_Steel_Loading\photos\vehicle\vehicle_image_20250511_155541.jpg
+2025-05-11 15:55:41 [INFO] 
+[步骤2] 请求第1次原始图片拍照
+2025-05-11 15:55:41 [INFO] 开始获取清晰图像...
+2025-05-11 15:56:26 [INFO] 已保存original图像: C:\Users\qinguang\feigangxiangmu\Scrap_steel_system\Scrap_Steel_Loading\photos\original\original_image_20250511_155626.jpg
+2025-05-11 15:56:38 [INFO] [完成] 第1次原始图片拍照完成: C:\Users\qinguang\feigangxiangmu\Scrap_steel_system\Scrap_Steel_Loading\photos\original\original_image_20250511_155626.jpg
+2025-05-11 15:56:42 [ERROR] 更新图片路径到 Flask 应用时出错: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /set_image_path (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023C87E69510>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2025-05-11 15:56:42 [INFO] [步骤2.1] 进行危险品推理
+2025-05-11 15:56:45 [INFO] [完成] 危险品检测完成，未发现危险品
+2025-05-11 15:56:45 [INFO] 危险品检测结果已写入JSON文件: C:\Users\qinguang\feigangxiangmu\Scrap_steel_system\Scrap_Steel_Loading\photos\detection_results.json
+2025-05-11 15:56:45 [INFO] 检测结果的路径为：C:\Users\qinguang\feigangxiangmu\Scrap_steel_system\Scrap_Steel_Loading\photos\dangerous_det\detection_20250511_155645.jpg
+2025-05-11 15:56:45 [INFO] 文件存在，大小: 134443 字节
+2025-05-11 15:56:49 [ERROR] 更新危险品检测结果到 Flask 应用时出错: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /set_detection_path (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023C87E36F50>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2025-05-11 15:56:49 [INFO] [步骤2.2] 对原始图片进行废钢分割
+2025-05-11 15:56:49 [WARNING] [警告] 废钢分割失败，将按默认流程继续
+2025-05-11 15:56:49 [INFO] 
+[步骤2.3] 请求第1次抓取循环
+2025-05-11 15:56:49 [INFO] [发送] → arm1: 'START_GRAB'
+2025-05-11 15:57:02 [INFO] 机械臂坐标系抓取点: [(402.3019104003906, -68.1258316040039), (401.7853698730469, 52.76652145385742), (395.3846740722656, 173.19276428222656)]
+2025-05-11 15:57:02 [INFO] 抓取点坐标（带z=0）:
+2025-05-11 15:57:02 [INFO] 402.3019104003906,-68.1258316040039,0
+2025-05-11 15:57:02 [INFO] 401.7853698730469,52.76652145385742,0
+2025-05-11 15:57:02 [INFO] 395.3846740722656,173.19276428222656,0
+2025-05-11 15:57:02 [INFO] 发送第一个抓取点坐标: 402.3019104003906,-68.1258316040039,0
+2025-05-11 15:57:02 [INFO] 发送第二个抓取点坐标: 401.7853698730469,52.76652145385742,0
+2025-05-11 15:57:02 [INFO] 发送第三个抓取点坐标: 395.3846740722656,173.19276428222656,0
+2025-05-11 15:57:02 [INFO] [完成] 第1次抓取指令发送成功

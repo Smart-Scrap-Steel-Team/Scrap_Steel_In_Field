@@ -1,0 +1,60 @@
+2025-04-28 14:19:52 [INFO] 
+===== 开始 arm1 的处理流程 =====
+2025-04-28 14:19:52 [INFO] 
+[步骤1] 请求拍摄车体照片
+2025-04-28 14:19:52 [INFO] 开始获取清晰图像...
+2025-04-28 14:19:56 [INFO] 已保存vehicle图像: C:\Users\qinguang\feigangxiangmu\Scrap_steel_system\Scrap_Steel_Loading\photos\vehicle\vehicle_image_20250428_141956.jpg
+2025-04-28 14:20:00 [ERROR] 更新图片路径到 Flask 应用时出错: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /set_image_path (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000015656EF3490>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2025-04-28 14:20:00 [INFO] [完成] 车体拍照完成: C:\Users\qinguang\feigangxiangmu\Scrap_steel_system\Scrap_Steel_Loading\photos\vehicle\vehicle_image_20250428_141956.jpg
+2025-04-28 14:20:00 [INFO] 
+[步骤2] 请求第1次原始图片拍照
+2025-04-28 14:20:00 [INFO] 开始获取清晰图像...
+2025-04-28 14:20:03 [INFO] 已保存original图像: C:\Users\qinguang\feigangxiangmu\Scrap_steel_system\Scrap_Steel_Loading\photos\original\original_image_20250428_142003.jpg
+2025-04-28 14:20:08 [ERROR] 更新图片路径到 Flask 应用时出错: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /set_image_path (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000015656EF3280>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2025-04-28 14:20:08 [INFO] [完成] 第1次原始图片拍照完成: C:\Users\qinguang\feigangxiangmu\Scrap_steel_system\Scrap_Steel_Loading\photos\original\original_image_20250428_142003.jpg
+2025-04-28 14:20:08 [INFO] [步骤2.1] 进行危险品推理
+2025-04-28 14:20:08 [INFO] [完成] 危险品检测完成，未发现危险品
+2025-04-28 14:20:08 [INFO] [步骤2.2] 对原始图片进行废钢分割
+2025-04-28 14:20:08 [WARNING] [警告] 废钢分割失败，将按默认流程继续
+2025-04-28 14:20:08 [INFO] 
+[步骤2.3] 请求第1次抓取循环
+2025-04-28 14:20:08 [INFO] [发送] → arm1: 'START_GRAB'
+2025-04-28 14:20:08 [INFO] [完成] 第1次抓取指令发送成功
+2025-04-28 14:22:49 [INFO] 收到机械臂消息: 1
+2025-04-28 14:22:49 [INFO] 收到第1次抓取后的消息: 1
+2025-04-28 14:22:49 [INFO] 
+[步骤3] 请求第2次原始图片拍照
+2025-04-28 14:22:49 [INFO] 开始获取清晰图像...
+2025-04-28 14:22:53 [INFO] 已保存original图像: C:\Users\qinguang\feigangxiangmu\Scrap_steel_system\Scrap_Steel_Loading\photos\original\original_image_20250428_142253.jpg
+2025-04-28 14:22:57 [ERROR] 更新图片路径到 Flask 应用时出错: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /set_image_path (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000015656EF3E50>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2025-04-28 14:22:57 [INFO] [完成] 第2次原始图片拍照完成: C:\Users\qinguang\feigangxiangmu\Scrap_steel_system\Scrap_Steel_Loading\photos\original\original_image_20250428_142253.jpg
+2025-04-28 14:22:57 [INFO] [步骤3.1] 进行危险品推理
+2025-04-28 14:22:57 [INFO] [完成] 危险品检测完成，未发现危险品
+2025-04-28 14:22:57 [INFO] [步骤3.2] 对原始图片进行废钢分割
+2025-04-28 14:22:57 [WARNING] [警告] 废钢分割失败，将按默认流程继续
+2025-04-28 14:22:57 [INFO] 
+[步骤3.3] 请求第2次抓取循环
+2025-04-28 14:22:57 [INFO] [发送] → arm1: 'START_GRAB'
+2025-04-28 14:22:57 [INFO] [完成] 第2次抓取指令发送成功
+2025-04-28 14:23:00 [INFO] 收到机械臂消息: 1
+2025-04-28 14:23:00 [INFO] 收到第2次抓取后的消息: 1
+2025-04-28 14:23:00 [INFO] 
+[步骤4] 请求第3次原始图片拍照
+2025-04-28 14:23:00 [INFO] 开始获取清晰图像...
+2025-04-28 14:23:03 [INFO] 已保存original图像: C:\Users\qinguang\feigangxiangmu\Scrap_steel_system\Scrap_Steel_Loading\photos\original\original_image_20250428_142303.jpg
+2025-04-28 14:23:08 [ERROR] 更新图片路径到 Flask 应用时出错: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /set_image_path (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000015656F40790>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2025-04-28 14:23:08 [INFO] [完成] 第3次原始图片拍照完成: C:\Users\qinguang\feigangxiangmu\Scrap_steel_system\Scrap_Steel_Loading\photos\original\original_image_20250428_142303.jpg
+2025-04-28 14:23:08 [INFO] [步骤4.1] 进行危险品推理
+2025-04-28 14:23:08 [INFO] [完成] 危险品检测完成，未发现危险品
+2025-04-28 14:23:08 [INFO] [步骤4.2] 对原始图片进行废钢分割
+2025-04-28 14:23:08 [WARNING] [警告] 废钢分割失败，将按默认流程继续
+2025-04-28 14:23:08 [INFO] 
+[步骤4.3] 请求第3次抓取循环
+2025-04-28 14:23:08 [INFO] [发送] → arm1: 'START_GRAB'
+2025-04-28 14:23:08 [INFO] [完成] 第3次抓取指令发送成功
+2025-04-28 14:24:06 [INFO] 收到机械臂消息: 1
+2025-04-28 14:24:06 [INFO] 收到第3次抓取后的消息: 1
+2025-04-28 14:24:06 [INFO] 
+===== arm1 的处理流程已完成 =====
+
+2025-04-28 14:24:06 [INFO] 机械臂处理流程已完成

@@ -1,0 +1,80 @@
+2025-04-29 21:14:31 [INFO] 
+===== 开始 arm1 的处理流程 =====
+2025-04-29 21:14:31 [INFO] 
+[步骤1] 请求拍摄车体照片
+2025-04-29 21:14:31 [INFO] 开始获取清晰图像...
+2025-04-29 21:14:41 [INFO] 已保存vehicle图像: C:\Users\qinguang\feigangxiangmu\Scrap_steel_system\Scrap_Steel_Loading\photos\vehicle\vehicle_image_20250429_211441.jpg
+2025-04-29 21:14:41 [INFO] [完成] 车体拍照完成: C:\Users\qinguang\feigangxiangmu\Scrap_steel_system\Scrap_Steel_Loading\photos\vehicle\vehicle_image_20250429_211441.jpg
+2025-04-29 21:14:41 [INFO] 
+[步骤2] 请求第1次原始图片拍照
+2025-04-29 21:14:41 [INFO] 开始获取清晰图像...
+2025-04-29 21:14:45 [INFO] 已保存original图像: C:\Users\qinguang\feigangxiangmu\Scrap_steel_system\Scrap_Steel_Loading\photos\original\original_image_20250429_211445.jpg
+2025-04-29 21:14:45 [INFO] [完成] 第1次原始图片拍照完成: C:\Users\qinguang\feigangxiangmu\Scrap_steel_system\Scrap_Steel_Loading\photos\original\original_image_20250429_211445.jpg
+2025-04-29 21:14:45 [INFO] 图片路径已更新到 Flask 应用
+2025-04-29 21:14:45 [INFO] [步骤2.1] 进行危险品推理
+2025-04-29 21:14:46 [INFO] [完成] 危险品检测成功，发现 3 个危险品
+2025-04-29 21:14:46 [INFO] 危险品 1: FireExt1 (置信度: 0.54)
+2025-04-29 21:14:46 [INFO] 危险品 2: FireExt1 (置信度: 0.49)
+2025-04-29 21:14:46 [INFO] 危险品 3: FireExt1 (置信度: 0.36)
+2025-04-29 21:14:46 [INFO] 危险品检测结果已写入JSON文件: C:\Users\qinguang\feigangxiangmu\Scrap_steel_system\Scrap_Steel_Loading\photos\detection_results.json
+2025-04-29 21:14:47 [INFO] 饼状图已更新到 Flask 应用
+2025-04-29 21:14:47 [INFO] 检测结果的路径为：C:\Users\qinguang\feigangxiangmu\Scrap_steel_system\Scrap_Steel_Loading\photos\dangerous_det\detection_20250429_211446.jpg
+2025-04-29 21:14:47 [INFO] 文件存在，大小: 1476786 字节
+2025-04-29 21:14:47 [INFO] 危险品检测结果已更新到 Flask 应用
+2025-04-29 21:14:47 [INFO] [步骤2.2] 对原始图片进行废钢分割
+2025-04-29 21:14:47 [WARNING] [警告] 废钢分割失败，将按默认流程继续
+2025-04-29 21:14:47 [INFO] 
+[步骤2.3] 请求第1次抓取循环
+2025-04-29 21:14:47 [INFO] [发送] → arm1: 'START_GRAB'
+2025-04-29 21:14:47 [INFO] [完成] 第1次抓取指令发送成功
+2025-04-29 21:14:56 [INFO] 收到机械臂消息: 1
+2025-04-29 21:14:56 [INFO] 收到第1次抓取后的消息: 1
+2025-04-29 21:14:56 [INFO] 
+[步骤3] 请求第2次原始图片拍照
+2025-04-29 21:14:56 [INFO] 开始获取清晰图像...
+2025-04-29 21:14:59 [INFO] 已保存original图像: C:\Users\qinguang\feigangxiangmu\Scrap_steel_system\Scrap_Steel_Loading\photos\original\original_image_20250429_211459.jpg
+2025-04-29 21:14:59 [INFO] [完成] 第2次原始图片拍照完成: C:\Users\qinguang\feigangxiangmu\Scrap_steel_system\Scrap_Steel_Loading\photos\original\original_image_20250429_211459.jpg
+2025-04-29 21:14:59 [INFO] 图片路径已更新到 Flask 应用
+2025-04-29 21:14:59 [INFO] [步骤3.1] 进行危险品推理
+2025-04-29 21:15:00 [INFO] [完成] 危险品检测成功，发现 2 个危险品
+2025-04-29 21:15:00 [INFO] 危险品 1: FireExt1 (置信度: 0.55)
+2025-04-29 21:15:00 [INFO] 危险品 2: FireExt1 (置信度: 0.46)
+2025-04-29 21:15:00 [INFO] 危险品检测结果已写入JSON文件: C:\Users\qinguang\feigangxiangmu\Scrap_steel_system\Scrap_Steel_Loading\photos\detection_results.json
+2025-04-29 21:15:01 [INFO] 饼状图已更新到 Flask 应用
+2025-04-29 21:15:01 [INFO] 检测结果的路径为：C:\Users\qinguang\feigangxiangmu\Scrap_steel_system\Scrap_Steel_Loading\photos\dangerous_det\detection_20250429_211500.jpg
+2025-04-29 21:15:01 [INFO] 文件存在，大小: 1470312 字节
+2025-04-29 21:15:01 [INFO] 危险品检测结果已更新到 Flask 应用
+2025-04-29 21:15:01 [INFO] [步骤3.2] 对原始图片进行废钢分割
+2025-04-29 21:15:01 [WARNING] [警告] 废钢分割失败，将按默认流程继续
+2025-04-29 21:15:01 [INFO] 
+[步骤3.3] 请求第2次抓取循环
+2025-04-29 21:15:01 [INFO] [发送] → arm1: 'START_GRAB'
+2025-04-29 21:15:01 [INFO] [完成] 第2次抓取指令发送成功
+2025-04-29 21:15:01 [INFO] 收到机械臂消息: 1
+2025-04-29 21:15:01 [INFO] 收到第2次抓取后的消息: 1
+2025-04-29 21:15:01 [INFO] 
+[步骤4] 请求第3次原始图片拍照
+2025-04-29 21:15:01 [INFO] 开始获取清晰图像...
+2025-04-29 21:15:10 [INFO] 已保存original图像: C:\Users\qinguang\feigangxiangmu\Scrap_steel_system\Scrap_Steel_Loading\photos\original\original_image_20250429_211510.jpg
+2025-04-29 21:15:10 [INFO] [完成] 第3次原始图片拍照完成: C:\Users\qinguang\feigangxiangmu\Scrap_steel_system\Scrap_Steel_Loading\photos\original\original_image_20250429_211510.jpg
+2025-04-29 21:15:10 [INFO] 图片路径已更新到 Flask 应用
+2025-04-29 21:15:10 [INFO] [步骤4.1] 进行危险品推理
+2025-04-29 21:15:11 [INFO] [完成] 危险品检测成功，发现 2 个危险品
+2025-04-29 21:15:11 [INFO] 危险品 1: FireExt1 (置信度: 0.54)
+2025-04-29 21:15:11 [INFO] 危险品 2: FireExt1 (置信度: 0.46)
+2025-04-29 21:15:11 [INFO] 危险品检测结果已写入JSON文件: C:\Users\qinguang\feigangxiangmu\Scrap_steel_system\Scrap_Steel_Loading\photos\detection_results.json
+2025-04-29 21:15:11 [INFO] 饼状图已更新到 Flask 应用
+2025-04-29 21:15:11 [INFO] 检测结果的路径为：C:\Users\qinguang\feigangxiangmu\Scrap_steel_system\Scrap_Steel_Loading\photos\dangerous_det\detection_20250429_211511.jpg
+2025-04-29 21:15:11 [INFO] 文件存在，大小: 1471272 字节
+2025-04-29 21:15:11 [INFO] 危险品检测结果已更新到 Flask 应用
+2025-04-29 21:15:11 [INFO] [步骤4.2] 对原始图片进行废钢分割
+2025-04-29 21:15:11 [WARNING] [警告] 废钢分割失败，将按默认流程继续
+2025-04-29 21:15:11 [INFO] 
+[步骤4.3] 请求第3次抓取循环
+2025-04-29 21:15:11 [INFO] [发送] → arm1: 'START_GRAB'
+2025-04-29 21:15:11 [INFO] [完成] 第3次抓取指令发送成功
+2025-04-29 21:15:11 [INFO] 收到机械臂消息: 1
+2025-04-29 21:15:11 [INFO] 收到第3次抓取后的消息: 1
+2025-04-29 21:15:11 [INFO] 
+===== arm1 的处理流程已完成 =====
+

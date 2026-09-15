@@ -1,0 +1,5 @@
+Detected Pixel Corners (1:Top-Left, 2:Top-Right, 3:Bottom-Right, 4:Bottom-Left):
+Corner 1: (1134.0, 641.0)
+Corner 2: (3281.0, 744.0)
+Corner 3: (3246.0, 1634.0)
+Corner 4: (1062.0, 1507.0)

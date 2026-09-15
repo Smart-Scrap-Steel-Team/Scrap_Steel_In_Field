@@ -1,0 +1,20 @@
+2026-05-22 17:55:52 [INFO] CUDA 初始化成功
+2026-05-22 17:55:52 [INFO] 引擎加载成功: scrap_steel.engine
+2026-05-22 17:55:52 [INFO] 分割系统初始化成功
+2026-05-22 17:55:55 [INFO] 引擎加载成功: scrap_steel.engine
+2026-05-22 17:55:55 [INFO] 分割系统初始化成功
+2026-05-22 17:55:55 [INFO] 图像预处理完成，原始尺寸: (2160, 3840)
+2026-05-22 17:55:55 [INFO] 开始执行分割...
+2026-05-22 17:55:55 [ERROR] 推理错误: local variable 'd_mask' referenced before assignment
+2026-05-22 17:55:55 [INFO] 保存分割和检测结果到: C:\code\show\Scrap_Steel_In_Field\photos\segmentation\segment_20260522_175555.jpg
+2026-05-22 17:55:55 [INFO] JSON结果保存到: C:\code\show\Scrap_Steel_In_Field\photos\segmentation_result.json
+2026-05-22 17:55:55 [INFO] 类别统计：{}
+2026-05-22 17:55:55 [INFO] 面积统计：{}
+2026-05-22 17:56:13 [INFO] 图像预处理完成，原始尺寸: (2160, 3840)
+2026-05-22 17:56:13 [INFO] 开始执行分割...
+2026-05-22 17:56:13 [ERROR] 推理过程发生异常: explicit_context_dependent failed: invalid device context - no currently active context?
+2026-05-22 17:56:13 [INFO] 分割完成，检测到 0 个物体
+2026-05-22 17:56:13 [INFO] 保存分割和检测结果到: C:\code\show\Scrap_Steel_In_Field\photos\segmentation\segment_20260522_175613.jpg
+2026-05-22 17:56:13 [INFO] JSON结果保存到: C:\code\show\Scrap_Steel_In_Field\photos\segmentation_result.json
+2026-05-22 17:56:13 [INFO] 类别统计：{}
+2026-05-22 17:56:13 [INFO] 面积统计：{}

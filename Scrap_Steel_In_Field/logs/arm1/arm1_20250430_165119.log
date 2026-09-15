@@ -1,0 +1,12 @@
+2025-04-30 16:51:19 [INFO] 
+===== 开始 arm1 的处理流程 =====
+2025-04-30 16:51:19 [INFO] 
+[步骤1] 请求拍摄车体照片
+2025-04-30 16:51:19 [INFO] 开始获取清晰图像...
+2025-04-30 16:52:04 [INFO] 已保存vehicle图像: C:\Users\qinguang\feigangxiangmu\Scrap_steel_system\Scrap_Steel_Loading\photos\vehicle\vehicle_image_20250430_165204.jpg
+2025-04-30 16:52:04 [INFO] [完成] 车体拍照完成: C:\Users\qinguang\feigangxiangmu\Scrap_steel_system\Scrap_Steel_Loading\photos\vehicle\vehicle_image_20250430_165204.jpg
+2025-04-30 16:52:04 [INFO] 
+[步骤2] 请求第1次原始图片拍照
+2025-04-30 16:52:04 [INFO] 开始获取清晰图像...
+2025-04-30 16:52:49 [INFO] 已保存original图像: C:\Users\qinguang\feigangxiangmu\Scrap_steel_system\Scrap_Steel_Loading\photos\original\original_image_20250430_165248.jpg
+2025-04-30 16:52:51 [INFO] [完成] 第1次原始图片拍照完成: C:\Users\qinguang\feigangxiangmu\Scrap_steel_system\Scrap_Steel_Loading\photos\original\original_image_20250430_165248.jpg

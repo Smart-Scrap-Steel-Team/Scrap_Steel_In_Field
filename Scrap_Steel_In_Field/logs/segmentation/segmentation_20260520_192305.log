@@ -1,0 +1,194 @@
+2026-05-20 19:23:06 [INFO] CUDA 初始化成功
+2026-05-20 19:23:06 [INFO] 引擎加载成功: scrap_steel.engine
+2026-05-20 19:23:06 [INFO] 分割系统初始化成功
+2026-05-20 19:23:08 [INFO] 引擎加载成功: scrap_steel.engine
+2026-05-20 19:23:08 [INFO] 分割系统初始化成功
+2026-05-20 19:23:09 [INFO] 图像预处理完成，原始尺寸: (2160, 3840)
+2026-05-20 19:23:09 [INFO] 开始执行分割...
+2026-05-20 19:23:09 [ERROR] 推理过程发生异常: explicit_context_dependent failed: invalid device context - no currently active context?
+2026-05-20 19:23:09 [INFO] 分割完成，检测到 0 个物体
+2026-05-20 19:23:09 [INFO] 保存分割和检测结果到: C:\code\show\Scrap_Steel_In_Field\photos\segmentation\segment_20260520_192309.jpg
+2026-05-20 19:23:09 [INFO] JSON结果保存到: C:\code\show\Scrap_Steel_In_Field\photos\segmentation_result.json
+2026-05-20 19:23:09 [INFO] 类别统计：{}
+2026-05-20 19:23:09 [INFO] 面积统计：{}
+2026-05-20 19:23:09 [ERROR] 分割失败: 未能生成有效的分割掩码
+2026-05-20 19:23:09 [INFO] 引擎上下文已释放
+2026-05-20 19:23:09 [INFO] TensorRT 引擎已释放
+2026-05-20 19:23:09 [INFO] 全局 CUDA 资源已释放
+2026-05-20 19:23:09 [INFO] 分割系统资源已释放
+2026-05-20 19:23:16 [INFO] CUDA 初始化成功
+2026-05-20 19:23:16 [INFO] 引擎加载成功: scrap_steel.engine
+2026-05-20 19:23:16 [INFO] 分割系统初始化成功
+2026-05-20 19:23:16 [INFO] 图像预处理完成，原始尺寸: (2160, 3840)
+2026-05-20 19:23:16 [INFO] 开始执行分割...
+2026-05-20 19:23:16 [ERROR] 推理执行失败: cannot reshape array of size 819200 into shape (1,52,8400)
+2026-05-20 19:23:16 [INFO] 分割完成，检测到 0 个物体
+2026-05-20 19:23:16 [INFO] 保存分割和检测结果到: C:\code\show\Scrap_Steel_In_Field\photos\segmentation\segment_20260520_192316.jpg
+2026-05-20 19:23:16 [INFO] JSON结果保存到: C:\code\show\Scrap_Steel_In_Field\photos\segmentation_result.json
+2026-05-20 19:23:16 [INFO] 类别统计：{}
+2026-05-20 19:23:16 [INFO] 面积统计：{}
+2026-05-20 19:23:16 [ERROR] 分割失败: 未能生成有效的分割掩码
+2026-05-20 19:23:16 [INFO] 引擎上下文已释放
+2026-05-20 19:23:16 [INFO] TensorRT 引擎已释放
+2026-05-20 19:23:16 [INFO] 全局 CUDA 资源已释放
+2026-05-20 19:23:16 [INFO] 分割系统资源已释放
+2026-05-20 19:23:21 [INFO] CUDA 初始化成功
+2026-05-20 19:23:21 [INFO] 引擎加载成功: scrap_steel.engine
+2026-05-20 19:23:21 [INFO] 分割系统初始化成功
+2026-05-20 19:23:21 [INFO] 图像预处理完成，原始尺寸: (2160, 3840)
+2026-05-20 19:23:21 [INFO] 开始执行分割...
+2026-05-20 19:23:21 [ERROR] 推理执行失败: cannot reshape array of size 819200 into shape (1,52,8400)
+2026-05-20 19:23:21 [INFO] 分割完成，检测到 0 个物体
+2026-05-20 19:23:21 [INFO] 保存分割和检测结果到: C:\code\show\Scrap_Steel_In_Field\photos\segmentation\segment_20260520_192321.jpg
+2026-05-20 19:23:21 [INFO] JSON结果保存到: C:\code\show\Scrap_Steel_In_Field\photos\segmentation_result.json
+2026-05-20 19:23:21 [INFO] 类别统计：{}
+2026-05-20 19:23:21 [INFO] 面积统计：{}
+2026-05-20 19:23:21 [ERROR] 分割失败: 未能生成有效的分割掩码
+2026-05-20 19:23:21 [INFO] 引擎上下文已释放
+2026-05-20 19:23:21 [INFO] TensorRT 引擎已释放
+2026-05-20 19:23:21 [INFO] 全局 CUDA 资源已释放
+2026-05-20 19:23:21 [INFO] 分割系统资源已释放
+2026-05-20 19:23:25 [INFO] CUDA 初始化成功
+2026-05-20 19:23:25 [INFO] 引擎加载成功: scrap_steel.engine
+2026-05-20 19:23:25 [INFO] 分割系统初始化成功
+2026-05-20 19:23:26 [INFO] 图像预处理完成，原始尺寸: (2160, 3840)
+2026-05-20 19:23:26 [INFO] 开始执行分割...
+2026-05-20 19:23:26 [ERROR] 推理执行失败: cannot reshape array of size 819200 into shape (1,52,8400)
+2026-05-20 19:23:26 [INFO] 分割完成，检测到 0 个物体
+2026-05-20 19:23:26 [INFO] 保存分割和检测结果到: C:\code\show\Scrap_Steel_In_Field\photos\segmentation\segment_20260520_192326.jpg
+2026-05-20 19:23:26 [INFO] JSON结果保存到: C:\code\show\Scrap_Steel_In_Field\photos\segmentation_result.json
+2026-05-20 19:23:26 [INFO] 类别统计：{}
+2026-05-20 19:23:26 [INFO] 面积统计：{}
+2026-05-20 19:23:26 [ERROR] 分割失败: 未能生成有效的分割掩码
+2026-05-20 19:23:26 [INFO] 引擎上下文已释放
+2026-05-20 19:23:26 [INFO] TensorRT 引擎已释放
+2026-05-20 19:23:26 [INFO] 全局 CUDA 资源已释放
+2026-05-20 19:23:26 [INFO] 分割系统资源已释放
+2026-05-20 19:23:30 [INFO] CUDA 初始化成功
+2026-05-20 19:23:30 [INFO] 引擎加载成功: scrap_steel.engine
+2026-05-20 19:23:30 [INFO] 分割系统初始化成功
+2026-05-20 19:23:31 [INFO] 图像预处理完成，原始尺寸: (2160, 3840)
+2026-05-20 19:23:31 [INFO] 开始执行分割...
+2026-05-20 19:23:31 [ERROR] 推理执行失败: cannot reshape array of size 819200 into shape (1,52,8400)
+2026-05-20 19:23:31 [INFO] 分割完成，检测到 0 个物体
+2026-05-20 19:23:31 [INFO] 保存分割和检测结果到: C:\code\show\Scrap_Steel_In_Field\photos\segmentation\segment_20260520_192331.jpg
+2026-05-20 19:23:31 [INFO] JSON结果保存到: C:\code\show\Scrap_Steel_In_Field\photos\segmentation_result.json
+2026-05-20 19:23:31 [INFO] 类别统计：{}
+2026-05-20 19:23:31 [INFO] 面积统计：{}
+2026-05-20 19:23:31 [ERROR] 分割失败: 未能生成有效的分割掩码
+2026-05-20 19:23:31 [INFO] 引擎上下文已释放
+2026-05-20 19:23:31 [INFO] TensorRT 引擎已释放
+2026-05-20 19:23:31 [INFO] 全局 CUDA 资源已释放
+2026-05-20 19:23:31 [INFO] 分割系统资源已释放
+2026-05-20 19:23:35 [INFO] CUDA 初始化成功
+2026-05-20 19:23:35 [INFO] 引擎加载成功: scrap_steel.engine
+2026-05-20 19:23:35 [INFO] 分割系统初始化成功
+2026-05-20 19:23:36 [INFO] 图像预处理完成，原始尺寸: (2160, 3840)
+2026-05-20 19:23:36 [INFO] 开始执行分割...
+2026-05-20 19:23:36 [ERROR] 推理执行失败: cannot reshape array of size 819200 into shape (1,52,8400)
+2026-05-20 19:23:36 [INFO] 分割完成，检测到 0 个物体
+2026-05-20 19:23:36 [INFO] 保存分割和检测结果到: C:\code\show\Scrap_Steel_In_Field\photos\segmentation\segment_20260520_192336.jpg
+2026-05-20 19:23:36 [INFO] JSON结果保存到: C:\code\show\Scrap_Steel_In_Field\photos\segmentation_result.json
+2026-05-20 19:23:36 [INFO] 类别统计：{}
+2026-05-20 19:23:36 [INFO] 面积统计：{}
+2026-05-20 19:23:36 [ERROR] 分割失败: 未能生成有效的分割掩码
+2026-05-20 19:23:36 [INFO] 引擎上下文已释放
+2026-05-20 19:23:36 [INFO] TensorRT 引擎已释放
+2026-05-20 19:23:36 [INFO] 全局 CUDA 资源已释放
+2026-05-20 19:23:36 [INFO] 分割系统资源已释放
+2026-05-20 19:23:40 [INFO] CUDA 初始化成功
+2026-05-20 19:23:41 [INFO] 引擎加载成功: scrap_steel.engine
+2026-05-20 19:23:41 [INFO] 分割系统初始化成功
+2026-05-20 19:23:41 [INFO] 图像预处理完成，原始尺寸: (2160, 3840)
+2026-05-20 19:23:41 [INFO] 开始执行分割...
+2026-05-20 19:23:41 [ERROR] 推理执行失败: cannot reshape array of size 819200 into shape (1,52,8400)
+2026-05-20 19:23:41 [INFO] 分割完成，检测到 0 个物体
+2026-05-20 19:23:41 [INFO] 保存分割和检测结果到: C:\code\show\Scrap_Steel_In_Field\photos\segmentation\segment_20260520_192341.jpg
+2026-05-20 19:23:41 [INFO] JSON结果保存到: C:\code\show\Scrap_Steel_In_Field\photos\segmentation_result.json
+2026-05-20 19:23:41 [INFO] 类别统计：{}
+2026-05-20 19:23:41 [INFO] 面积统计：{}
+2026-05-20 19:23:41 [ERROR] 分割失败: 未能生成有效的分割掩码
+2026-05-20 19:23:41 [INFO] 引擎上下文已释放
+2026-05-20 19:23:41 [INFO] TensorRT 引擎已释放
+2026-05-20 19:23:41 [INFO] 全局 CUDA 资源已释放
+2026-05-20 19:23:41 [INFO] 分割系统资源已释放
+2026-05-20 19:23:46 [INFO] CUDA 初始化成功
+2026-05-20 19:23:46 [INFO] 引擎加载成功: scrap_steel.engine
+2026-05-20 19:23:46 [INFO] 分割系统初始化成功
+2026-05-20 19:23:46 [INFO] 图像预处理完成，原始尺寸: (2160, 3840)
+2026-05-20 19:23:46 [INFO] 开始执行分割...
+2026-05-20 19:23:46 [ERROR] 推理执行失败: cannot reshape array of size 819200 into shape (1,52,8400)
+2026-05-20 19:23:46 [INFO] 分割完成，检测到 0 个物体
+2026-05-20 19:23:46 [INFO] 保存分割和检测结果到: C:\code\show\Scrap_Steel_In_Field\photos\segmentation\segment_20260520_192346.jpg
+2026-05-20 19:23:46 [INFO] JSON结果保存到: C:\code\show\Scrap_Steel_In_Field\photos\segmentation_result.json
+2026-05-20 19:23:46 [INFO] 类别统计：{}
+2026-05-20 19:23:46 [INFO] 面积统计：{}
+2026-05-20 19:23:46 [ERROR] 分割失败: 未能生成有效的分割掩码
+2026-05-20 19:23:46 [INFO] 引擎上下文已释放
+2026-05-20 19:23:46 [INFO] TensorRT 引擎已释放
+2026-05-20 19:23:46 [INFO] 全局 CUDA 资源已释放
+2026-05-20 19:23:46 [INFO] 分割系统资源已释放
+2026-05-20 19:23:51 [INFO] CUDA 初始化成功
+2026-05-20 19:23:51 [INFO] 引擎加载成功: scrap_steel.engine
+2026-05-20 19:23:51 [INFO] 分割系统初始化成功
+2026-05-20 19:23:51 [INFO] 图像预处理完成，原始尺寸: (2160, 3840)
+2026-05-20 19:23:51 [INFO] 开始执行分割...
+2026-05-20 19:23:51 [ERROR] 推理执行失败: cannot reshape array of size 819200 into shape (1,52,8400)
+2026-05-20 19:23:51 [INFO] 分割完成，检测到 0 个物体
+2026-05-20 19:23:51 [INFO] 保存分割和检测结果到: C:\code\show\Scrap_Steel_In_Field\photos\segmentation\segment_20260520_192351.jpg
+2026-05-20 19:23:51 [INFO] JSON结果保存到: C:\code\show\Scrap_Steel_In_Field\photos\segmentation_result.json
+2026-05-20 19:23:51 [INFO] 类别统计：{}
+2026-05-20 19:23:51 [INFO] 面积统计：{}
+2026-05-20 19:23:51 [ERROR] 分割失败: 未能生成有效的分割掩码
+2026-05-20 19:23:51 [INFO] 引擎上下文已释放
+2026-05-20 19:23:51 [INFO] TensorRT 引擎已释放
+2026-05-20 19:23:51 [INFO] 全局 CUDA 资源已释放
+2026-05-20 19:23:51 [INFO] 分割系统资源已释放
+2026-05-20 19:23:56 [INFO] CUDA 初始化成功
+2026-05-20 19:23:56 [INFO] 引擎加载成功: scrap_steel.engine
+2026-05-20 19:23:56 [INFO] 分割系统初始化成功
+2026-05-20 19:23:56 [INFO] 图像预处理完成，原始尺寸: (2160, 3840)
+2026-05-20 19:23:56 [INFO] 开始执行分割...
+2026-05-20 19:23:56 [ERROR] 推理执行失败: cannot reshape array of size 819200 into shape (1,52,8400)
+2026-05-20 19:23:56 [INFO] 分割完成，检测到 0 个物体
+2026-05-20 19:23:56 [INFO] 保存分割和检测结果到: C:\code\show\Scrap_Steel_In_Field\photos\segmentation\segment_20260520_192356.jpg
+2026-05-20 19:23:56 [INFO] JSON结果保存到: C:\code\show\Scrap_Steel_In_Field\photos\segmentation_result.json
+2026-05-20 19:23:56 [INFO] 类别统计：{}
+2026-05-20 19:23:56 [INFO] 面积统计：{}
+2026-05-20 19:23:56 [ERROR] 分割失败: 未能生成有效的分割掩码
+2026-05-20 19:23:56 [INFO] 引擎上下文已释放
+2026-05-20 19:23:56 [INFO] TensorRT 引擎已释放
+2026-05-20 19:23:56 [INFO] 全局 CUDA 资源已释放
+2026-05-20 19:23:56 [INFO] 分割系统资源已释放
+2026-05-20 19:24:01 [INFO] CUDA 初始化成功
+2026-05-20 19:24:01 [INFO] 引擎加载成功: scrap_steel.engine
+2026-05-20 19:24:01 [INFO] 分割系统初始化成功
+2026-05-20 19:24:01 [INFO] 图像预处理完成，原始尺寸: (2160, 3840)
+2026-05-20 19:24:01 [INFO] 开始执行分割...
+2026-05-20 19:24:01 [ERROR] 推理执行失败: cannot reshape array of size 819200 into shape (1,52,8400)
+2026-05-20 19:24:01 [INFO] 分割完成，检测到 0 个物体
+2026-05-20 19:24:02 [INFO] 保存分割和检测结果到: C:\code\show\Scrap_Steel_In_Field\photos\segmentation\segment_20260520_192401.jpg
+2026-05-20 19:24:02 [INFO] JSON结果保存到: C:\code\show\Scrap_Steel_In_Field\photos\segmentation_result.json
+2026-05-20 19:24:02 [INFO] 类别统计：{}
+2026-05-20 19:24:02 [INFO] 面积统计：{}
+2026-05-20 19:24:02 [ERROR] 分割失败: 未能生成有效的分割掩码
+2026-05-20 19:24:02 [INFO] 引擎上下文已释放
+2026-05-20 19:24:02 [INFO] TensorRT 引擎已释放
+2026-05-20 19:24:02 [INFO] 全局 CUDA 资源已释放
+2026-05-20 19:24:02 [INFO] 分割系统资源已释放
+2026-05-20 19:24:07 [INFO] CUDA 初始化成功
+2026-05-20 19:24:07 [INFO] 引擎加载成功: scrap_steel.engine
+2026-05-20 19:24:07 [INFO] 分割系统初始化成功
+2026-05-20 19:24:07 [INFO] 图像预处理完成，原始尺寸: (2160, 3840)
+2026-05-20 19:24:07 [INFO] 开始执行分割...
+2026-05-20 19:24:07 [ERROR] 推理执行失败: cannot reshape array of size 819200 into shape (1,52,8400)
+2026-05-20 19:24:07 [INFO] 分割完成，检测到 0 个物体
+2026-05-20 19:24:07 [INFO] 保存分割和检测结果到: C:\code\show\Scrap_Steel_In_Field\photos\segmentation\segment_20260520_192407.jpg
+2026-05-20 19:24:07 [INFO] JSON结果保存到: C:\code\show\Scrap_Steel_In_Field\photos\segmentation_result.json
+2026-05-20 19:24:07 [INFO] 类别统计：{}
+2026-05-20 19:24:07 [INFO] 面积统计：{}
+2026-05-20 19:24:07 [ERROR] 分割失败: 未能生成有效的分割掩码
+2026-05-20 19:24:07 [INFO] 引擎上下文已释放
+2026-05-20 19:24:07 [INFO] TensorRT 引擎已释放
+2026-05-20 19:24:07 [INFO] 全局 CUDA 资源已释放
+2026-05-20 19:24:07 [INFO] 分割系统资源已释放

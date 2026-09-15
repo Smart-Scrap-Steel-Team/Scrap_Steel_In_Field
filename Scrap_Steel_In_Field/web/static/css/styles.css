@@ -1,0 +1,238 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+body {
+    background-image: url('../screen.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.content {
+    color: white;
+    text-align: center;
+    padding: 20px;
+    text-shadow: 1px 1px 3px #000;
+}
+
+#vehicleImage {
+    position: absolute;
+    left: 26.5%;
+    top: 20.5%;
+    width: 45.5%;
+    height: 32.5%;
+    border: 1px solid #30b7eb;
+    background-color: rgba(27, 42, 67, 0.5);
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+#dangerImage {
+    position: absolute;
+    right: 3.5%;
+    bottom: 4.35%;
+    width: 45.5%;
+    height: 32.5%;
+    border: 1px solid #30b7eb;
+    background-color: rgba(27, 42, 67, 0.5);
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#monitorImage {
+    position: absolute;
+    right: 3.5%;
+    top: 20.5%;
+    width: 45.5%;
+    height: 32.5%;
+    border: 1px solid #30b7eb;
+    background-color: rgba(27, 42, 67, 0.5);
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#pieChart {
+    position: absolute;
+    left: 25.5%;
+    top: 63%;
+    width: 22.3%;
+    height: 32.5%;
+    border: 1px solid #30b7eb;
+    background-color: rgba(27, 42, 67, 0.5);
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#scrapChart {
+    position: absolute;
+    left: 2.25%;
+    top: 63%;
+    width: 22.3%;
+    height: 32.5%;
+    border: 1px solid #30b7eb;
+    background-color: rgba(27, 42, 67, 0.5);
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#jsonDataContainer, #jsonHistoryContainer {
+    position: absolute;
+    left: 6.5%;
+    width: 40.7%;
+    height: 15.3%;
+    border: 1px solid #30b7eb;
+    background-color: rgba(27, 42, 67, 0.5);
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 5px;
+    overflow: hidden;
+}
+
+#jsonDataContainer {
+    top: 20.5%;
+}
+
+#jsonHistoryContainer {
+    top: 37.5%;
+}
+
+#jsonData, #jsonHistory {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 0px;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#jsonData {
+    /* 最新数据部分的特殊样式 */
+    align-items: center; /* 居中对齐 */
+}
+
+#jsonHistory {
+    /* 历史数据部分的特殊样式 */
+    align-items: stretch; /* 拉伸填充 */
+}
+
+#jsonData::-webkit-scrollbar, #jsonHistory::-webkit-scrollbar { 
+    display: none; /* Chrome, Safari and Opera */
+}
+
+.history-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.history-item {
+    border: 1px solid #30b7eb;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 10px;
+    background-color: rgba(27, 42, 67, 0.7);
+}
+
+.history-item h4 {
+    margin: 0 0 5px 0;
+    color: #30b7eb;
+    font-size: 14px;
+    text-align: left;
+    border-bottom: 1px dashed #30b7eb;
+    padding-bottom: 3px;
+}
+
+/* 车辆表格样式 */
+.vehicle-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: -25px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.vehicle-table td {
+    border: none;
+    border-bottom: 1px solid rgba(48, 183, 235, 0.3);
+    padding: 4px 8px;
+    text-align: left;
+    background-color: rgba(27, 42, 67, 0.7);
+}
+
+.vehicle-table tr:nth-child(even) {
+    background-color: rgba(48, 183, 235, 0.2);
+}
+
+.vehicle-table tr:hover {
+    background-color: #ddd;
+}
+
+/* 历史数据的表格样式 */
+.vehicle-history-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: -35px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.vehicle-history-table td {
+    border: none;
+    border-bottom: 1px solid rgba(48, 183, 235, 0.3);
+    padding: 4px 8px;
+    text-align: left;
+    background-color: rgba(27, 42, 67, 0.7);
+}
+
+.vehicle-history-table th {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border: none;
+    border-bottom: 1px solid rgba(48, 183, 235, 0.5);
+    background-color: rgba(27, 42, 67, 0.7);
+    color: white;
+}
+
+.vehicle-history-table tr:nth-child(even) {
+    background-color: rgba(48, 183, 235, 0.2);
+}
+
+.vehicle-history-table tr:hover {
+    background-color: #ddd;
+}
+

@@ -1,0 +1,9 @@
+2025-05-11 17:56:05 [INFO] 
+===== 开始 arm1 的处理流程 =====
+2025-05-11 17:56:05 [INFO] 
+[步骤1] 请求拍摄车体照片
+2025-05-11 17:56:05 [INFO] 开始获取清晰图像...
+2025-05-11 17:56:41 [INFO] 已保存vehicle图像: C:\Users\qinguang\feigangxiangmu\Scrap_steel_system\Scrap_Steel_Loading\photos\vehicle\vehicle_image_20250511_175641.jpg
+2025-05-11 17:56:41 [INFO] [完成] 车体拍照完成: C:\Users\qinguang\feigangxiangmu\Scrap_steel_system\Scrap_Steel_Loading\photos\vehicle\vehicle_image_20250511_175641.jpg
+2025-05-11 17:56:41 [INFO] 收到机械臂消息: 1
+2025-05-11 17:56:41 [INFO] 开始获取清晰图像...

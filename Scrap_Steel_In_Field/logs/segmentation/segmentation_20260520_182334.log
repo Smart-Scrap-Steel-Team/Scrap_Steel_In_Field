@@ -1,0 +1,46 @@
+2026-05-20 18:23:34 [INFO] CUDA 初始化成功
+2026-05-20 18:23:34 [ERROR] 加载引擎出错: pybind11::init(): factory function returned nullptr
+2026-05-20 18:23:34 [ERROR] 初始化失败: Failed to load TensorRT engine.
+2026-05-20 18:23:34 [INFO] 全局 CUDA 资源已释放
+2026-05-20 18:23:37 [INFO] CUDA 初始化成功
+2026-05-20 18:23:37 [ERROR] 加载引擎出错: pybind11::init(): factory function returned nullptr
+2026-05-20 18:23:37 [ERROR] 初始化失败: Failed to load TensorRT engine.
+2026-05-20 18:23:37 [INFO] 全局 CUDA 资源已释放
+2026-05-20 18:23:37 [ERROR] 初始化失败: Failed to load TensorRT engine.
+2026-05-20 18:23:37 [INFO] CUDA 未初始化，无需释放
+2026-05-20 18:23:37 [INFO] 分割系统资源已释放
+2026-05-20 18:23:42 [INFO] CUDA 初始化成功
+2026-05-20 18:23:42 [ERROR] 加载引擎出错: pybind11::init(): factory function returned nullptr
+2026-05-20 18:23:42 [ERROR] 初始化失败: Failed to load TensorRT engine.
+2026-05-20 18:23:42 [INFO] 全局 CUDA 资源已释放
+2026-05-20 18:23:42 [ERROR] 初始化失败: Failed to load TensorRT engine.
+2026-05-20 18:23:42 [INFO] CUDA 未初始化，无需释放
+2026-05-20 18:23:42 [INFO] 分割系统资源已释放
+2026-05-20 18:23:48 [INFO] CUDA 初始化成功
+2026-05-20 18:23:48 [ERROR] 加载引擎出错: pybind11::init(): factory function returned nullptr
+2026-05-20 18:23:48 [ERROR] 初始化失败: Failed to load TensorRT engine.
+2026-05-20 18:23:48 [INFO] 全局 CUDA 资源已释放
+2026-05-20 18:23:48 [ERROR] 初始化失败: Failed to load TensorRT engine.
+2026-05-20 18:23:48 [INFO] CUDA 未初始化，无需释放
+2026-05-20 18:23:48 [INFO] 分割系统资源已释放
+2026-05-20 18:23:55 [INFO] CUDA 初始化成功
+2026-05-20 18:23:55 [ERROR] 加载引擎出错: pybind11::init(): factory function returned nullptr
+2026-05-20 18:23:55 [ERROR] 初始化失败: Failed to load TensorRT engine.
+2026-05-20 18:23:55 [INFO] 全局 CUDA 资源已释放
+2026-05-20 18:23:55 [ERROR] 初始化失败: Failed to load TensorRT engine.
+2026-05-20 18:23:55 [INFO] CUDA 未初始化，无需释放
+2026-05-20 18:23:55 [INFO] 分割系统资源已释放
+2026-05-20 18:24:00 [INFO] CUDA 初始化成功
+2026-05-20 18:24:00 [ERROR] 加载引擎出错: pybind11::init(): factory function returned nullptr
+2026-05-20 18:24:00 [ERROR] 初始化失败: Failed to load TensorRT engine.
+2026-05-20 18:24:00 [INFO] 全局 CUDA 资源已释放
+2026-05-20 18:24:00 [ERROR] 初始化失败: Failed to load TensorRT engine.
+2026-05-20 18:24:00 [INFO] CUDA 未初始化，无需释放
+2026-05-20 18:24:00 [INFO] 分割系统资源已释放
+2026-05-20 18:24:05 [INFO] CUDA 初始化成功
+2026-05-20 18:24:05 [ERROR] 加载引擎出错: pybind11::init(): factory function returned nullptr
+2026-05-20 18:24:05 [ERROR] 初始化失败: Failed to load TensorRT engine.
+2026-05-20 18:24:05 [INFO] 全局 CUDA 资源已释放
+2026-05-20 18:24:05 [ERROR] 初始化失败: Failed to load TensorRT engine.
+2026-05-20 18:24:05 [INFO] CUDA 未初始化，无需释放
+2026-05-20 18:24:05 [INFO] 分割系统资源已释放

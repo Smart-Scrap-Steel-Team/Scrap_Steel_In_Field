@@ -1,0 +1,79 @@
+2025-04-30 17:08:22 [INFO] 
+===== 开始 arm1 的处理流程 =====
+2025-04-30 17:08:22 [INFO] 
+[步骤1] 请求拍摄车体照片
+2025-04-30 17:08:22 [INFO] 开始获取清晰图像...
+2025-04-30 17:08:35 [INFO] 已保存vehicle图像: C:\Users\qinguang\feigangxiangmu\Scrap_steel_system\Scrap_Steel_Loading\photos\vehicle\vehicle_image_20250430_170835.jpg
+2025-04-30 17:08:35 [INFO] [完成] 车体拍照完成: C:\Users\qinguang\feigangxiangmu\Scrap_steel_system\Scrap_Steel_Loading\photos\vehicle\vehicle_image_20250430_170835.jpg
+2025-04-30 17:08:35 [INFO] 
+[步骤2] 请求第1次原始图片拍照
+2025-04-30 17:08:35 [INFO] 开始获取清晰图像...
+2025-04-30 17:08:39 [INFO] 已保存original图像: C:\Users\qinguang\feigangxiangmu\Scrap_steel_system\Scrap_Steel_Loading\photos\original\original_image_20250430_170839.jpg
+2025-04-30 17:08:41 [INFO] [完成] 第1次原始图片拍照完成: C:\Users\qinguang\feigangxiangmu\Scrap_steel_system\Scrap_Steel_Loading\photos\original\original_image_20250430_170839.jpg
+2025-04-30 17:08:45 [ERROR] 更新图片路径到 Flask 应用时出错: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /set_image_path (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B5E7C7C580>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2025-04-30 17:08:45 [INFO] [步骤2.1] 进行危险品推理
+2025-04-30 17:08:45 [INFO] [完成] 危险品检测成功，发现 4 个危险品
+2025-04-30 17:08:45 [INFO] 危险品 1: GasCyl1 (置信度: 0.92)
+2025-04-30 17:08:45 [INFO] 危险品 2: GasCyl1 (置信度: 0.60)
+2025-04-30 17:08:45 [INFO] 危险品 3: FireExt1 (置信度: 0.56)
+2025-04-30 17:08:45 [INFO] 危险品 4: FireExt1 (置信度: 0.45)
+2025-04-30 17:08:45 [INFO] 危险品检测结果已写入JSON文件: C:\Users\qinguang\feigangxiangmu\Scrap_steel_system\Scrap_Steel_Loading\photos\detection_results.json
+2025-04-30 17:08:50 [ERROR] 更新饼状图到 Flask 应用时出错: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /set_pie_chart_path (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B580108700>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2025-04-30 17:08:50 [INFO] 检测结果的路径为：C:\Users\qinguang\feigangxiangmu\Scrap_steel_system\Scrap_Steel_Loading\photos\dangerous_det\detection_20250430_170845.jpg
+2025-04-30 17:08:50 [INFO] 文件存在，大小: 1475993 字节
+2025-04-30 17:08:54 [ERROR] 更新危险品检测结果到 Flask 应用时出错: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /set_detection_path (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B580108EE0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2025-04-30 17:08:54 [INFO] [步骤2.2] 对原始图片进行废钢分割
+2025-04-30 17:08:54 [WARNING] [警告] 废钢分割失败，将按默认流程继续
+2025-04-30 17:08:54 [INFO] 
+[步骤2.3] 请求第1次抓取循环
+2025-04-30 17:08:54 [INFO] [发送] → arm1: 'START_GRAB'
+2025-04-30 17:08:54 [ERROR] [错误] 第1次抓取指令发送失败: [arm1] 没有连接的客户端
+2025-04-30 17:08:54 [INFO] 
+[步骤3] 请求第2次原始图片拍照
+2025-04-30 17:08:54 [INFO] 开始获取清晰图像...
+2025-04-30 17:09:08 [INFO] 已保存original图像: C:\Users\qinguang\feigangxiangmu\Scrap_steel_system\Scrap_Steel_Loading\photos\original\original_image_20250430_170908.jpg
+2025-04-30 17:09:10 [INFO] [完成] 第2次原始图片拍照完成: C:\Users\qinguang\feigangxiangmu\Scrap_steel_system\Scrap_Steel_Loading\photos\original\original_image_20250430_170908.jpg
+2025-04-30 17:09:14 [ERROR] 更新图片路径到 Flask 应用时出错: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /set_image_path (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B580109570>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2025-04-30 17:09:14 [INFO] [步骤3.1] 进行危险品推理
+2025-04-30 17:09:14 [INFO] [完成] 危险品检测成功，发现 4 个危险品
+2025-04-30 17:09:14 [INFO] 危险品 1: GasCyl1 (置信度: 0.91)
+2025-04-30 17:09:14 [INFO] 危险品 2: GasCyl1 (置信度: 0.59)
+2025-04-30 17:09:14 [INFO] 危险品 3: FireExt1 (置信度: 0.56)
+2025-04-30 17:09:14 [INFO] 危险品 4: FireExt1 (置信度: 0.39)
+2025-04-30 17:09:14 [INFO] 危险品检测结果已写入JSON文件: C:\Users\qinguang\feigangxiangmu\Scrap_steel_system\Scrap_Steel_Loading\photos\detection_results.json
+2025-04-30 17:09:18 [ERROR] 更新饼状图到 Flask 应用时出错: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /set_pie_chart_path (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B596600340>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2025-04-30 17:09:18 [INFO] 检测结果的路径为：C:\Users\qinguang\feigangxiangmu\Scrap_steel_system\Scrap_Steel_Loading\photos\dangerous_det\detection_20250430_170914.jpg
+2025-04-30 17:09:18 [INFO] 文件存在，大小: 1420873 字节
+2025-04-30 17:09:23 [ERROR] 更新危险品检测结果到 Flask 应用时出错: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /set_detection_path (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B596600B20>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2025-04-30 17:09:23 [INFO] [步骤3.2] 对原始图片进行废钢分割
+2025-04-30 17:09:23 [WARNING] [警告] 废钢分割失败，将按默认流程继续
+2025-04-30 17:09:23 [INFO] 
+[步骤3.3] 请求第2次抓取循环
+2025-04-30 17:09:23 [INFO] [发送] → arm1: 'START_GRAB'
+2025-04-30 17:09:23 [ERROR] [错误] 第2次抓取指令发送失败: [arm1] 没有连接的客户端
+2025-04-30 17:09:23 [INFO] 
+[步骤4] 请求第3次原始图片拍照
+2025-04-30 17:09:23 [INFO] 开始获取清晰图像...
+2025-04-30 17:09:26 [INFO] 已保存original图像: C:\Users\qinguang\feigangxiangmu\Scrap_steel_system\Scrap_Steel_Loading\photos\original\original_image_20250430_170926.jpg
+2025-04-30 17:09:28 [INFO] [完成] 第3次原始图片拍照完成: C:\Users\qinguang\feigangxiangmu\Scrap_steel_system\Scrap_Steel_Loading\photos\original\original_image_20250430_170926.jpg
+2025-04-30 17:09:32 [ERROR] 更新图片路径到 Flask 应用时出错: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /set_image_path (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B596600E50>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2025-04-30 17:09:32 [INFO] [步骤4.1] 进行危险品推理
+2025-04-30 17:09:33 [INFO] [完成] 危险品检测成功，发现 4 个危险品
+2025-04-30 17:09:33 [INFO] 危险品 1: GasCyl1 (置信度: 0.92)
+2025-04-30 17:09:33 [INFO] 危险品 2: GasCyl1 (置信度: 0.64)
+2025-04-30 17:09:33 [INFO] 危险品 3: FireExt1 (置信度: 0.55)
+2025-04-30 17:09:33 [INFO] 危险品 4: FireExt1 (置信度: 0.42)
+2025-04-30 17:09:33 [INFO] 危险品检测结果已写入JSON文件: C:\Users\qinguang\feigangxiangmu\Scrap_steel_system\Scrap_Steel_Loading\photos\detection_results.json
+2025-04-30 17:09:37 [ERROR] 更新饼状图到 Flask 应用时出错: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /set_pie_chart_path (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B58010AB00>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2025-04-30 17:09:37 [INFO] 检测结果的路径为：C:\Users\qinguang\feigangxiangmu\Scrap_steel_system\Scrap_Steel_Loading\photos\dangerous_det\detection_20250430_170933.jpg
+2025-04-30 17:09:37 [INFO] 文件存在，大小: 1418545 字节
+2025-04-30 17:09:41 [ERROR] 更新危险品检测结果到 Flask 应用时出错: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /set_detection_path (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B58010BD90>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2025-04-30 17:09:41 [INFO] [步骤4.2] 对原始图片进行废钢分割
+2025-04-30 17:09:41 [WARNING] [警告] 废钢分割失败，将按默认流程继续
+2025-04-30 17:09:41 [INFO] 
+[步骤4.3] 请求第3次抓取循环
+2025-04-30 17:09:41 [INFO] [发送] → arm1: 'START_GRAB'
+2025-04-30 17:09:41 [ERROR] [错误] 第3次抓取指令发送失败: [arm1] 没有连接的客户端
+2025-04-30 17:09:41 [INFO] 
+===== arm1 的处理流程已完成 =====
+

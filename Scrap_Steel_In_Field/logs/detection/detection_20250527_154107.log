@@ -1,0 +1,82 @@
+2025-05-27 17:09:47 [INFO] CUDA 初始化成功
+2025-05-27 17:09:47 [INFO] 引擎加载成功: dangerous.engine
+2025-05-27 17:09:47 [INFO] 检测系统初始化成功
+2025-05-27 17:09:47 [INFO] 图像预处理完成，原始尺寸: (2160, 3840)
+2025-05-27 17:09:47 [INFO] 开始执行目标检测...
+2025-05-27 17:09:47 [INFO] 检测完成，找到 4 个物体
+2025-05-27 17:09:47 [INFO] 物体 1: GasCyl1 (置信度: 0.80)
+2025-05-27 17:09:47 [INFO] 物体 2: FireExt1 (置信度: 0.48)
+2025-05-27 17:09:47 [INFO] 物体 3: GasCyl1 (置信度: 0.30)
+2025-05-27 17:09:47 [INFO] 物体 4: FireExt1 (置信度: 0.29)
+2025-05-27 17:09:47 [INFO] 准备保存检测结果到: C:\Users\diaoqingguang\Scrap_steel_system\Scrap_Steel_In_Field\photos\dangerous_det\detection_20250527_170947.jpg
+2025-05-27 17:09:47 [INFO] 图像形状: (2160, 3840, 3)
+2025-05-27 17:09:47 [INFO] 图像数据类型: uint8
+2025-05-27 17:09:47 [INFO] 图像最大值: 255
+2025-05-27 17:09:47 [INFO] 图像最小值: 0
+2025-05-27 17:09:47 [INFO] 开始保存检测结果图像: 图像尺寸=(2160, 3840, 3), 类型=uint8, 路径=C:\Users\diaoqingguang\Scrap_steel_system\Scrap_Steel_In_Field\photos\dangerous_det\detection_20250527_170947.jpg
+2025-05-27 17:09:47 [INFO] 成功保存检测结果到: C:\Users\diaoqingguang\Scrap_steel_system\Scrap_Steel_In_Field\photos\dangerous_det\detection_20250527_170947.jpg
+2025-05-27 17:09:47 [INFO] 保存的检测结果文件大小: 1880431 字节
+2025-05-27 17:09:47 [INFO] 引擎上下文已释放
+2025-05-27 17:09:47 [INFO] TensorRT 引擎已释放
+2025-05-27 17:09:47 [INFO] 全局 CUDA 资源已释放
+2025-05-27 17:09:47 [INFO] 检测系统资源已释放
+2025-05-27 17:13:10 [INFO] CUDA 初始化成功
+2025-05-27 17:13:10 [INFO] 引擎加载成功: dangerous.engine
+2025-05-27 17:13:10 [INFO] 检测系统初始化成功
+2025-05-27 17:13:10 [INFO] 图像预处理完成，原始尺寸: (2160, 3840)
+2025-05-27 17:13:10 [INFO] 开始执行目标检测...
+2025-05-27 17:13:10 [INFO] 检测完成，找到 1 个物体
+2025-05-27 17:13:10 [INFO] 物体 1: GasCyl1 (置信度: 0.28)
+2025-05-27 17:13:10 [INFO] 准备保存检测结果到: C:\Users\diaoqingguang\Scrap_steel_system\Scrap_Steel_In_Field\photos\dangerous_det\detection_20250527_171310.jpg
+2025-05-27 17:13:10 [INFO] 图像形状: (2160, 3840, 3)
+2025-05-27 17:13:10 [INFO] 图像数据类型: uint8
+2025-05-27 17:13:10 [INFO] 图像最大值: 255
+2025-05-27 17:13:10 [INFO] 图像最小值: 0
+2025-05-27 17:13:10 [INFO] 开始保存检测结果图像: 图像尺寸=(2160, 3840, 3), 类型=uint8, 路径=C:\Users\diaoqingguang\Scrap_steel_system\Scrap_Steel_In_Field\photos\dangerous_det\detection_20250527_171310.jpg
+2025-05-27 17:13:10 [INFO] 成功保存检测结果到: C:\Users\diaoqingguang\Scrap_steel_system\Scrap_Steel_In_Field\photos\dangerous_det\detection_20250527_171310.jpg
+2025-05-27 17:13:10 [INFO] 保存的检测结果文件大小: 1876988 字节
+2025-05-27 17:13:10 [INFO] 引擎上下文已释放
+2025-05-27 17:13:10 [INFO] TensorRT 引擎已释放
+2025-05-27 17:13:10 [INFO] 全局 CUDA 资源已释放
+2025-05-27 17:13:10 [INFO] 检测系统资源已释放
+2025-05-27 17:14:17 [INFO] CUDA 初始化成功
+2025-05-27 17:14:17 [INFO] 引擎加载成功: dangerous.engine
+2025-05-27 17:14:17 [INFO] 检测系统初始化成功
+2025-05-27 17:14:17 [INFO] 图像预处理完成，原始尺寸: (2160, 3840)
+2025-05-27 17:14:17 [INFO] 开始执行目标检测...
+2025-05-27 17:14:17 [INFO] 检测完成，找到 2 个物体
+2025-05-27 17:14:17 [INFO] 物体 1: GasCyl1 (置信度: 0.63)
+2025-05-27 17:14:17 [INFO] 物体 2: GasCyl1 (置信度: 0.51)
+2025-05-27 17:14:17 [INFO] 准备保存检测结果到: C:\Users\diaoqingguang\Scrap_steel_system\Scrap_Steel_In_Field\photos\dangerous_det\detection_20250527_171417.jpg
+2025-05-27 17:14:17 [INFO] 图像形状: (2160, 3840, 3)
+2025-05-27 17:14:17 [INFO] 图像数据类型: uint8
+2025-05-27 17:14:17 [INFO] 图像最大值: 255
+2025-05-27 17:14:17 [INFO] 图像最小值: 0
+2025-05-27 17:14:17 [INFO] 开始保存检测结果图像: 图像尺寸=(2160, 3840, 3), 类型=uint8, 路径=C:\Users\diaoqingguang\Scrap_steel_system\Scrap_Steel_In_Field\photos\dangerous_det\detection_20250527_171417.jpg
+2025-05-27 17:14:17 [INFO] 成功保存检测结果到: C:\Users\diaoqingguang\Scrap_steel_system\Scrap_Steel_In_Field\photos\dangerous_det\detection_20250527_171417.jpg
+2025-05-27 17:14:17 [INFO] 保存的检测结果文件大小: 1796256 字节
+2025-05-27 17:14:17 [INFO] 引擎上下文已释放
+2025-05-27 17:14:17 [INFO] TensorRT 引擎已释放
+2025-05-27 17:14:17 [INFO] 全局 CUDA 资源已释放
+2025-05-27 17:14:17 [INFO] 检测系统资源已释放
+2025-05-27 17:15:50 [INFO] CUDA 初始化成功
+2025-05-27 17:15:50 [INFO] 引擎加载成功: dangerous.engine
+2025-05-27 17:15:50 [INFO] 检测系统初始化成功
+2025-05-27 17:15:50 [INFO] 图像预处理完成，原始尺寸: (2160, 3840)
+2025-05-27 17:15:50 [INFO] 开始执行目标检测...
+2025-05-27 17:15:50 [INFO] 检测完成，找到 3 个物体
+2025-05-27 17:15:50 [INFO] 物体 1: GasCyl1 (置信度: 0.31)
+2025-05-27 17:15:50 [INFO] 物体 2: GasCyl1 (置信度: 0.30)
+2025-05-27 17:15:50 [INFO] 物体 3: GasCyl1 (置信度: 0.28)
+2025-05-27 17:15:50 [INFO] 准备保存检测结果到: C:\Users\diaoqingguang\Scrap_steel_system\Scrap_Steel_In_Field\photos\dangerous_det\detection_20250527_171550.jpg
+2025-05-27 17:15:50 [INFO] 图像形状: (2160, 3840, 3)
+2025-05-27 17:15:50 [INFO] 图像数据类型: uint8
+2025-05-27 17:15:50 [INFO] 图像最大值: 255
+2025-05-27 17:15:50 [INFO] 图像最小值: 0
+2025-05-27 17:15:50 [INFO] 开始保存检测结果图像: 图像尺寸=(2160, 3840, 3), 类型=uint8, 路径=C:\Users\diaoqingguang\Scrap_steel_system\Scrap_Steel_In_Field\photos\dangerous_det\detection_20250527_171550.jpg
+2025-05-27 17:15:50 [INFO] 成功保存检测结果到: C:\Users\diaoqingguang\Scrap_steel_system\Scrap_Steel_In_Field\photos\dangerous_det\detection_20250527_171550.jpg
+2025-05-27 17:15:50 [INFO] 保存的检测结果文件大小: 1849519 字节
+2025-05-27 17:15:50 [INFO] 引擎上下文已释放
+2025-05-27 17:15:50 [INFO] TensorRT 引擎已释放
+2025-05-27 17:15:50 [INFO] 全局 CUDA 资源已释放
+2025-05-27 17:15:50 [INFO] 检测系统资源已释放

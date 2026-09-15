@@ -1,0 +1,19 @@
+2025-04-28 16:41:28 [INFO] CUDA 初始化成功
+2025-04-28 16:41:28 [INFO] 引擎加载成功: dangerous.engine
+2025-04-28 16:41:28 [INFO] 检测系统初始化成功
+2025-04-28 16:41:28 [INFO] 图像预处理完成，原始尺寸: (2160, 3840)
+2025-04-28 16:41:28 [INFO] 开始执行目标检测...
+2025-04-28 16:41:28 [INFO] 检测完成，找到 1 个物体
+2025-04-28 16:41:28 [INFO] 物体 1: FireExt1 (置信度: 0.49)
+2025-04-28 16:41:28 [INFO] 准备保存检测结果到: C:\Users\qinguang\feigangxiangmu\Scrap_steel_system\Scrap_Steel_Loading\photos\dangerous_det\detection_20250428_164128.jpg
+2025-04-28 16:41:28 [INFO] 图像形状: (2160, 3840, 3)
+2025-04-28 16:41:28 [INFO] 图像数据类型: uint8
+2025-04-28 16:41:28 [INFO] 图像最大值: 255
+2025-04-28 16:41:28 [INFO] 图像最小值: 0
+2025-04-28 16:41:28 [INFO] 开始保存检测结果图像: 图像尺寸=(2160, 3840, 3), 类型=uint8, 路径=C:\Users\qinguang\feigangxiangmu\Scrap_steel_system\Scrap_Steel_Loading\photos\dangerous_det\detection_20250428_164128.jpg
+2025-04-28 16:41:28 [INFO] 成功保存检测结果到: C:\Users\qinguang\feigangxiangmu\Scrap_steel_system\Scrap_Steel_Loading\photos\dangerous_det\detection_20250428_164128.jpg
+2025-04-28 16:41:28 [INFO] 保存的检测结果文件大小: 1482193 字节
+2025-04-28 16:41:28 [INFO] 引擎上下文已释放
+2025-04-28 16:41:28 [INFO] TensorRT 引擎已释放
+2025-04-28 16:41:28 [INFO] 全局 CUDA 资源已释放
+2025-04-28 16:41:28 [INFO] 检测系统资源已释放
